@@ -26,6 +26,12 @@ jobs:
           ref: main
           path: .external/mermaid-diagram-skill
 
+      - name: Install CJK fonts for Chinese labels
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+
       - name: Record external tool provenance
         shell: bash
         run: |
