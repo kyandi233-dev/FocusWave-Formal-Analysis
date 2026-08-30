@@ -38,6 +38,25 @@ jobs:
           git -C .external/mermaid-diagram-skill rev-parse HEAD > '正式报告/科研绘图/F02-正式实验范式与时间轴/mermaid-skill-commit.txt'
           cat '正式报告/科研绘图/F02-正式实验范式与时间轴/mermaid-skill-commit.txt'
 
+      - name: Add GitHub-runner Puppeteer compatibility to public renderer
+        shell: bash
+        run: |
+          cat > "$RUNNER_TEMP/puppeteer-config.json" <<'JSON'
+          {
+            "args": ["--no-sandbox", "--disable-setuid-sandbox"]
+          }
+          JSON
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('.external/mermaid-diagram-skill/references/render_mermaid.sh')
+          text = p.read_text()
+          old = 'mmdc -i "$INPUT" -o "$OUTPUT"'
+          new = 'mmdc -p "$RUNNER_TEMP/puppeteer-config.json" -i "$INPUT" -o "$OUTPUT"'
+          if old not in text:
+              raise SystemExit('Expected public renderer command not found; upstream may have changed')
+          p.write_text(text.replace(old, new))
+          PY
+
       - name: Render F02 through public repository renderer
         shell: bash
         run: |
