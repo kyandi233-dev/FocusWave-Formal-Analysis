@@ -1,0 +1,52 @@
+name: Render F02 scientific figure
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - codex/code-fix-ledger
+    paths:
+      - '正式报告/科研绘图/F02-正式实验范式与时间轴/**'
+      - '.github/workflows/render-scientific-figure-f02.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  render-mermaid:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout FocusWave report repository
+        uses: actions/checkout@v4
+
+      - name: Checkout public Mermaid diagram skill
+        uses: actions/checkout@v4
+        with:
+          repository: mgranberry/mermaid-diagram-skill
+          ref: main
+          path: .external/mermaid-diagram-skill
+
+      - name: Record external tool provenance
+        shell: bash
+        run: |
+          git -C .external/mermaid-diagram-skill rev-parse HEAD > '正式报告/科研绘图/F02-正式实验范式与时间轴/mermaid-skill-commit.txt'
+          cat '正式报告/科研绘图/F02-正式实验范式与时间轴/mermaid-skill-commit.txt'
+
+      - name: Render F02 through public repository renderer
+        shell: bash
+        run: |
+          mkdir -p '正式报告/科研绘图/F02-正式实验范式与时间轴/rendered'
+          bash .external/mermaid-diagram-skill/references/render_mermaid.sh \
+            '正式报告/科研绘图/F02-正式实验范式与时间轴/f02-timeline.mmd' \
+            '正式报告/科研绘图/F02-正式实验范式与时间轴/rendered/f02-timeline.png'
+
+      - name: Upload rendered figure artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: F02-experiment-timeline
+          path: |
+            正式报告/科研绘图/F02-正式实验范式与时间轴/rendered/f02-timeline.png
+            正式报告/科研绘图/F02-正式实验范式与时间轴/f02-timeline.mmd
+            正式报告/科研绘图/F02-正式实验范式与时间轴/figure-spec.md
+            正式报告/科研绘图/F02-正式实验范式与时间轴/mermaid-skill-commit.txt
+          if-no-files-found: error
