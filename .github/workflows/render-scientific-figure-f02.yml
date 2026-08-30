@@ -6,11 +6,12 @@ on:
     branches:
       - codex/code-fix-ledger
     paths:
-      - '正式报告/科研绘图/F02-正式实验范式与时间轴/**'
+      - '正式报告/科研绘图/F02-正式实验范式与时间轴/figure-spec.md'
+      - '正式报告/科研绘图/F02-正式实验范式与时间轴/f02-timeline.mmd'
       - '.github/workflows/render-scientific-figure-f02.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   render-mermaid:
@@ -64,6 +65,21 @@ jobs:
           bash .external/mermaid-diagram-skill/references/render_mermaid.sh \
             '正式报告/科研绘图/F02-正式实验范式与时间轴/f02-timeline.mmd' \
             '正式报告/科研绘图/F02-正式实验范式与时间轴/rendered/f02-timeline.png'
+
+      - name: Commit rendered output back to report branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            '正式报告/科研绘图/F02-正式实验范式与时间轴/rendered/f02-timeline.png' \
+            '正式报告/科研绘图/F02-正式实验范式与时间轴/mermaid-skill-commit.txt'
+          if git diff --cached --quiet; then
+            echo 'Rendered output unchanged.'
+          else
+            git commit -m 'build(figure): render F02 with public Mermaid skill'
+            git push origin HEAD:codex/code-fix-ledger
+          fi
 
       - name: Upload rendered figure artifact
         uses: actions/upload-artifact@v4
