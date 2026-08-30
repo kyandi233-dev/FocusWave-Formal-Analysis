@@ -1,0 +1,48 @@
+%% F02 FocusWave formal experiment paradigm and timeline
+%% Structure follows mgranberry/mermaid-diagram-skill flowchart guidance:
+%% main timeline = sequence; lower panels = trial and thought-probe detail.
+flowchart TB
+
+    subgraph timeline["正式实验时间轴"]
+        direction LR
+        rest["3 min 静息记录"] --> practice["18 个练习试次"] --> block1["Block 1<br/>432 trials · 384 Go / 48 No-Go<br/>10 probes · 约 9 min"] --> break["休息 ≥ 2 min"] --> block2["Block 2<br/>432 trials · 384 Go / 48 No-Go<br/>10 probes · 约 9 min"] --> finish(("实验结束"))
+    end
+
+    subgraph detail["任务内部结构"]
+        direction LR
+
+        subgraph trialPanel["A · 单试次"]
+            direction LR
+            stimulus["刺激<br/>250 ms"] --> mask["掩蔽<br/>900 ms"]
+            go["Go：非苹果<br/>按键"]
+            nogo["No-Go：苹果<br/>抑制按键"]
+        end
+
+        subgraph probePanel["B · 双问题思维探针"]
+            direction TB
+            q1["Q1 注意内容<br/>任务专注 / 注意实验但未专注分类<br/>任务无关思维 / 头脑空白"] --> q2["Q2 警觉程度<br/>非常困倦 → 比较困倦 → 比较清醒 → 非常清醒"]
+        end
+    end
+
+    block1 -. "trial structure" .-> stimulus
+    block1 -. "10 probes / Block" .-> q1
+
+    classDef baseline fill:#dbeafe,stroke:#2563eb,color:#1f2937
+    classDef practice fill:#fed7aa,stroke:#c2410c,color:#1f2937
+    classDef block fill:#bfdbfe,stroke:#1d4ed8,color:#1f2937
+    classDef restbreak fill:#e5e7eb,stroke:#6b7280,color:#1f2937
+    classDef endpoint fill:#a7f3d0,stroke:#047857,color:#1f2937
+    classDef trial fill:#ddd6fe,stroke:#6d28d9,color:#1f2937
+    classDef go fill:#d1fae5,stroke:#059669,color:#1f2937
+    classDef nogo fill:#fee2e2,stroke:#dc2626,color:#1f2937
+    classDef probe fill:#fef3c7,stroke:#b45309,color:#1f2937
+
+    class rest baseline
+    class practice practice
+    class block1,block2 block
+    class break restbreak
+    class finish endpoint
+    class stimulus,mask trial
+    class go go
+    class nogo nogo
+    class q1,q2 probe
