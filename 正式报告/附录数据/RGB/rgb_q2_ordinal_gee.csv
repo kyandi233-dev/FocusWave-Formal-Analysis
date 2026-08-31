@@ -1,0 +1,7 @@
+﻿model_name,model_family,outcome,predictor,estimate_per_predictor_sd,se,ci_low,ci_high,status,observation_unit,participant_group_n,session_n,n_rows
+Q2_body_motion_energy_median,OrdinalGEE,q2_ordinal_4level,body_motion_energy_median,0.05359885249070629,0.08768969567252455,-0.11827295102744181,0.22547065600885438,estimable,probe,61,115,2300
+Q2_exposure_change_abs_median,OrdinalGEE,q2_ordinal_4level,exposure_change_abs_median,0.0424209354775269,0.07261783645999953,-0.09991002398407217,0.18475189493912597,estimable,probe,61,115,2300
+Q2_pose_lateral_right_per_sec_median,OrdinalGEE,q2_ordinal_4level,pose_lateral_right_per_sec_median,-0.023751340824360763,0.03140848743509038,-0.0853119761971379,0.03780929454841638,estimable,probe,61,115,2300
+Q2_pose_vertical_up_per_sec_median,OrdinalGEE,q2_ordinal_4level,pose_vertical_up_per_sec_median,0.029009713498637332,0.032107292831937105,-0.03392058045195939,0.09194000744923406,estimable,probe,61,115,2300
+Q2_pose_radial_proximity_direction_score_median,OrdinalGEE,q2_ordinal_4level,pose_radial_proximity_direction_score_median,0.003794991357566815,0.030401512647925965,-0.055791973432368074,0.06338195614750171,estimable,probe,61,115,2300
+Q2_blink_event_rate_per_min,OrdinalGEE,q2_ordinal_4level,blink_event_rate_per_min,-0.24357861046932627,0.0877249950343208,-0.415519600736595,-0.07163762020205752,estimable,probe,60,110,2200

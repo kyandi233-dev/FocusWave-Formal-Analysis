@@ -1,0 +1,40 @@
+{
+  "created_at_utc": "2026-08-30T20:22:12.058446+00:00",
+  "status": "complete",
+  "pipeline_version": "nir-probe-endpoint-models-v1",
+  "primary_track": "binocular_primary",
+  "primary_probe_window": "pre_30s",
+  "primary_metrics": [
+    "pupil_geom_mean_diameter",
+    "hard_pupil_fraction"
+  ],
+  "endpoint_freeze": "frozen_20260831_primary_plus_sensitivity",
+  "q1_model": {
+    "outcome": "probe_response",
+    "family": "MNLogit_cluster_robust",
+    "reference_category": 1,
+    "category_gate": "all four categories 1-4 required"
+  },
+  "q2_model": {
+    "outcome": "probe_vigilance",
+    "family": "OrderedModel_cumulative_logit_cluster_robust",
+    "level_gate": "at least three observed levels within 1-4",
+    "implementation_note": "OrdinalGEE (behavior-side reference) unavailable in this runtime: native scipy cholesky crash 0xc06d007f kills the process and cannot be caught; cumulative-logit OrderedModel with participant-cluster robust covariance used instead"
+  },
+  "within_between_decomposition": "participant-group mean (between) and deviation (within) per probe observation",
+  "predictor_standardization": "z_score_within_fitted_sample_per_term",
+  "pupil_projection": "frozen primary metrics projected from 10_analysis_ready candidate sidecar into each probe window on the shared unix_ms axis; per-eye valid-frame median then binocular/left-only/right-only fusion",
+  "n_sessions_requested": 109,
+  "n_sessions_loaded": 109,
+  "n_probe_observations": 2180,
+  "n_effect_rows": 16,
+  "n_failure_rows": 0,
+  "load_failures": [],
+  "scientific_inference_authorized_by_code_alone": false,
+  "endpoint_selection_from_p_values_allowed": false,
+  "outputs": {
+    "model_table": "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\NIR\\11_analysis_tables\\probe_pupil_models\\probe_pupil_model_table.csv",
+    "effects": "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\NIR\\11_analysis_tables\\probe_pupil_models\\probe_pupil_model_effects.csv",
+    "failures": "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\NIR\\11_analysis_tables\\probe_pupil_models\\probe_pupil_model_failures.csv"
+  }
+}

@@ -1,0 +1,25 @@
+﻿analysis,metric,term,estimate,se,ci_low,ci_high,participant_group_n,session_n,n_rows,correlation_structure,status
+block_cycle_gee,body_motion_energy_median,Intercept,0.09171348035177908,0.0068662196233881,0.0782556898899384,0.10517127081361975,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,body_motion_energy_median,block2,-0.0009884650639739024,0.0005177532398576055,-0.002003261414094809,2.633128614700441e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,body_motion_energy_median,cycle_bin,-0.00016373249739517345,6.86899701786522e-05,-0.0002983648389453318,-2.9100155845015145e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,body_motion_energy_median,block2:cycle_bin,0.00016734776014058314,9.165846766938768e-05,-1.230283649141672e-05,0.000346998356772583,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,exposure_change_abs_median,Intercept,0.0043296539445707724,0.00033916443526866804,0.0036648916514441833,0.004994416237697362,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,exposure_change_abs_median,block2,0.00024255390750800874,0.00017362739602597743,-9.775578870290701e-05,0.0005828636037189245,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,exposure_change_abs_median,cycle_bin,-2.6764956435454077e-05,2.475658397568044e-05,-7.528786102778774e-05,2.1757948156879587e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,exposure_change_abs_median,block2:cycle_bin,-2.9941851061034305e-05,3.273532530230402e-05,-9.410308865355019e-05,3.421938653148157e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_lateral_right_per_sec_median,Intercept,4.14353672243822e-05,4.4170235586390015e-05,-4.513829452494223e-05,0.00012800902897370663,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_lateral_right_per_sec_median,block2,9.857603106879087e-06,6.668629650599026e-05,-0.00012084753804486181,0.00014056274425861998,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_lateral_right_per_sec_median,cycle_bin,-8.01416873551929e-06,1.2651234280973498e-05,-3.281058792622735e-05,1.6782250455188764e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_lateral_right_per_sec_median,block2:cycle_bin,-5.959994206036226e-06,1.837508586490937e-05,-4.197516250125859e-05,3.0055174089186137e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_vertical_up_per_sec_median,Intercept,-7.235312897195482e-05,8.746783821402523e-05,-0.00024379009187144426,9.908383392753461e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_vertical_up_per_sec_median,block2,-4.082427316938887e-05,0.0001223016894870205,-0.00028053558456394906,0.0001988870382251713,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_vertical_up_per_sec_median,cycle_bin,1.6599384471107218e-05,2.5992245897653216e-05,-3.434541748829308e-05,6.754418643050752e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_vertical_up_per_sec_median,block2:cycle_bin,1.5577493870680988e-05,3.420724129910313e-05,-5.146869907556115e-05,8.262368681692312e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_radial_proximity_direction_score_median,Intercept,-0.02225490715604299,0.02661348969152557,-0.07441734695143311,0.02990753263934713,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_radial_proximity_direction_score_median,block2,0.05198067632850233,0.035917619106554825,-0.018417857120345126,0.12237920977734978,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_radial_proximity_direction_score_median,cycle_bin,0.005755693581780515,0.006820915227077339,-0.007613300263291069,0.0191246874268521,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,pose_radial_proximity_direction_score_median,block2:cycle_bin,-0.013954451345755672,0.009036301498781433,-0.03166560228336728,0.0037566995918559363,61,115,1380,Exchangeable within participant_group_id,estimable
+block_cycle_gee,blink_event_rate_per_min,Intercept,4.531762474901146,0.9517833581081898,2.6662670930090933,6.397257856793198,60,110,1320,Exchangeable within participant_group_id,estimable
+block_cycle_gee,blink_event_rate_per_min,block2,2.2041292806700694,0.8842077261514255,0.4710821374132754,3.9371764239268634,60,110,1320,Exchangeable within participant_group_id,estimable
+block_cycle_gee,blink_event_rate_per_min,cycle_bin,0.5100101608506294,0.16252710227439468,0.19145704039281586,0.828563281308443,60,110,1320,Exchangeable within participant_group_id,estimable
+block_cycle_gee,blink_event_rate_per_min,block2:cycle_bin,-0.3238448013638854,0.1901434065635172,-0.6965258782283791,0.04883627550060832,60,110,1320,Exchangeable within participant_group_id,estimable
