@@ -18,6 +18,8 @@ FocusWave 当前研究围绕三个相互连接的问题展开：行为和多模�
 
 当前 governed cohort（治理队列）由 `Attention-Analysis` 当前配置声明为 **116 sessions（场次）、61 participant groups（参与者组）**。模态 availability 与 cohort membership（队列成员资格）分开；NIR、RGB、mmWave 任一模态缺失不得反向删除 Behavior 场次或改变 `participant_group_id`。当前 NIR 1.16.3 测量审计链有 109 个 current-compatible NIR source records（当前兼容近红外源记录）；该数字只表示 NIR 可运行来源，不是监督学习总体样本数。
 
+截至 2026-09-12，mmWave integration snapshot v1 已保留完整 116 场/2,320 探针，并提供 109 场/2,180 探针的临时心肺特征；其状态为 `PROVISIONAL_INTEGRATION_READY / PHYSIOLOGY_LIMITED`。运动代理仍仅用于诊断，心率变异性继续阻塞，Attention-Analysis 的 1.16.10 科学模态/设备迁移仍待完成。
+
 ## 1.16 系列专题文档
 
 ### 1.16.1 监督学习心理意义、训练权重与多层评价
