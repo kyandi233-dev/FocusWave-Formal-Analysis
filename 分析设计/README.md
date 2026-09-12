@@ -2,15 +2,23 @@
 
 更新日期：2026-09-12。
 
-本目录是 FocusWave 当前正式方法设计入口。阅读时先区分三层：**当前代码实际实现了什么、Formal 已冻结准备怎样分析、仍待真实数据审计或方法讨论的内容是什么**。历史方案不删除，但与后出的正式决策冲突时，以较新的决策文件和当前代码为准。
+本目录是 FocusWave 当前正式方法设计入口。阅读时先区分三层：**当前代码实际实现了什么、Formal 已冻结准备怎样分析、仍待真实数据审计或方法讨论的内容是什么**。历史方案不删除，但与后出的正式决策冲突时，以较新的 1.16 决策文件和当前代码为准。
 
-## 当前总逻辑
+## 当前总入口
+
+先读：[`1.16-当前方法总状态与执行入口_20260912.md`](1.16-当前方法总状态与执行入口_20260912.md)。
+
+该页统一回答当前研究问题、116 场治理队列与模态 availability（可用性）的区别、监督学习/Behavior/NIR 两条工作线、A/B/C/D 与 #40/#41/#42/#43/#44/#48 的当前关系、四个剩余监督学习协议风险、feature selection（特征选择）的正式逻辑、feature registry（特征登记表）冻结要求和真实数据运行门。
+
+Formal 1.16 系列唯一当前工作分支为 `codex/code-fix-ledger`。历史 `codex/1.16.1-supervised-interpretation-review` 已停止作为工作入口；Git 当前显示它与权威分支已分叉，其历史提交只用于 provenance（来源追踪）。
+
+## 当前研究总逻辑
 
 FocusWave 当前研究围绕三个相互连接的问题展开：行为和多模态测量怎样随 probe（探针）时点的注意内容报告变化；传感器在已有 Behavior（行为）信息之外是否提供稳定的额外信息；这些关系和预测是否能推广到模型训练中完全未见的 participant（参与者）。首轮监督学习预测的是 **Q1 注意内容自我报告**，不是潜在注意状态的“真值”。Q2 作为主观困倦/清醒解释变量，不作为首轮 Q1 预测输入。
 
-当前 governed cohort（治理队列）由 `Attention-Analysis` 当前配置声明为 **116 sessions（场次）、61 participant groups（参与者组）**。模态 availability（可用性）与 cohort membership（队列成员资格）分开；NIR、RGB、mmWave 任一模态缺失不得反向删除 Behavior 场次或改变 `participant_group_id`。
+当前 governed cohort（治理队列）由 `Attention-Analysis` 当前配置声明为 **116 sessions（场次）、61 participant groups（参与者组）**。模态 availability 与 cohort membership（队列成员资格）分开；NIR、RGB、mmWave 任一模态缺失不得反向删除 Behavior 场次或改变 `participant_group_id`。当前 NIR 1.16.3 测量审计链有 109 个 current-compatible NIR source records（当前兼容近红外源记录）；该数字只表示 NIR 可运行来源，不是监督学习总体样本数。
 
-## 当前优先阅读：1.16 系列
+## 1.16 系列专题文档
 
 ### 1.16.1 监督学习心理意义、训练权重与多层评价
 
@@ -21,11 +29,12 @@ FocusWave 当前研究围绕三个相互连接的问题展开：行为和多模�
 - Q1 `1` vs `2/3/4` 为首轮二分类预测目标；
 - outer validation（外层验证）按 `participant_group_id` 做 participant-disjoint LOSO（参与者互斥留一参与者验证）；
 - inner validation（内层验证）为 participant-grouped 5-fold GroupKFold（参与者分组五折交叉验证）；
-- 训练、插补、标准化与内层评分均采用 participant-equal（参与者等权）口径；
+- 训练、插补、标准化与内层评分采用 participant-equal（参与者等权）口径；
 - 主总体评价先 participant 内聚合 probe，再 participant 间等权；
 - fixed-OOF participant-cluster bootstrap（固定折外参与者簇自助法）用于参与者抽样不确定性；
 - specific feature（具体特征）解释包括 `x -> Q1`、`Behavior -> Behavior+x`、`Full-x -> Full`；
-- M0–M7 保留为设备/信息包比较，并由 feature provenance/dependency registry（特征来源/依赖注册表）约束真实设备依赖。
+- M0–M7 保留为设备/信息包比较，并由 feature provenance/dependency registry（特征来源/依赖注册表）约束真实设备依赖；
+- 合法 OOF（折外）概率可形成 probe-sampled trajectory（探针采样轨迹），但不称连续实时监测；session AUROC 仅解释场内状态区分能力。
 
 ### 1.16.2 瞳孔与眨眼联合清洗、probe 前动态
 
@@ -39,6 +48,29 @@ FocusWave 当前研究围绕三个相互连接的问题展开：行为和多模�
 
 该文件负责把 1.16.2 转成可执行代码任务。第一阶段只做 measurement audit（测量审计），比较 blink buffer（眨眼缓冲）、fixed bin（固定时间箱）、趋势时间支持、`R_seg` QC（质量控制）与同步质量；禁止根据 Q1/Q2、显著性或 outer-test（外层测试）预测性能选择这些测量参数。真实数据审计完成后再回本目录冻结参数。
 
+## 当前监督学习实现与未决协议
+
+当前已经不是“Task A/B/C/D 从零开始”的阶段。Task A 的训练/评价主干、#42 的 prediction archive（预测归档）合同、#48 的 A/B materialization（物化）以及 #41 的 Behavior 权威 probe-key mapper 均已有实现；Task C 的 Behavior 接口也已基本收口。当前最重要的是保持科研语义在跨模块传递时不漂移。
+
+优先复核四项：
+
+1. **Task B `required_features` 与 Task A 实际比较模型的一致性**：共同样本只能由该次直接比较真正需要的特征决定；
+2. **fold（折）内实际特征与增量比较资格**：被研究特征若因训练折全缺失/零方差被删除，该折应记为不可估，不能把增量 0 解释为“没有信息”；
+3. **feature registry 布尔字段严格解析**：禁止字符串 `"false"` 被 Python 真值转换成 True；
+4. **missing-aware（缺失感知）区分真正残余缺失与 malformed value（格式坏值）**：解析失败不能被伪装成可插补的单特征缺失。
+
+完整合同、两条工作线及汇合顺序见 1.16 总入口页。
+
+## 特征进入监督学习的正式逻辑
+
+当前特征选择分三层：
+
+1. **科学资格冻结**：先依据测量含义、时间合法性、producer（特征生成程序）可靠性、QC（质量控制）、设备依赖和研究问题决定正式候选，不看 outer-test 结果；
+2. **训练数据内部开发**：只在预先限定的有限候选表示和超参数范围内，于 outer-train 内的 inner participant-grouped CV（内层参与者分组交叉验证）完成选择；
+3. **fold 内技术可估计性**：已冻结特征若在某训练折全缺失/零方差可以无法估计，但必须进入比较资格和报告分母，不能等价成“科学上无效”。
+
+历史统一 80% coverage（覆盖率）硬门、完整样本相关冗余自动删除、把 producer 所有字段无差别投入模型等做法均不是当前正式路线。
+
 ## 1.15 系列的当前地位
 
 `1.15`–`1.15.10` 记录了从共同状态构想到 Q1 监督学习、质量筛选、A/B/C/D 并行实现、毫米波修复和绘图扩展的形成过程。它们继续作为历史方法依据和代码来源，但已经不是所有问题的最终口径。
@@ -46,23 +78,26 @@ FocusWave 当前研究围绕三个相互连接的问题展开：行为和多模�
 尤其注意：
 
 - `1.15.7` 的 Task A/B/C/D 是并行实现计划；A/B/C 基础任务已完成，旧 Task D 科学合同已被 1.16.2/1.16.3 更新；
-- 历史统一 80% coverage（覆盖率）自动准入门不得恢复；
+- 历史统一 80% coverage 自动准入门不得恢复；
 - 旧 Task D 将 `pupil_geom_mean_diameter` 作为唯一 NIR 基础信号、将 `robust_binned_slope_per_sec` 作为正式趋势的描述只代表 PR #39 基线，不代表 1.16 最终路线；
 - `1.15.0-astra聊天记录.md` 是对话证据，不作为独立方法权威。
 
-## 当前代码修复与执行依赖
+## 当前执行依赖
 
-`Attention-Analysis` 当前仅保留 5 个 active issue（开放问题单）：#40–#44。
+当前监督学习与测量集成相关开放任务包括 #40、#41、#42、#43、#44、#48。其中 #42/#48 已有核心实现，仍需最终集成验收；#41 mapper 已实现但最终 NIR 接线等待 #44；#40 等 #44 最终 feature/status 合同；#43 的通用训练与评价核心已经基本实现，正式结果仍受 feature freeze 与跨模块合同约束。
 
-| Issue | 本目录中的方法对应 | 当前关系 |
-|---|---|---|
-| #41 | probe 身份与时间定位必须以 Behavior 权威 probe 表映射 | A/B/D 集成前置 |
-| #42 | Q1 标签与 prediction archive（预测归档）完整性 | 可独立修复 |
-| #44 | 1.16.2/1.16.3 的真实测量审计 | 当前 Draft PR #45；审计后回 Formal 冻结参数 |
-| #40 | NIR feature/status（特征/状态）进入 B 的可估计性合同 | 等 #44 冻结最终 NIR 字段后接线 |
-| #43 | 1.16.1 的参与者等权评价、bootstrap、特征级解释、M0–M7 | 可继续开发；正式结果受其他接口和 feature freeze（特征冻结）约束 |
+当前汇合顺序为：
 
-旧 #19/#20/#21/#22/#30/#32/#34/#36/#38 已退出 active 队列。详细 P0 证据仍见 `协作治理/6.2-P0修复任务单_20260911.md`；1.16 文档统一分支规则见 `协作治理/6.3-1.16系列单一Formal分支与代码任务治理_20260912.md`。
+`Behavior/NIR feature freeze`
+→ `真实 feature registry`
+→ `#41 最终 probe-key 接线`
+→ `#40 NIR status 接线`
+→ `A + B + #41 + #42 + #48 integration test（集成测试）`
+→ `少量真实 schema / LOSO smoke test（冒烟测试）`
+→ `正式 governed-cohort 监督学习运行`
+→ `问卷探索性时间对应与正式报告`。
+
+详细 P0 证据仍见 `协作治理/6.2-P0修复任务单_20260911.md`；1.16 文档统一分支规则见 `协作治理/6.3-1.16系列单一Formal分支与代码任务治理_20260912.md`。
 
 ## 其他分析设计文件
 
@@ -74,4 +109,4 @@ FocusWave 当前研究围绕三个相互连接的问题展开：行为和多模�
 
 ## 报告边界
 
-本目录负责“分析为什么这样做、当前规则是什么、哪些证据可以进入报告”。正式报告正文维护在 `正式报告/章节草稿/`。代码存在、CI（持续集成）通过、合成测试通过都不能替代真实分析结果；尚未完成 116 场真实运行、仍待 measurement audit 或尚未冻结的内容只能写成计划/候选/限制，不得写成正式研究发现。
+本目录负责“分析为什么这样做、当前规则是什么、哪些证据可以进入报告”。正式报告正文维护在 `正式报告/章节草稿/`。代码存在、CI（持续集成）通过、合成测试通过都不能替代真实分析结果；仍待 measurement audit、feature freeze 或跨模块集成的内容只能写成计划/候选/限制，不得写成正式研究发现。
