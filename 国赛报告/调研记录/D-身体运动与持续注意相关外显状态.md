@@ -26,12 +26,12 @@
 3. 注意下降是否具有固定的运动方向，即一定“更多运动”或一定“更少运动”？
 4. 整体运动量和具体姿态方向中，哪一类更适合作为 FocusWave 当前 RGB 的主要心理学表述？
 5. 普通 RGB 视频研究如何使用可见行为预测心智游移、投入和注意相关状态？预测成功能够支持到什么解释层级？
-6. 实验室、课堂、驾驶等情境之间哪些结果可以迁移，哪些只能作为情境特异证据？
+6. 实验室、课堂、驾驶与办公等情境之间哪些结果可以迁移，哪些只能作为情境特异证据？
 7. 当前毫米波运动相关字段与 RGB 可见运动在构念上可能如何区分？
 
 ### 1.2 检索范围
 
-2026-09-12 检索了以下组合及其同义扩展：`sustained attention + movement`、`mind wandering + body movement / head movement`、`task engagement + posture / movement`、`fidgeting + cognition / attention`、`video-based mind wandering`、`behavioral engagement detection`、`fatigue / drowsiness + posture`，并扩展至 human factors（人因学）、educational psychology（教育心理学）和 affective computing（情感计算）。优先顺序为：心理学/人因学直接实证与综述 > 有明确状态标签来源的视频识别研究 > 仅以工程性能为目的的分类研究。
+2026-09-12 检索了以下组合及其同义扩展：`sustained attention + movement`、`mind wandering + body movement / head movement`、`task engagement + posture / movement`、`fidgeting + cognition / attention`、`video-based mind wandering`、`behavioral engagement detection`、`fatigue / drowsiness + posture`、`office work + movement / attention`、`sedentary work + cognition`，并扩展至 human factors（人因学）、educational psychology（教育心理学）和 affective computing（情感计算）。优先顺序为：心理学/人因学直接实证与综述 > 有明确状态标签来源的视频识别研究 > 仅以工程性能为目的的分类研究。
 
 核心文献均核验作者、年份、题名、期刊、DOI（数字对象唯一标识符）或稳定出处、研究条件和主要结果。工程研究只用于支持“可见行为具有可预测信息”，不将分类性能转写为心理机制证据。
 
@@ -103,6 +103,8 @@ fatigue（疲劳）与 drowsiness（困倦）需要与持续注意下降区分�
 驾驶研究提供了最清楚的边界例子。He 等（2016）在 50 名驾驶模拟参与者中同步记录 EEG（脑电图）、头部点动角、眼睑闭合和时间因素，用 EEG 状态作为警觉/困倦分组依据。其结果显示头部点动的多个时域/频域指标可区分状态，但论文同时指出困倦时既可能出现频繁点头，也可能出现**持续较长时间的极小头部运动**，而且头部运动具有明显个体驾驶习惯差异。这再次说明困倦并不是简单的“运动越大”。
 
 Perrotte、Bougard、Portron 与 Vercher（2024）在部分自动驾驶模拟中连续记录座椅压力/姿态运动和心肺指标，并以 PERCLOS70（眼睑闭合比例标准）划分困倦程度。姿态信息确实增加了困倦检测信息，但姿态同时受到自动驾驶任务状态影响。其后 Perrotte、Vercher 与 Bougard（2026）的真实道路研究进一步发现，与深度困倦/入睡相关的姿态存在显著个体差异，姿态指标对自动化等级也很敏感。作者据此强调姿态同时反映主动行为和困倦，个体化监测仍然必要。
+
+办公场景进一步说明这种关系缺乏跨情境单调性。Tuckwell、Vincent、Gupta 与 Ferguson（2022）以系统检索方式综述了 8 项办公室久坐中断研究，干预包括坐站转换、步行桌和骑行桌；工作记忆、注意和心理运动功能在部分研究中出现短时改善，但其他研究没有相同收益，整体结果是混合的。这里的“更多运动”还是实验干预而不是自然发生的小动作，因此它不能直接用于解释 FocusWave 的帧差运动量；但它清楚表明，即使在办公持续认知任务中，姿态/活动变化与认知表现也高度依赖运动类型、时间尺度和任务要求，不能形成统一方向阈值。
 
 因此，FocusWave 如果在持续任务后期观察到运动增加、减少或特定姿态变化，都不能在没有额外证据时归因于“注意下降”。可能解释至少包括：心智游移加深、身体不适/疲劳导致重新调整、困倦导致慢性头部变化或运动减少、主动维持清醒的补偿动作，以及单纯的任务持续时间效应。正式分析应将 block（区块）与 time-in-block（区块内时间）作为重要背景变量，而报告解释应保留这些竞争机制。
 
@@ -180,6 +182,7 @@ movement energy（运动能量）回答的是“这段时间画面中发生了�
 | Whitehill et al., 2014 | 学习任务；观察者投入评分 | 面部表情视频 | 人类对高/低投入判断一致；机器可逼近观察者判断 | 外显表情可承载“观察到的投入”信息 | 观察者投入标签等同内部持续注意 |
 | Buono et al., 2023 | 在线讲座；模型输出与学生自评投入比较 | 面部动作、视线、头姿 | 整体投入预测与自评关系较弱；情绪维度关系更强 | 可见行为对投入不同维度的信息强度不同 | 训练出的投入分类器天然有效测量认知投入 |
 | Perrotte et al., 2024 | 部分自动驾驶；PERCLOS70 困倦标签 | 座椅压力、姿态运动、心肺信号 | 姿态提供困倦相关信息，但也受自动化任务状态影响 | 姿态是有用但情境敏感的困倦线索 | 某种姿态变化只由困倦造成 |
+| Tuckwell et al., 2022 | 办公久坐中断研究综述 | 坐站、步行桌、骑行桌等活动干预 | 8 项研究的注意/工作记忆/心理运动结果混合，部分短时改善、部分无效 | 办公场景中活动与认知关系受运动类型、时间尺度和任务影响 | 更多活动具有统一的注意改善或损害方向 |
 | Xu et al., 2026 | 52 项自动学习投入测量研究综述 | 眼、脸、头姿、手势/手姿等 | 非言语视觉线索广泛使用；头姿意义受任务情境限制 | 身体线索适合作为情境化、多模态投入观察 | 头姿存在跨任务固定“投入方向” |
 
 ---
@@ -296,7 +299,7 @@ movement energy（运动能量）回答的是“这段时间画面中发生了�
 7. **Fredricks et al. (2004)**：用于界定任务/学习投入是行为、情绪和认知多维构念，防止把可见行为等同认知投入。
 8. **Perrotte et al. (2024)**：用于疲劳/困倦边界和“姿态有信息但同时受任务情境影响”的人因证据。
 
-如果最终参考文献篇幅很紧，可先保留前 6 篇；如果 2.4 需要专门解释 engagement（投入）构念和困倦边界，再加入第 7–8 篇。
+如果最终参考文献篇幅很紧，可先保留前 6 篇；如果 2.4 需要专门解释 engagement（投入）构念和困倦边界，再加入第 7–8 篇。Tuckwell et al.（2022）作为办公场景的补充边界证据保留在调研记录中，不占用最终核心 5–8 篇名额。
 
 ---
 
@@ -312,7 +315,7 @@ Farley, J., Risko, E. F., & Kingstone, A. (2013). Everyday attention and lecture
 
 Fredricks, J. A., Blumenfeld, P. C., & Paris, A. H. (2004). School engagement: Potential of the concept, state of the evidence. *Review of Educational Research, 74*(1), 59–109. https://doi.org/10.3102/00346543074001059
 
-He, Q., Li, W., Fan, X., & Fei, Z. (2016). Evaluation of driver fatigue with multi-indicators based on artificial neural network. *IET Intelligent Transport Systems, 10*(8). https://doi.org/10.1049/iet-its.2015.0021
+He, Q., Li, W., Fan, X., & Fei, Z. (2016). Evaluation of driver fatigue with multi-indicators based on artificial neural network. *IET Intelligent Transport Systems, 10*(8), 555–561. https://doi.org/10.1049/iet-its.2015.0021
 
 Perrotte, G., Bougard, C., Portron, A., & Vercher, J.-L. (2024). Monitoring driver drowsiness in partially automated vehicles: Added value from combining postural and physiological indicators. *Transportation Research Part F: Traffic Psychology and Behaviour, 100*, 458–474. https://doi.org/10.1016/j.trf.2023.12.010
 
@@ -321,6 +324,8 @@ Perrotte, G., Vercher, J.-L., & Bougard, C. (2026). Postural and physiological i
 Qian, B., Liu, Y., Yang, X., & Zhang, Z. (2024). The effects of posture on mind wandering. *Experimental Psychology, 71*(3), 154–163. https://doi.org/10.1027/1618-3169/a000616
 
 Seli, P., Carriere, J. S. A., Thomson, D. R., Cheyne, J. A., Ehgoetz Martens, K. A., & Smilek, D. (2014). Restless mind, restless body. *Journal of Experimental Psychology: Learning, Memory, and Cognition, 40*(3), 660–668. https://doi.org/10.1037/a0035260
+
+Tuckwell, G. A., Vincent, G. E., Gupta, C. C., & Ferguson, S. A. (2022). Does breaking up sitting in office-based settings result in cognitive performance improvements which last throughout the day? A review of the evidence. *Industrial Health, 60*(6), 501–513. https://doi.org/10.2486/indhealth.2021-0174
 
 Whitehill, J., Serpell, Z., Lin, Y.-C., Foster, A., & Movellan, J. R. (2014). The faces of engagement: Automatic recognition of student engagement from facial expressions. *IEEE Transactions on Affective Computing, 5*(1), 86–98. https://doi.org/10.1109/TAFFC.2014.2316163
 
