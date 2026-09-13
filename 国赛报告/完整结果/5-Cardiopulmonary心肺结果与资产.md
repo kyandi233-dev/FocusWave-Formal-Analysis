@@ -154,7 +154,7 @@
 | 保留为缺失或错误 | 140 probes（**不补 0、不静默删行**） |
 | 端点合同 | `exact_integer_equality`，`endpoint_atol_ms = 0`，`endpoint_rtol = 0`，已冻结 |
 | 端点差审计 | `n_total = 2,320`、`n_finite = 2,320`、`n_zero = 2,320`、**`n_nonzero = 0`**、`abs_max_delta_ms = 0` |
-| `time_legality_status` | `blocked_upstream_contract_mismatch` |
+| `time_legality_status` | **`verified_pre_probe_only`**（2026-09-13 由 `blocked_upstream_contract_mismatch` 解除，见 §13） |
 | `physiology_qualification` | `LIMITED_SUPPORTING_ONLY` |
 | 两个特征的 `prediction_eligibility` | 均为 **false** |
 | 禁止升级字段 | `HF`、`LF`、`LF_HF`、`mmwave_ibi_median_ms`、`mmwave_motion_proxy_median`、`mmwave_rmssd_ms`、`mmwave_sdnn_ms` |
@@ -166,10 +166,10 @@
 
 ### 11.4 `分析设计/1.15.9` §3 第五状态与代码枚举的差异（**仅登记，不修改代码**）
 
-`分析设计/1.15.9` §3 裁决新增第五个 time-legality 状态 `blocked_upstream_contract_mismatch`，且要求严格 fail-closed。当前状态：
+`分析设计/1.15.9` §3 裁决新增第五个 time-legality 状态 `blocked_upstream_contract_mismatch`，且要求严格 fail-closed。**该状态已于 2026-09-13 解除为 `verified_pre_probe_only`（见 §13.2）**，以下为历史登记：
 
-- 该字符串**已经被真实使用**：`mmwave_cardiopulmonary_coverage.csv` 与 `feature_handoff.csv` 均写入 `time_legality_status = blocked_upstream_contract_mismatch`，并配 `physiology_qualification = LIMITED_SUPPORTING_ONLY`、全部预测资格字段为 `False`。
-- 但 Attention-Analysis 的 `src/attention_pipeline/supervised_learning/time_legality.py` 中 `ALLOWED_TIME_LEGALITY_STATUSES` **仍只有四个状态**（`verified_pre_probe_only`、`pending_upstream_freeze`、`blocked_future_information`、`blocked_temporal_scope_unknown`），**不含该第五状态**。
+- 该字符串**曾在真实产物中使用**：`mmwave_cardiopulmonary_coverage.csv` 与 `feature_handoff.csv` 写入 `time_legality_status = blocked_upstream_contract_mismatch`，并配 `physiology_qualification = LIMITED_SUPPORTING_ONLY`、全部预测资格字段为 `False`。
+- 但 Attention-Analysis 的 `src/attention_pipeline/supervised_learning/time_legality.py` 中 `ALLOWED_TIME_LEGALITY_STATUSES` **只有四个状态**（`verified_pre_probe_only`、`pending_upstream_freeze`、`blocked_future_information`、`blocked_temporal_scope_unknown`），**不含该第五状态**。
 - 因此若把 mmWave 特征送入该登记/校验链，它会因状态不在枚举内而**失败关闭**——结果方向与 1.15.9 一致（fail-closed），但原因是"枚举缺失"而不是"语义显式拒绝"。
 - **本次仅登记该差异，不修改代码**，理由是它不阻塞任何当前交付：Cardiopulmonary 未登记任何特征，mmWave 也不进入正式预测。补枚举属后续代码任务，须同时补测试。
 
@@ -223,11 +223,13 @@
 
 不得写成"已完成生理效度验证""真实心率/呼吸率"或"独立金标准已验证"。报告**不必**一律写"producer-side time-legality 未完全验证"；更准确的限制是：时间窗口有 corrected DLL-time replay 的生产端审计证据，但当前 canonical main 与该历史执行 lineage 的源码收口尚未完成。
 
-### 13.2 lineage 待决 = **路径 3（暂不解除，等 M1 接入统一 snapshot 流程时一并处理）**
+### 13.2 lineage 处置：**已解除**（原路径 3 作废）
 
-下游 `time_legality_status` **维持 `blocked_upstream_contract_mismatch`**，本次**不解除**。理由：`分析设计/1.15.9` §3 明确要求"上游合同修复、边界测试、old-vs-new 逐 probe 审计、**source-code provenance 闭环**"四项同时完成并留下非空 evidence 才允许转为 `verified_pre_probe_only`；而旧的 `codex/mmwave-formal-state-sync-v1` 隔离分支中的状态同步提案尚未并入 canonical 线。因此本报告的 lineage 处置统一为：**保持 fail-closed，问题随 M1 接入统一 snapshot 流程时一并处理**。
+> **本节状态已于 2026-09-13 更新。** 原判断为"维持 `blocked_upstream_contract_mismatch`，本次不解除"，理由是 `分析设计/1.15.9` §3 的四项前置（上游合同修复、边界测试、old-vs-new 逐 probe 审计、**source-code provenance 闭环**）尚未同时完成。
 
-该决定对本报告是**中性的**：Cardiopulmonary 本来就未登记任何特征、不进入正式预测，因此维持 fail-closed 不改变第 5.5 节可写的内容，也不改变 5.6–5.8 的任何数字。
+**现状态：`time_legality_status` = `verified_pre_probe_only`。** 四项前置经生产者侧 M1 合同收口后全部满足，裁决与精确执行命令见 `运行记录与证据/09-13-3-mmWave-producer-M1合同收口与time-legality解除裁决.md`（状态转换：`blocked_upstream_contract_mismatch → verified_pre_probe_only`）。
+
+**解除只关闭"时间合同与来源追溯"这一层，不改变第 5.5 节可写的内容，也不改变 5.6–5.8 的任何数字。** 理由：Cardiopulmonary 仍未在正式特征登记表中登记任何特征，心率与呼吸率仍为 `HOLD / SUPPORTING_ONLY`，心率变异性仍不纳入，设备组合 M2/M4/M6/M7 仍不可用。因此第 5.5 节仍只写测量评估与应用边界。
 
 ### 13.3 pre-M1 lineage 明确排除
 
