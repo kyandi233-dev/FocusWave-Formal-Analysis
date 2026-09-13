@@ -14,14 +14,6 @@
 | 时间源 | DLL host receive/enqueue timestamp（CSV 零基第 1 列） |
 | 状态 | `MULTIFACTOR_MECHANISM_SUPPORTED` |
 
-输入身份核验（SHA-256 全部精确匹配）：
-
-| 输入表 | 行数 | SHA-256（前 16 位） |
-|---|---:|---|
-| `CONTROL_VS_CANDIDATES_100_PROBES_LOCAL_ONLY.csv` | 100 | `B4251445B1938DF6` |
-| `REFERENCE_QC_ELIGIBILITY_100_PROBES_LOCAL_ONLY.csv` | 100 | `EA9DB07FB37A2027` |
-| `MMWAVE_HR_RECOVERY_P2_ATTRIBUTION_100_PROBES.csv` | 100 | `FFED63DDE2E30F5A` |
-
 ## E.2 冻结对照复现（审计前置，必须通过）
 
 | 通路 | 平均绝对误差（次/min） | 偏差（次/min） | 第 90 百分位绝对误差 |
@@ -94,21 +86,3 @@
 
 **外部验证结果目前为零**：没有任何外部资产达到 C1 资格，因此本报告不报告外部验证数值。
 
-## E.9 来源与可追溯
-
-权威仓库 `greenboo26/focuswave-multimodal-attention-analysis`，分支 `main`，
-目录 `docs/results/2026-09-13_MMWAVE_LOW_BIAS_MECHANISM_AUDIT_V1/`：
-
-| 文件 | 内容 |
-|---|---|
-| `MMWAVE_LOW_BIAS_MECHANISM_AUDIT_V1_REPORT.md` | 完整报告（含硬边界与输入身份） |
-| `FAILURE_CLASS_BIAS_DECOMPOSITION.csv` | E.3 源表 |
-| `BIAS_ATTRIBUTION_DECOMPOSITION.csv` | E.4 源表 |
-| `QC_BIAS_DECOMPOSITION.csv` | E.5 源表 |
-| `FUSION_LOW_BIAS_DECOMPOSITION.csv`、`FUSION_PATH_AUDIT.md` | 融合路径逐 probe 与审计 |
-| `DISTANCE_FAILURE_CLASS_MATRIX.csv`、`DISTANCE_SESSION_STRATIFIED.csv` | 距离分解 |
-| `ECG_HR_BAND_DECOMPOSITION.csv` | 心电心率带分解 |
-| `MECHANISM_EVIDENCE_MATRIX.csv`、`MMWAVE_LOW_BIAS_MECHANISM_AUDIT_V1_MANIFEST.json` | 证据矩阵与 manifest |
-
-其他：覆盖与端点来自集成快照 v1 与端点守卫产物（见 `完整结果/5-Cardiopulmonary心肺结果与资产.md`）；
-正文图 5.5-3（`assets/figM-1_mmwave_bias_attribution.png`）。

@@ -50,15 +50,3 @@
 - 毫米波心率与呼吸率**未显示与整场走神等级的稳定关联**。这**不等于**毫米波无效，只表示在该层级、该效标、该样本量与该汇总尺度下未发现关联。
 - 结论限定在**场次级自评效标**；不能用于把全场生理窗口统一标记为高走神，也不能替代任务内探针报告、测量资格或预测评价（后者见 5.2–5.8）。
 
-## A.6 来源与可追溯
-
-| 项目 | 路径 |
-|---|---|
-| 场次级输入与审计 | `11_数据/derived/questionnaire_session_analysis_v1/` |
-| 来源清单 | `provenance_manifest.json`（`manifest_version = v1`，`created_at = 2026-08-25`） |
-| 输入审计 | `analysis_input_audit.json` |
-| 结局分布 | `outcome_distribution.csv` |
-| 系数表 | `ordinal_models_v1/ordinal_model_coefficients.csv` |
-| 模型诊断 | `ordinal_models_v1/ordinal_model_audit.json`、`model_summaries.txt` |
-| R 实现 | `11_数据/derived/run_questionnaire_ordinal_models_v1.R` |
-| 正文图 | 图 5.9-1（`assets/figQ-1_questionnaire_ordinal_models.png`） |

@@ -1,14 +1,6 @@
 # 附录 F　监督学习与设备组合完整结果附表
 
-对应正文第 5 章。数据来源：`SupervisedRunsV1/report_tables/`、`SupervisedRunsV1/probability_diagnostics/`
-
-本附录只登记**可读的整理表**：字段名为中文、只保留必要列、统一小数位。机器原始表（含内部字段名与逐探针/逐折明细）按仓库规则保留在 local-only 源目录，不进入报告附录。
-
----
-
 ## F.1 各分析集合上的模型性能
-
-来源文件：`headline_model_performance.csv`（43 行）
 
 | **分析集** | **模型** | **参与者数** | **探针数** | **参与者宏平均对数损失** | **95% CI 下限** | **95% CI 上限** | **状态** |
 |---|---|---|---|---|---|---|---|
@@ -56,11 +48,9 @@
 | AS.standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1 | standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1 | 61 | 1855 | 0.6478 | 0.6047 | 0.6967 | estimable |
 | AS.standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1 | standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1 | 61 | 1936 | 0.6471 | 0.6035 | 0.6954 | estimable |
 
-注：主指标为**参与者等权宏平均对数损失**。运行产物中的 `descriptive_base_rate_log_loss`（合并探针口径）与主指标不是同一口径，故未列入本表；同口径无监督基线见 `完整结果/6` §1.0。**不同分析集合分母不同，不得跨集合比较优劣。**
+注：主指标为**参与者等权宏平均对数损失**。描述性无信息基率按合并探针计算，与主指标口径不同，故未列入本表。**不同分析集合分母不同，不得跨集合比较优劣。**
 
 ## F.2 全部 22 项成对比较
-
-来源文件：`paired_increments.csv`（22 行）
 
 | **比较类型** | **特征 / 模态** | **增量** | **95% CI 下限** | **95% CI 上限** | **参与者数** |
 |---|---|---|---|---|---|
@@ -87,11 +77,9 @@
 | full_leave_one_out | ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1 | -0.000302 | -0.006477 | 0.004859 | 60 |
 | full_leave_one_out | ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1 | 0.006406 | -0.003102 | 0.01645 | 60 |
 
-注：增量为「基线损失 − 加项损失」，**负值表示加项更差**。区间为固定折外预测的参与者整簇自助（1,000 次、seed 20260830、95%、不重训），**未做多重比较校正**。22 项中 8 项区间排除 0，其中仅 2 项为正且均属行为信息。
+注：增量为「基线损失 − 加项损失」，**负值表示加项更差**。区间为固定折外预测的参与者整簇自助（1,000 次、95%），**未做多重比较校正**。22 项比较中 8 项的区间排除 0，其中仅 2 项为正且均属行为信息。
 
 ## F.3 概率诊断（排序与校准）
-
-来源文件：`probability_diagnostics.csv`（43 行）
 
 | **分析集** | **模型** | **参与者宏平均 AUROC** | **AUROC CI 下限** | **AUROC CI 上限** | **Brier 分数** | **AUROC 可估人数** | **单一类别人数** | **校准斜率** |
 |---|---|---|---|---|---|---|---|---|
@@ -139,8 +127,4 @@
 | AS.standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1 | standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1 | 0.485 | 0.4469 | 0.5235 | 0.2273 | 49 | 12 | -41.04 |
 | AS.standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1 | standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1 | 0.5925 | 0.5481 | 0.6441 | 0.2268 | 49 | 12 | -0.4288 |
 
-注：AUROC 为**参与者宏平均**，只在具有两类标签的参与者上平均。校准回归按探针合并。该诊断层**不参与模型或正则化参数选择**。
-
----
-
-**写作边界**：本附表内容不得改写为正文结论；正文只引用附录编号与其来源表。
+注：受试者工作特征曲线下面积（area under the receiver operating characteristic curve [AUROC]）为**参与者宏平均**，只在同时具有两类标签的参与者上计算。校准回归按探针合并。**该诊断结果不用于模型或参数选择。**

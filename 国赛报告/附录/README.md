@@ -31,7 +31,6 @@
 | F | `SupervisedRunsV1/report_tables/headline_model_performance.csv`（43）、`paired_increments.csv`（22）、`probability_diagnostics/probability_diagnostics.csv`（43）、`calibration_bins.csv` |
 
 **tracked 与 local-only 边界**：附录只收**聚合表**；逐探针预测、逐折审计、逐帧与行级大表按仓库规则保留本地，
-路径与 SHA-256 在各任务的 manifest 与 `完整结果/` 中登记，不进入 Git 与云盘主包。
 
 ## 云盘交接
 
