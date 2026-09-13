@@ -10,17 +10,24 @@
 - 瞳孔主表示冻结；
 - 眨眼缓冲、固定时间箱、动态指标最低时间跨度冻结；
 - 第一轮 pupil level / variability / slope / curvature / blink rate 候选物化；
-- feature handoff 与 coverage 输出。
+- feature handoff 与 coverage 输出；
+- 2,320 probe canonical identity 闭环；
+- Behavior + Ocular + Movement 三模态 P5 interface smoke（接口冒烟测试）真实通过。
 
 因此当前 Ocular 的**测量资格结果已经可以写入报告**；但冻结后的 Ocular 指标与 Q1/Q2、任务进程和近期行为之间的正式效应结果尚未在当前结果总账中形成，不能用测量资格表代替心理学效应。
 
-## 2. 正式样本与覆盖结构
+## 2. 正式样本、NIR 结构性缺失与覆盖结构
 
 正式研究总体为 61 名参与者、116 个实验场次、2,320 个思维探针。Ocular 的设备可用性不同于总体治理样本：
 
 - 近红外瞳孔测量 source manifest 覆盖 109 个实验场次；
-- 最终同时具备近红外瞳孔与 RGB 眨眼辅助清洗条件的场次为 108 个；
-- 108 个联合覆盖场次理论上对应 2,160 个思维探针窗口。
+- 7 个治理场次的 NIR 当前不可用：`sub-086`、`sub-087`、`sub-088`、`sub-089`、`sub-090`、`sub-091`、`sub-099`；
+- `sub-086`～`sub-091` 的原始 NIR 视频存在，但只有旧 schema producer 产物，缺少当前 fullclass-final/G1 必需字段；`sub-099` 原始视频存在，但当前正式 producer 根目录没有可用产物；
+- 这 7 场不是 G1 QC 淘汰，也不是 probe identity 缺失；对应 140 probes 在 Behavior/RGB 中完整存在；
+- 当前正式决定为：7 场作为**结构性 NIR availability 缺失**保留，不重跑 producer，不补零、不插补、不改变 cohort membership；
+- 最终同时具备近红外瞳孔与 RGB 眨眼辅助清洗条件的场次为 108 个；108 个联合覆盖场次理论上对应 2,160 个思维探针窗口。
+
+因此 Ocular 的 probe universe 始终保持 61 人 / 116 场 / 2,320 probes；NIR 只在真实可用范围产生有限值。
 
 第一轮冻结后的 5 个主要 Ocular 特征覆盖为：
 
@@ -139,7 +146,7 @@ NIR QC 后，示例总体构成约为：binocular 37.9%；left-only + right-only
 
 用于提供探针前眨眼频率等 Ocular 眼部行为信息。RGB 眨眼同时参与瞳孔眨眼污染区间清洗，但眨眼科学上仍归入 Ocular，不归入 Movement。
 
-## 9. P3 冻结后的正式输出
+## 9. P3 冻结与 P5 身份闭环后的正式输出
 
 本地根目录：`D:\Project\厚粲杯\11_数据\_FormalAnalysis\FormalScience\Ocular\`
 
@@ -148,17 +155,19 @@ NIR QC 后，示例总体构成约为：binocular 37.9%；left-only + right-only
 | `ocular_science_output_manifest.json` | 小型 JSON | 冻结参数、表示角色、输入证据与停止线 | 追溯/QC |
 | `ocular_feature_handoff.csv` | 25 行 | 眼部候选、required devices、角色、时间合法性、registry readiness | 后续统一 registry 输入 |
 | `ocular_feature_coverage.csv` | 25 行 | 每个候选的有限值覆盖、参与者数、场次数 | 5.1 / 测量资格 |
-| `ocular_probe_features_wide.csv` | 2,320 × 28 | 探针级 Ocular 宽表，后续 P5/监督学习接口输入 | 大型正式数据表，不复制全文 |
+| `ocular_probe_features_wide.csv` | **2,320 × 27** | 探针级 Ocular 宽表；含 canonical identity；P5/后续接口输入 | 大型正式数据表，不复制全文 |
 | `g1_temporal_support_freeze_grid.csv` | 72 行 | 冻结证据归档副本 | 测量资格 |
 | `g1_cross_signal_representation_summary.csv` | 168 行 | 表示一致性归档副本 | 测量资格 |
 | `g1_sync_semantics_split.csv` | 109 行 | 同步/覆盖诊断归档副本 | QC |
 | `g1_source_mode_limit_summary.csv` | 6 行 | 来源模式限制归档副本 | QC |
 
-注意：P3 Ocular 目录内的四张 freeze-support 归档副本在写入时发生过 1e−16 量级浮点末位重写；若需要权威原始精度，应引用 `NIR_G1_20260912_fixed\freeze_support\` 中的原表。
+最新物化后，canonical key 缺失/重复均为 0；G1 覆盖 2,180 probes，140 个 G1 缺失治理 probes 的 NIR predictor 全部保持 missing。四张 freeze-support 归档副本已按 byte-exact（字节一致）方式保存，不再存在旧 bundle 中约 1e−16 的 CSV 浮点末位重写问题。
 
 ## 10. 当前 Ocular 图件状态
 
 P3 冻结 bundle 主要完成**表格与 feature handoff 物化**，当前并没有一套已经冻结的 Ocular Q1/Q2 正式心理效应图包。因此结果总账暂不虚构“正式眼部效果图”。当前正文可以使用表 5.3-1（hard R_seg 与 geometry 一致性）和表 5.3-2（最低时间跨度与动态指标保留率）。
+
+下一步应在已冻结的 5 个第一轮 Ocular 特征上形成 task progression（任务进程）、Q1、Q2、recent Behavior（近期行为）正式解释性结果及对应图件；该工作不重新开放 P3 表示选择。
 
 ## 11. Google Drive 证据
 
@@ -180,18 +189,32 @@ https://drive.google.com/file/d/1uc1TsW6MvOUdbnTYypB8I3zcpC8vsRI_/view
 `_AI_HANDOFF/2026-09-13_p4-movement-ocular-materialization/`  
 https://drive.google.com/drive/folders/1tZwZtxA-FNVCVqOzGXjMUjCtanLZePYe
 
+### 11.4 P5 三模态接口真实通过
+
+当前权威 bundle：
+
+`_AI_HANDOFF/2026-09-13_p5-interface-smoke-pass-4205b8c/`
+
+历史失败 bundle 保留用于追溯，不作为当前权威结果：
+
+- `2026-09-13_p5-interface-smoke-BLOCKED-dd94a13/`
+- `2026-09-13_p5-interface-smoke-BLOCKED-2-13dbead/`
+
 ## 12. GitHub 方法与代码来源
 
 - G1 freeze-support 运行：`codex/nir-g1-summary-hardening @ 9b9a0ec170ab7e54198293bed181b134e492f4bc`
-- P3 冻结物化：`codex/1.16.10-modality-device-separation @ 49d2f9a231bd1436b543ebc93f61541db24d2c53`
+- P3 初始冻结物化：`codex/1.16.10-modality-device-separation @ 49d2f9a231bd1436b543ebc93f61541db24d2c53`
+- P5 身份闭环与真实通过：`codex/1.16.10-modality-device-separation @ 4205b8c903f33e372c1459a6186b4efa6a686293`
 - 方法裁决：`分析设计/1.16.15-Ocular_G1补充证据裁决与P3冻结_20260913.md`
+- P5 身份/缺失裁决：`分析设计/1.16.18-P5_Ocular探针宇宙与NIR缺失身份桥接裁决_20260913.md`
 - 报告方法：`国赛报告/章节草稿/4.4-科学变量形成、窗口化与质量控制.md`
 - 当前结果草稿：`国赛报告/章节草稿/5.3-眼部测量资格与瞳孔动态_20260913.md`
 
 ## 13. 已知限制与后续更新点
 
-1. 当前正式科学结果只冻结到“眼部指标如何可靠形成”，尚未形成冻结后 Ocular 对 Q1/Q2 的最终效应结果。
-2. 眨眼频率仅覆盖 60 名参与者 / 110 场 / 2,200 probes，分母与瞳孔主指标不同，后续模型不得假设二者完全同样本。
-3. 个别场次存在极端 nearest-frame residual；当前处理为窗口级实际可用性 + QC，而不是自动全场剔除。
-4. source mode 的数值偏倚无法从现有小表估计，只能作为限制与敏感性条件报告。
-5. 当前 P3 handoff manifest 曾出现顶层 `formal_minimum_span_frozen=false` 与 freeze-evidence 中 `true/20s` 的字段语义冲突；实际输出覆盖已按 20 s 规则生成。该记录属于追溯问题，不改变当前科学裁决；后续如新 bundle 修正 manifest，应更新本文件的权威证据指针。
+1. 当前正式科学结果只冻结到“眼部指标如何可靠形成”，尚未形成冻结后 Ocular 对 Q1/Q2、任务进程和近期行为的最终效应结果。
+2. 7 个治理场次的 NIR 作为结构性缺失正式接受，不重跑 producer；这不改变 116 场治理总体，也不允许使用旧 schema 产物补值。
+3. 眨眼频率仅覆盖 60 名参与者 / 110 场 / 2,200 probes，分母与瞳孔主指标不同，后续模型不得假设二者完全同样本。
+4. 个别场次存在极端 nearest-frame residual；当前处理为窗口级实际可用性 + QC，而不是自动全场剔除。
+5. source mode 的数值偏倚无法从现有小表估计，只能作为限制与敏感性条件报告。
+6. P5 已通过但只证明 Behavior / Ocular / Movement 三模态接口、身份、时间合法性和缺失语义一致；它不是正式监督学习结果，也未修改 unified feature registry。
