@@ -230,6 +230,9 @@ Movement P4 还读取：
 **`_AI_HANDOFF/2026-09-13_p4-movement-final-6955ad9/`**  
 https://drive.google.com/drive/folders/1RhP38Im0kKDFv2g-q7e4_nzIP8QpGrpM
 
+> **⚠ 版本边界（2026-09-13 补记）**：该 bundle 生成于 09:26，其 `movement_behavior_links.csv` 的 **RT-CV 行已被同日 20:04 的 RT-CV 口径统一重跑取代**（`rt_cv_min_n` 由 20 改为 2，见 §6.1）。当前权威的 Movement 科学输出为 `D:\Project\厚粲杯\11_数据\_FormalAnalysis\FormalScience\Movement\`（其 `source_rgb55_root = RGB\22_analysis_tables_5.5_rtcv_n2`）。
+> **该重跑尚未生成对应的 `_AI_HANDOFF` bundle**，因此本 bundle 与当前权威表在 RT-CV 行上不一致（`n_rows` 1,794 → 2,298；`session_n` 111 → 115）。**除这 6 个 RT-CV 单元格外，两版的 `movement_task_progression.csv`、`movement_q1_models.csv`、`movement_q2_models.csv`、`movement_feature_coverage.csv` 数值完全一致**（已逐列复算），本 bundle 嵌入的 3 张 PNG 亦不含 RT-CV，故对第 5.4 节结论无影响。按本 bundle 逐行复核 5.4 的 RT-CV 表述时须改用当前权威表。
+
 HANDOFF：  
 https://drive.google.com/file/d/1W_AJ1znSzOF2XmqsftkTFOtv6W5a-KWO/view
 
@@ -237,6 +240,8 @@ https://drive.google.com/file/d/1W_AJ1znSzOF2XmqsftkTFOtv6W5a-KWO/view
 https://drive.google.com/file/d/16fpl0mIRDVujSCDcWGzj8Aw5ZpC6s_NN/view
 
 bundle 包含 HANDOFF、Movement manifest、figure manifest/audit、feature handoff/coverage、5 张核心 PNG、4 张正式报告源表、最终字体补丁 diff、CJK 渲染回归测试、运行日志和 bundle manifest。其余 8 张 PNG、13 张 SVG、较大源表和图件源表保留在本地。
+
+**已知图件缺陷（待生产端修复）**：图 5.4-2 与图 5.4-3 的纵轴标签使用英文原始列名（如 `body_motion_energy_median | Q1=4 | ref=1`），与图件契约的 `Chinese_primary` 要求不符（图 5.4-1 为中文，三图不统一）；另有既有 `figure_manifest.csv` 对本图登记 `probe_or_model_row_n = 2320`，与实际（61 名参与者的配对、115 个场次 × 6 阶段均值）不符。本报告不自行重绘生产端图件，登记待其修复。
 
 ## 11. GitHub 方法与代码来源
 
