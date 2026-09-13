@@ -14,7 +14,7 @@
 - 2,320 probe canonical identity 闭环；
 - Behavior + Ocular + Movement 三模态 P5 interface smoke（接口冒烟测试）真实通过。
 
-因此当前 Ocular 的**测量资格结果已经可以写入报告**；但冻结后的 Ocular 指标与 Q1/Q2、任务进程和近期行为之间的正式效应结果尚未在当前结果总账中形成，不能用测量资格表代替心理学效应。
+因此当前 Ocular 的**测量资格结果已经可以写入报告**，冻结后 Ocular 指标与 Q1/Q2、任务进程和近期行为之间的正式效应结果也已在 `4fdb1a2` 的运行中形成，并在本文件第 10 节登记。两者身份不同：测量资格回答“指标能否稳定形成”，心理效应回答“指标与注意状态怎样对应”，不得互相替代。
 
 ## 2. 正式样本、NIR 结构性缺失与覆盖结构
 
@@ -163,20 +163,71 @@ NIR QC 后，示例总体构成约为：binocular 37.9%；left-only + right-only
 
 最新物化后，canonical key 缺失/重复均为 0；G1 覆盖 2,180 probes，140 个 G1 缺失治理 probes 的 NIR predictor 全部保持 missing。四张 freeze-support 归档副本已按 byte-exact（字节一致）方式保存，不再存在旧 bundle 中约 1e−16 的 CSV 浮点末位重写问题。
 
-## 10. 当前 Ocular 图件状态
+## 10. 冻结后眼部心理效应正式结果
 
-P3 冻结 bundle 主要完成**表格与 feature handoff 物化**，当前并没有一套已经冻结的 Ocular Q1/Q2 正式心理效应图包。因此结果总账暂不虚构“正式眼部效果图”。当前正文可以使用表 5.3-1（hard R_seg 与 geometry 一致性）和表 5.3-2（最低时间跨度与动态指标保留率）。
+### 10.1 证据身份与版本
 
-下一步应在已冻结的 5 个第一轮 Ocular 特征上形成 task progression（任务进程）、Q1、Q2、recent Behavior（近期行为）正式解释性结果及对应图件；该工作不重新开放 P3 表示选择。
+| 项 | 值 |
+|---|---|
+| 分析代码 | `kyandi233-dev/Attention-Analysis` `codex/1.16.10-modality-device-separation @ 4fdb1a22f99afaad604d6023a34796e9663fd4dd` |
+| 运行 manifest | `manifests/run_manifest.json`（`status = complete`，`created_at_utc = 2026-09-13T04:42:14Z`） |
+| 科学输出 manifest | `manifests/science_output_manifest.json`（`schema = ocular-postfreeze-science-v1`，`status = complete`，`authoritative = true`） |
+| 输入 | `tables/ocular_probe_features_wide.csv`（sha256 `f0d7b231…`）与 `Behavior/formal_v3/probe_primary_30s.csv`（sha256 `b15acd4b…`） |
+| 身份审计 | 眼部探针 2,320、行为探针 2,320、合并后 2,320；单侧独有 key 均为 0；61 参与者 / 116 场次；`key_universe_exact_match = true` |
+| 停止线 | `final_feature_registry_mutated = false`、`supervised_model_run = false`、`multimodal_model_run = false`、`performance_metric_computed = false`、`nir_producer_rerun = false` |
 
-## 11. Google Drive 证据
+`run_manifest.json` 登记了 6 张结果表的 SHA-256。已现场逐文件重算并与登记值比对，**6/6 完全一致**，因此本节表格与冻结运行字节对应。
 
-### 11.1 冻结前的原始精度证据
+### 10.2 五张正式结果表
+
+| 结果表 | 行数 | 用途 | 报告角色 |
+|---|---:|---|---|
+| `ocular_task_progression.csv` | 15 | 五个维度 × 区块、区块内进程、二者交互 | 正文（5.3.5） |
+| `ocular_q1_models.csv` | 30 | Q1 四类别 × 五个维度 × 参与者内/之间 | 正文（人内）＋正式伴随附录（人际） |
+| `ocular_q2_models.csv` | 10 | Q2 有序等级 × 五个维度 × 参与者内/之间 | 正文（人内）＋正式伴随附录（人际） |
+| `ocular_behavior_links.csv` | 40 | 四个近期行为结果 × 五个维度 × 参与者内/之间 | 正文（人内）＋正式伴随附录（人际） |
+| `ocular_feature_analysis_coverage.csv` | 5 | 五个冻结维度的有限值覆盖与分母 | 5.1 / 测量资格 |
+| `model_failures.csv` | 0 | 不可估计模型登记 | QC：**本次无失败模型** |
+
+`ocular_sensitivity_role_audit.csv`（20 行）机械登记了全部替代表示的 `analysis_role` 与 `main_model_eligible`，其中 `significance_can_promote_to_main` 在**每一行都为 False**：几何瞳孔、瞳孔标准差、仅近红外清洗轨道等替代表示不会因统计判据进入主结果。
+
+### 10.3 模型口径（源自 `science_output_manifest.json`，不得改写）
+
+- **任务进程**：`每个冻结眼部维度 ~ block_b2 + progression_centered + block_b2 × progression_centered`，Gaussian GEE exchangeable；`progression_centered = (probe_index_in_block − 1) / 9 − 0.5`；聚类单位 `participant_group_id`。
+- **Q1**：结果变量 `q1_nominal_4class`，参照类别 1；参与者聚类稳健多项逻辑回归；眼部同时纳入参与者均值（between）与探针偏离（within）；伴随项 `block_b2`、`progression_centered`。
+- **Q2**：结果变量 `q2_ordinal_4level`，**累积 Logit 有序模型**配合参与者聚类稳健协方差；**不作为连续变量处理**。
+- **眼部—行为联系**：方向为 `近期行为结果 ~ 眼部 within + 眼部 between + block + progression`，**仅为关联，不作因果主张**；连续结果用 Gaussian GEE，比率结果用由明确分子分母构造的 binomial GEE；每个模型只纳入一个眼部维度。
+- **多重比较**：Benjamini–Hochberg 分别在任务进程 / Q1 / Q2 / 行为四个族内校正，**从不用于重新选择眼部特征**。
+- **缺失处理**：逐模型完整观测；不补零、不插补；治理身份保持。
+
+### 10.4 当前正式效应结果
+
+按 `分析设计/1.16.19` 的裁决，正文以参与者内部（`ocular_within_z`）效应为主叙事，全部参与者之间（`ocular_between_z`）结果完整保留为 `formal_companion` 伴随结果，**不是**敏感性分析。
+
+参与者内部结果中，只有眨眼频率出现明确的注意内容相关效应：相对于“聚焦当前分类任务”，任务无关思维（*OR* = 1.258，95% CI [1.096, 1.444]，族内 *q* = .016）与思维空白（*OR* = 1.348，95% CI [1.157, 1.570]，族内 *q* = .004）都对应更高的眨眼频率。四个瞳孔维度的 12 个参与者内部对比区间全部包含 0。Q2 主观警觉方面，五个维度的参与者内部区间全部包含 0。眼部—行为的参与者内部关系中，眨眼频率与近期 Go 遗漏率的关联通过族内校正（*OR* = 1.154，95% CI [1.085, 1.228]，族内 *q* < .001）。
+
+任务进程方面，瞳孔波动与眨眼频率在区块间与区块内进程上均呈上升方向，但**整个任务进程族没有任何一项通过族内校正**（最小 *q* = .057），只能作为方向性观察报告。
+
+参与者之间（伴随）结果中，Q1 与 Q2 共 20 个对比均未通过族内校正；眼部—行为的人际关系中有两项通过族内校正：瞳孔二次时间曲率与正确 Go 反应时 Theil–Sen 斜率（*b* = −0.130，95% CI [−0.204, −0.057]，族内 *q* = .010）以及眨眼频率与 No-Go 误按率（*OR* = 0.772，95% CI [0.658, 0.905]，族内 *q* = .019）。**注意方向**：眨眼频率与 No-Go 误按率的人内方向为正而人际方向为负，两类结果不得互相外推。
+
+以上全部数字可在第 5.3 节对应表格中逐项复核；本总账不重复全部 95 行效应。
+
+## 11. 当前 Ocular 图件状态
+
+P3 冻结 bundle 主要完成**表格与 feature handoff 物化**。冻结后分析（`4fdb1a2`）生成了 7 张图与 7 份图件审计，但按 `分析设计/1.16.19` 的裁决，这些图把参与者内与参与者之间的结果混在同一图内，**不符合当前报告层级**，因此不作为正文主图。正文主图集 `O-M1` 至 `O-M4` 尚未重绘。
+
+因此结果总账仍然只登记正式表格，不虚构已冻结的“正式眼部效果图”。当前正文可以使用表 5.3-1（hard R_seg 与 geometry 一致性）、表 5.3-2（最低时间跨度与动态指标保留率）以及 5.3.5–5.3.9 的效应表（对应第 10 节登记的正式结果表）。
+
+`O-M1` 需由同一冻结 Gaussian GEE（`feature ~ block_b2 * progression_centered`）派生预测值与 95% 置信区间，属独立图件工作，且需要获批后才能实现；该工作不重新开放 P3 表示选择，也不改变本文件第 10 节的统计结果。
+
+## 12. Google Drive 证据
+
+### 12.1 冻结前的原始精度证据
 
 `_AI_HANDOFF/2026-09-13_ocular-g1-freeze-support-9b9a0ec/`  
 https://drive.google.com/drive/folders/1KAHwOt3-7S3MdnMzBVVxQeGo0qUd5dWP
 
-### 11.2 P3 冻结物化证据
+### 12.2 P3 冻结物化证据
 
 `_AI_HANDOFF/2026-09-13_p3-ocular-frozen-49d2f9a/`  
 https://drive.google.com/drive/folders/1GOJF7LEJns5qVpELqvs_NZkt_5069rJT
@@ -184,12 +235,12 @@ https://drive.google.com/drive/folders/1GOJF7LEJns5qVpELqvs_NZkt_5069rJT
 HANDOFF：  
 https://drive.google.com/file/d/1uc1TsW6MvOUdbnTYypB8I3zcpC8vsRI_/view
 
-### 11.3 早期 Ocular × Movement 交叉伪迹证据
+### 12.3 早期 Ocular × Movement 交叉伪迹证据
 
 `_AI_HANDOFF/2026-09-13_p4-movement-ocular-materialization/`  
 https://drive.google.com/drive/folders/1tZwZtxA-FNVCVqOzGXjMUjCtanLZePYe
 
-### 11.4 P5 三模态接口真实通过
+### 12.4 P5 三模态接口真实通过
 
 当前权威 bundle：
 
@@ -200,19 +251,27 @@ https://drive.google.com/drive/folders/1tZwZtxA-FNVCVqOzGXjMUjCtanLZePYe
 - `2026-09-13_p5-interface-smoke-BLOCKED-dd94a13/`
 - `2026-09-13_p5-interface-smoke-BLOCKED-2-13dbead/`
 
-## 12. GitHub 方法与代码来源
+### 12.5 冻结后眼部心理效应（`4fdb1a2`）
+
+`_AI_HANDOFF/2026-09-13_ocular-postfreeze-analysis-4fdb1a2/`  
+https://drive.google.com/drive/folders/1sioMXbaU4tzzUus4AB9PjVYyRK8poLmP
+
+## 13. GitHub 方法与代码来源
 
 - G1 freeze-support 运行：`codex/nir-g1-summary-hardening @ 9b9a0ec170ab7e54198293bed181b134e492f4bc`
 - P3 初始冻结物化：`codex/1.16.10-modality-device-separation @ 49d2f9a231bd1436b543ebc93f61541db24d2c53`
 - P5 身份闭环与真实通过：`codex/1.16.10-modality-device-separation @ 4205b8c903f33e372c1459a6186b4efa6a686293`
+- **冻结后眼部心理效应（本文件第 10 节来源）**：`codex/1.16.10-modality-device-separation @ 4fdb1a22f99afaad604d6023a34796e9663fd4dd`
 - 方法裁决：`分析设计/1.16.15-Ocular_G1补充证据裁决与P3冻结_20260913.md`
 - P5 身份/缺失裁决：`分析设计/1.16.18-P5_Ocular探针宇宙与NIR缺失身份桥接裁决_20260913.md`
-- 报告方法：`国赛报告/章节草稿/4.4-科学变量形成、窗口化与质量控制.md`
+- 绘图与汇报角色裁决：`分析设计/1.16.19-Behavior_Movement_Ocular科研绘图与结果汇报第一阶段裁决_20260913.md`
+- 报告方法：`国赛报告/章节草稿/4.4-科学变量形成、窗口化与质量控制.md`、`国赛报告/章节草稿/4.5-解释性统计与主观信息关联分析.md`
 - 当前结果草稿：`国赛报告/章节草稿/5.3-眼部测量资格与瞳孔动态_20260913.md`
+- 表格装配脚本（第 5.3 节数字由此从冻结结果表生成，非手工誊写）：`D:\Project\厚粲杯\.harness\build_ocular_chapter_tables.py`、`build_5_3_chapter.py`
 
-## 13. 已知限制与后续更新点
+## 14. 已知限制与后续更新点
 
-1. 当前正式科学结果只冻结到“眼部指标如何可靠形成”，尚未形成冻结后 Ocular 对 Q1/Q2、任务进程和近期行为的最终效应结果。
+1. 冻结后 Ocular 对 Q1/Q2、任务进程和近期行为的正式效应结果**已经形成**并登记于第 10 节。但正文主图集（`O-M1` 至 `O-M4`）尚未按 `分析设计/1.16.19` 的层级重绘：当前 `figures/main` 中的 7 张图把参与者内与参与者之间的结果混在同一图内，**不得直接作为正文主图使用**。`O-M1` 需由同一冻结 Gaussian GEE 派生预测值，属独立图件工作，不在本轮结果登记范围内。
 2. 7 个治理场次的 NIR 作为结构性缺失正式接受，不重跑 producer；这不改变 116 场治理总体，也不允许使用旧 schema 产物补值。
 3. 眨眼频率仅覆盖 60 名参与者 / 110 场 / 2,200 probes，分母与瞳孔主指标不同，后续模型不得假设二者完全同样本。
 4. 个别场次存在极端 nearest-frame residual；当前处理为窗口级实际可用性 + QC，而不是自动全场剔除。
