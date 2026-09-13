@@ -50,36 +50,7 @@
 
 注：主指标为**参与者等权宏平均对数损失**。描述性无信息基率按合并探针计算，与主指标口径不同，故未列入本表。**不同分析集合分母不同，不得跨集合比较优劣。**
 
-## F.2 全部 22 项成对比较
-
-| **比较类型** | **特征 / 模态** | **增量** | **95% CI 下限** | **95% CI 上限** | **参与者数** |
-|---|---|---|---|---|---|
-| behavior_increment | movement.body_motion_energy.median.pre30s.v1 | -0.003365 | -0.007163 | -0.000378 | 61 |
-| behavior_increment | ocular.blink_rate.rgb_event_rate.pre30s.v1 | 0.001286 | -0.004866 | 0.007325 | 60 |
-| behavior_increment | ocular.pupil_level.rseg_hard.rgb_nir_qc.v1 | 0.001636 | -0.00385 | 0.01124 | 60 |
-| behavior_increment | ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1 | -0.000493 | -0.000972 | -9.8e-05 | 60 |
-| behavior_increment | ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1 | -0.000992 | -0.003152 | 0.00024 | 60 |
-| behavior_increment | ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1 | 0.006366 | -0.00264 | 0.01612 | 60 |
-| behavior_modality_increment | modality::movement | -0.003365 | -0.007163 | -0.000378 | 61 |
-| behavior_modality_increment | modality::ocular | 0.007585 | -0.007448 | 0.02799 | 60 |
-| full_leave_one_modality_out | modality::behavior | 0.02883 | 0.005915 | 0.05168 | 60 |
-| full_leave_one_modality_out | modality::movement | -0.002013 | -0.007523 | 0.003006 | 60 |
-| full_leave_one_modality_out | modality::ocular | 0.003131 | -0.008704 | 0.01517 | 60 |
-| full_leave_one_out | behavior.go_omission.raw.v1 | -0.004867 | -0.01263 | -0.000555 | 60 |
-| full_leave_one_out | behavior.nogo_commission.raw.v1 | 0.03151 | 0.01197 | 0.05291 | 60 |
-| full_leave_one_out | behavior.rt_level.median.v1 | -0.001591 | -0.003925 | 0.000268 | 60 |
-| full_leave_one_out | behavior.rt_trend.theilsen.v1 | -0.000459 | -0.000816 | -0.000183 | 60 |
-| full_leave_one_out | behavior.rt_variability.cv.v1 | -0.002971 | -0.006218 | -3.4e-05 | 60 |
-| full_leave_one_out | movement.body_motion_energy.median.pre30s.v1 | -0.002013 | -0.007523 | 0.003006 | 60 |
-| full_leave_one_out | ocular.blink_rate.rgb_event_rate.pre30s.v1 | 0.000875 | -0.005282 | 0.006575 | 60 |
-| full_leave_one_out | ocular.pupil_level.rseg_hard.rgb_nir_qc.v1 | 0.000667 | -0.004434 | 0.005964 | 60 |
-| full_leave_one_out | ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1 | -0.000299 | -0.000665 | 3.9e-05 | 60 |
-| full_leave_one_out | ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1 | -0.000302 | -0.006477 | 0.004859 | 60 |
-| full_leave_one_out | ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1 | 0.006406 | -0.003102 | 0.01645 | 60 |
-
-注：增量为「基线损失 − 加项损失」，**负值表示加项更差**。区间为固定折外预测的参与者整簇自助（1,000 次、95%），**未做多重比较校正**。22 项比较中 8 项的区间排除 0，其中仅 2 项为正且均属行为信息。
-
-## F.3 概率诊断（排序与校准）
+## F.2 概率诊断（排序与校准）
 
 | **分析集** | **模型** | **参与者宏平均 AUROC** | **AUROC CI 下限** | **AUROC CI 上限** | **Brier 分数** | **AUROC 可估人数** | **单一类别人数** | **校准斜率** |
 |---|---|---|---|---|---|---|---|---|

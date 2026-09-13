@@ -80,16 +80,16 @@
 
 注：系数为参与者聚类广义估计方程（generalized estimating equation [GEE]）的标准化系数，即预测变量每增加 1 个标准差时的变化量。 本组为正式伴随结果，不属敏感性分析。反应时变异系数按每名参与者至少 2 个有效试次计算。
 
-## D.5 指标覆盖与角色
+## D.5 指标覆盖
 
-| **指标** | **报告角色** | **有限值探针数** | **有效率** | **参与者数** | **场次数** |
-|---|---|---|---|---|---|
-| body_motion_energy_median | primary_candidate | 2300 | 0.9914 | 61 | 115 |
-| pose_lateral_right_per_sec_median | sensitivity_auxiliary | 2300 | 0.9914 | 61 | 115 |
-| pose_vertical_up_per_sec_median | sensitivity_auxiliary | 2300 | 0.9914 | 61 | 115 |
-| pose_radial_proximity_direction_score_median | qc_sensitivity_only | 2300 | 0.9914 | 61 | 115 |
-| exposure_change_abs_median | device_qc_only | 2300 | 0.9914 | 61 | 115 |
-| global_motion_energy_median | device_qc_only | 2300 | 0.9914 | 61 | 115 |
-| gray_mean_median | device_qc_only | 2300 | 0.9914 | 61 | 115 |
+| **指标** | **有限值探针数** | **有效率** | **参与者数** | **场次数** |
+|---|---|---|---|---|
+| body_motion_energy_median | 2300 | 0.9914 | 61 | 115 |
+| pose_lateral_right_per_sec_median | 2300 | 0.9914 | 61 | 115 |
+| pose_vertical_up_per_sec_median | 2300 | 0.9914 | 61 | 115 |
+| pose_radial_proximity_direction_score_median | 2300 | 0.9914 | 61 | 115 |
+| exposure_change_abs_median | 2300 | 0.9914 | 61 | 115 |
+| global_motion_energy_median | 2300 | 0.9914 | 61 | 115 |
+| gray_mean_median | 2300 | 0.9914 | 61 | 115 |
 
 注：系数为参与者聚类广义估计方程（generalized estimating equation [GEE]）的标准化系数，即预测变量每增加 1 个标准差时的变化量。
