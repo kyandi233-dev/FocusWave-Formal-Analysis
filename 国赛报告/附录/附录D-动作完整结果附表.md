@@ -1,14 +1,6 @@
 # 附录 D　动作完整结果附表
 
-对应正文第 5 章。数据来源：`FormalScience/Movement/tables/`（当前权威）
-
-本附录只登记**可读的整理表**：字段名为中文、只保留必要列、统一小数位。机器原始表（含内部字段名与逐探针/逐折明细）按仓库规则保留在 local-only 源目录，不进入报告附录。
-
----
-
 ## D.1 任务进程系数
-
-来源文件：`movement_task_progression.csv`（16 行）
 
 | **指标** | **项** | **系数** | **95% CI 下限** |
 |---|---|---|---|
@@ -29,11 +21,9 @@
 | cycle_bin | -0.007613 | 0.01912 | 1380 |
 | block2:cycle_bin | -0.03167 | 0.003757 | 1380 |
 
-注：源表为当前权威 `FormalScience/Movement`；反应时变异系数行采用 `rt_cv_min_n = 2` 口径。
+注：系数为参与者聚类广义估计方程（generalized estimating equation [GEE]）的标准化系数，即预测变量每增加 1 个标准差时的变化量。
 
 ## D.2 与即时注意内容（Q1）的关系
-
-来源文件：`movement_q1_models.csv`（12 行）
 
 | **对比类别（参照：任务聚焦）** | **标准化系数** | **95% CI 下限** | **95% CI 上限** | **行数** |
 |---|---|---|---|---|
@@ -50,11 +40,9 @@
 | 3 | -0.08597 | -0.2839 | 0.112 | 2,300 |
 | 4 | -0.1489 | -0.3088 | 0.011 | 2,300 |
 
-注：源表为当前权威 `FormalScience/Movement`；反应时变异系数行采用 `rt_cv_min_n = 2` 口径。
+注：系数为参与者聚类广义估计方程（generalized estimating equation [GEE]）的标准化系数，即预测变量每增加 1 个标准差时的变化量。
 
 ## D.3 与主观警觉（Q2）的关系
-
-来源文件：`movement_q2_models.csv`（4 行）
 
 | **累积标准化系数** | **95% CI 下限** | **95% CI 上限** | **行数** |
 |---|---|---|---|
@@ -63,11 +51,9 @@
 | 0.02901 | -0.03392 | 0.09194 | 2,300 |
 | 0.003795 | -0.05579 | 0.06338 | 2,300 |
 
-注：源表为当前权威 `FormalScience/Movement`；反应时变异系数行采用 `rt_cv_min_n = 2` 口径。
+注：系数为参与者聚类广义估计方程（generalized estimating equation [GEE]）的标准化系数，即预测变量每增加 1 个标准差时的变化量。
 
 ## D.4 与近期行为的关系（正式伴随结果）
-
-来源文件：`movement_behavior_links.csv`（20 行）
 
 | **行为结局** | **预测变量** | **标准化系数** | **95% CI 下限** | **95% CI 上限** | **行数** |
 |---|---|---|---|---|---|
@@ -92,11 +78,9 @@
 | pose_radial_proximity_direction_score_median | commission_rate | 0.008519 | -0.004596 | 0.02163 | 2300 |
 | pose_radial_proximity_direction_score_median | dprime_loglinear | -0.003516 | -0.01779 | 0.01076 | 2300 |
 
-注：源表为当前权威 `FormalScience/Movement`；反应时变异系数行采用 `rt_cv_min_n = 2` 口径。 该组按 `分析设计/1.16.19` 登记为 `formal_companion`，**「放附录」不等于「敏感性分析」**。
+注：系数为参与者聚类广义估计方程（generalized estimating equation [GEE]）的标准化系数，即预测变量每增加 1 个标准差时的变化量。 本组为正式伴随结果，不属敏感性分析。反应时变异系数按每名参与者至少 2 个有效试次计算。
 
 ## D.5 指标覆盖与角色
-
-来源文件：`movement_feature_coverage.csv`（7 行）
 
 | **指标** | **报告角色** | **有限值探针数** | **有效率** | **参与者数** | **场次数** |
 |---|---|---|---|---|---|
@@ -108,8 +92,4 @@
 | global_motion_energy_median | device_qc_only | 2300 | 0.9914 | 61 | 115 |
 | gray_mean_median | device_qc_only | 2300 | 0.9914 | 61 | 115 |
 
-注：源表为当前权威 `FormalScience/Movement`；反应时变异系数行采用 `rt_cv_min_n = 2` 口径。
-
----
-
-**写作边界**：本附表内容不得改写为正文结论；正文只引用附录编号与其来源表。
+注：系数为参与者聚类广义估计方程（generalized estimating equation [GEE]）的标准化系数，即预测变量每增加 1 个标准差时的变化量。
