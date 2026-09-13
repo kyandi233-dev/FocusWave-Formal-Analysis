@@ -22,9 +22,11 @@
 | 正式实验程序 | `kyandi233-dev/FocusWave@formaltest` |
 | Formal 方法、治理、报告 | `kyandi233-dev/FocusWave-Formal-Analysis@codex/code-fix-ledger` |
 | Behavior / Ocular / Movement 下游分析 | `kyandi233-dev/Attention-Analysis` |
-| 科学模态 / 设备命名迁移与 P4/P3 handoff | `Attention-Analysis@codex/1.16.10-modality-device-separation`，当前核验 HEAD `d4d52e8974a674ad442bf7b8fd6adc20a69106cd` |
+| 科学模态 / 设备命名迁移与 P4/P3 handoff | `Attention-Analysis@codex/1.16.10-modality-device-separation`，当前核验 HEAD `4205b8c903f33e372c1459a6186b4efa6a686293`（2026-09-13；此前记录的 `d4d52e8974a674ad442bf7b8fd6adc20a69106cd` 已滞后） |
+| 统一特征登记 / 比较集 / LOSO / 概率诊断 | `Attention-Analysis@codex/supervised-probability-diagnostics-20260913`，当前核验 HEAD `e0bdf33671a25842e3bfd1e3a418ddc9d539904d`（基于 `codex/supervised-comparison-sets-20260913` @ `1c3095f`） |
+| 毫米波心肺接入监督学习（补充通道） | `Attention-Analysis@codex/mmwave-supervised-intake-20260913`，当前核验 HEAD `608cffc` |
 | Ocular G1 supplemental freeze evidence（补充冻结证据） | `Attention-Analysis@codex/nir-g1-summary-hardening`，当前核验 HEAD `9b9a0ec170ab7e54198293bed181b134e492f4bc` |
-| mmWave（毫米波）与多模态外部 producer | `greenboo26/focuswave-multimodal-attention-analysis` |
+| mmWave（毫米波）与多模态外部 producer | `greenboo26/focuswave-multimodal-attention-analysis@main`，当前核验 HEAD `3d3671f05b0c502e60824c9f7b9c2fa18efddbb6`；M1 生产端合同线 `01da845e70e255b6537f8d03220aac2e6cc0bf31` 在已推送分支 `codex/mmwave-producer-contract-provenance-m1-20260913`（PR #44）上 |
 
 `Attention-Analysis@codex/formal-analysis-v2-portable` 仍是长期正式基础线，但当前代码事实不能只看基础分支；P4 Movement、post-G1 Ocular handoff 和 G1 补充汇总必须读取上表对应开发分支。
 
@@ -95,12 +97,14 @@ RGB 是 source/device namespace（来源/设备命名空间），不是科学模
 
 毫米波相关历史 `44 场 / 39 场可加载` 仅代表早期工程输入审计，不再代表当前 governed cohort。当前分析设计中的 integration snapshot（集成快照）保留 116 场 / 2,320 probes 的总体骨架，心肺候选特征仍处于 physiology-limited（生理验证受限）状态。
 
-另有隔离 Formal 状态同步分支：
+另有隔离 Formal 状态同步分支（**已失效，保留追溯**）：
 
 `codex/mmwave-formal-state-sync-v1`  
 远端 HEAD：`8f9bb62593b440e88b42ffd0d047bfd12c4b90e9`
 
-该分支当前**尚未合入** `codex/code-fix-ledger`，只修改 3 份 `分析设计/` 文档，没有代码、数据或 `01_管理/` 改动。当前停放状态：
+> **2026-09-13 核验更新**：该远端分支**已被删除**；毫米波状态同步已改由 Formal PR #10（`b11d019ee94862e621d2d7a54eb0c9bf6046234a`）与 PR #11（`a4c5afa1ea22beef24b772e9c9cdfbc0f3eda370`）合入 `codex/code-fix-ledger`，并有 `运行记录与证据/09-13-1-mmWave状态同步与time-legality裁决收口.md` 收口。因此下方停放状态**已被取代**，不得再作为当前状态引用。
+
+原停放状态（已取代）：
 
 - `FORMAL_MMWAVE_STATE_SYNC = PARTIAL`；
 - `BRANCH_ISOLATION = DONE`；
