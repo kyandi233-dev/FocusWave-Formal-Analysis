@@ -45,19 +45,19 @@
 
 ## C.3 行为指标的有效覆盖
 
-| **指标** | **报告角色** | **有限值探针数** | **有效率** | **参与者数** | **场次数** |
-|---|---|---|---|---|---|
-| RT level (mean) | primary_candidate | 2318 | 0.9991 | 61 | 116 |
-| RT level (median) | primary_candidate | 2318 | 0.9991 | 61 | 116 |
-| RT variability (CV) | primary | 2318 | 0.9991 | 61 | 116 |
-| RT trend (Theil-Sen slope) | primary | 2316 | 0.9983 | 61 | 116 |
-| Go omission rate | primary | 2320 | 1 | 61 | 116 |
-| No-Go commission rate | primary | 2320 | 1 | 61 | 116 |
-| RT variability (SD) | sensitivity | 2318 | 0.9991 | 61 | 116 |
-| RT variability (MAD) | sensitivity | 2318 | 0.9991 | 61 | 116 |
-| RT variability (IQR) | sensitivity | 2318 | 0.9991 | 61 | 116 |
-| Loglinear d-prime | sensitivity | 2320 | 1 | 61 | 116 |
-| Go omission without detected timing ambiguity | qc_sensitivity | 2320 | 1 | 61 | 116 |
-| Timing-ambiguous Go omission | qc_sensitivity | 2320 | 1 | 61 | 116 |
+| **指标** | **有限值探针数** | **有效率** | **参与者数** | **场次数** |
+|---|---|---|---|---|
+| RT level (mean) | 2318 | 0.9991 | 61 | 116 |
+| RT level (median) | 2318 | 0.9991 | 61 | 116 |
+| RT variability (CV) | 2318 | 0.9991 | 61 | 116 |
+| RT trend (Theil-Sen slope) | 2316 | 0.9983 | 61 | 116 |
+| Go omission rate | 2320 | 1 | 61 | 116 |
+| No-Go commission rate | 2320 | 1 | 61 | 116 |
+| RT variability (SD) | 2318 | 0.9991 | 61 | 116 |
+| RT variability (MAD) | 2318 | 0.9991 | 61 | 116 |
+| RT variability (IQR) | 2318 | 0.9991 | 61 | 116 |
+| Loglinear d-prime | 2320 | 1 | 61 | 116 |
+| Go omission without detected timing ambiguity | 2320 | 1 | 61 | 116 |
+| Timing-ambiguous Go omission | 2320 | 1 | 61 | 116 |
 
 注：有效值定义为该指标在探针窗口内可计算。分母为纳入分析的 2,320 个探针。
