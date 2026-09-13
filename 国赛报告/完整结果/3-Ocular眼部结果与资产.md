@@ -256,6 +256,18 @@ https://drive.google.com/drive/folders/1tZwZtxA-FNVCVqOzGXjMUjCtanLZePYe
 `_AI_HANDOFF/2026-09-13_ocular-postfreeze-analysis-4fdb1a2/`  
 https://drive.google.com/drive/folders/1sioMXbaU4tzzUus4AB9PjVYyRK8poLmP
 
+### 12.6 头动协变量敏感性（Q1 口径，已完成头动一半）
+
+`1.15.5`§5 要求的头动/尺度协变量敏感性，方法权威 `分析设计/1.16.26-瞳孔头动协变量敏感性预注册_20260913.md`。**只覆盖头动一半**；尺度代理在冻结合同中不存在，标记 `NOT_EXECUTABLE_WITHOUT_PRODUCER_RECOMPUTE`。
+
+预先规定的两个协变量为生产端登记为 `sensitivity_auxiliary` 的姿势方向列（`pose_lateral_right_per_sec_median`、`pose_vertical_up_per_sec_median`）。在一个分析集合（1,779 probes / 60 participants，与「仅 Ocular」集合**逐行相同、丢 0 行**）上比较 5 列与 5+2 列两个模型：
+
+- `ocular_reference` 0.645425 [0.597980, 0.692285]
+- `ocular_plus_headmotion` 0.643318 [0.594897, 0.690173]
+- 配对增量 **+0.002107**，95% CI **[−0.000849, +0.005116]** → **包含 0**，即 **Ocular 结论对头动调整稳健**
+
+本节与 §12.3（早期 Ocular × Movement 交叉伪迹证据）**回答不同问题**：§12.3 是**测量伪迹**层面（`q1_q2_used = False`，`interpretation_scope = measurement_artifact_sensitivity_only`），本节是 **Q1 监督学习口径**。两者不得互相替代。完整登记见 `完整结果/6` §1.6；运行记录 `运行记录与证据/09-13-5-瞳孔头动协变量敏感性.md`。
+
 ## 13. GitHub 方法与代码来源
 
 - G1 freeze-support 运行：`codex/nir-g1-summary-hardening @ 9b9a0ec170ab7e54198293bed181b134e492f4bc`
