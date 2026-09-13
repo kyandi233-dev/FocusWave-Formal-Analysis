@@ -184,13 +184,28 @@ snapshot v2 = NOT_FORMED
 
 ## 11. 下一步（下游，独立分支）
 
-下游 `kyandi233-dev/Attention-Analysis` 的 Cardiopulmonary ingest 当前在代码中硬编码 `TIME_LEGALITY_STATUS = "blocked_upstream_contract_mismatch"`（PR #76 已验收）。依本裁决，下一步应在该仓库开**独立分支**做最小修改：
+下游 `kyandi233-dev/Attention-Analysis` 的 Cardiopulmonary ingest 当前在代码中硬编码 `TIME_LEGALITY_STATUS = "blocked_upstream_contract_mismatch"`（PR #76 已实现并验收，但仍是 Draft/OPEN，未合并）。依本裁决，下一步应在该仓库开**独立分支**做最小修改：
 
 - `time_legality_status` → `verified_pre_probe_only`；
 - evidence reference 指向本记录与两个 Drive bundle / producer_execution_commit；
 - prediction / device-package eligibility 中**仅**与 time-legality 相关的字段。
 
 **必须继续保持** `physiology_qualification = LIMITED_SUPPORTING_ONLY`，不得因时间合同通过而把 HR/BR 变为正式生理金标准。
+
+### 11.1 未决：本裁决适用于哪条输入 lineage（需裁决，不得默认继承）
+
+本记录的解除，适用于 **M1 producer lineage**，即由 `producer_execution_commit = 01da845e...` 生成的那份 2,320-probe J/E 表。
+
+但下游 adapter 当前消费的输入是 **`MMWAVE_INTEGRATION_SNAPSHOT_V1`**，它来自历史 corrected replay（`source_commit 16729b2...`）——而该 lineage 的源码 hash 不一致问题**并未由 M1 解决**（M1 是另起一条可远程检索的生产线，不是重建 snapshot v1）。
+
+因此存在一个尚未裁决的问题：
+
+> 下游 ingest 是否可以把自身的 `time_legality_status` 直接解除？
+
+- 若解除，等于对一份 provenance 尚未闭环的输入声明时间合法性，与 `1.15.9` 的 provenance 要求相抵触；
+- 若要真正解除，需要把下游输入改为 M1 产物（即重建集成快照），而这又触及"不得形成 snapshot v2"的禁止项。
+
+**这是输入 lineage 的口径选择，属于方法裁决，本记录不自行认定。** 在裁决前，下游 `time_legality_status` 保持 `blocked_upstream_contract_mismatch` 不变。
 
 ## 12. 明确未做
 
