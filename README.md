@@ -1,150 +1,110 @@
-# FocusWave 正式分析与报告证据库
+# FocusWave 正式分析、结果与国赛报告权威仓库
 
-更新日期：2026-09-13。
+> **状态：CURRENT（当前权威入口）**  
+> 最后核验：2026-09-15  
+> 当前权威分支：`main`  
+> 本轮 README 重构前 `main`：`4aeaf10a61d720df1a8cf1953338e6e8443d3502`  
+> 国赛提交快照：`national-competition-submission-20260913` → `4826474157adf72667227fc3f9893e3770e7ef18`
 
-本仓库是 FocusWave 当前分析计划、研究决策、协作治理、国赛报告规范与证据映射的权威入口。可执行分析代码维护在对应代码仓库；本仓库保存方法合同、状态裁决、报告草稿、运行证据与来源追踪。历史方案继续保留，但与后出的正式决策冲突时，以当前 `codex/code-fix-ledger`、对应代码分支和真实运行输出为准。
+本仓库保存 FocusWave 当前正式方法、研究决策、结果证据、运行追溯和国赛报告。可执行分析代码主要位于 `kyandi233-dev/Attention-Analysis`；本仓库回答“研究实际采用什么方法、哪些结果已经成立、证据在哪里、报告应怎样表述”。
 
-## 先看这里
+历史分支与阶段性计划已经收口。**当前 Formal 唯一长期分支为 `main`**；旧文档中出现的 `codex/code-fix-ledger`、临时 `codex/*` 开发分支和旧 Issue（问题单）只保留 provenance（来源追踪）意义，不再作为当前入口。
 
-当前恢复项目上下文时，建议按以下顺序读取：
+## 1. 当前研究总逻辑
 
-1. [`分析设计/1.16-state-snapshot-20260913.md`](分析设计/1.16-state-snapshot-20260913.md)：当前单模态科学输出、Ocular 收口、Movement P4、毫米波停放状态与停止点的快速快照。
-2. [`分析设计/1.16.12-单模态科研输出绘图与特征交接计划_20260913.md`](分析设计/1.16.12-单模态科研输出绘图与特征交接计划_20260913.md)：当前 Behavior / Ocular / Movement science-output（科学输出）总合同。
-3. [`分析设计/1.16.14-Ocular_G1完成后参数冻结与补充审计状态_20260913.md`](分析设计/1.16.14-Ocular_G1完成后参数冻结与补充审计状态_20260913.md)：Ocular G1 真实运行后已经冻结和仍待冻结的参数。
-4. [`分析设计/1.16.15-Movement单模态科学输出实现与Ocular交叉审计状态_20260913.md`](分析设计/1.16.15-Movement单模态科学输出实现与Ocular交叉审计状态_20260913.md)：P4 Movement 与 Ocular×Movement 伪迹敏感性审计。
-5. [`分析设计/1.16.16-Ocular科学特征交接接口与P4协同收口状态_20260913.md`](分析设计/1.16.16-Ocular科学特征交接接口与P4协同收口状态_20260913.md)：post-G1 Ocular handoff（特征交接）接口和当前停止边界。
-6. [`分析设计/1.16-当前方法总状态与执行入口_20260912.md`](分析设计/1.16-当前方法总状态与执行入口_20260912.md)：1.16 主方法形成与监督学习协议的上位背景。该文件仍是方法总入口，但具体单模态执行状态应同时读取上面的 9 月 13 日文件。
+FocusWave 以持续性注意反应任务（Sustained Attention to Response Task, SART，持续性注意反应任务）和思维探针建立任务行为与主观状态参照，同时同步采集 NIR（近红外）、RGB（可见光视频）和 mmWave（毫米波）信息。正式分析把设备来源与科学信息分开：
 
-## 当前权威仓库与代码线
+| 科学信息 | 主要来源 | 当前研究作用 |
+|---|---|---|
+| Behavior（行为） | SART / 思维探针 | 任务表现、近期行为状态和监督学习基础信息 |
+| Ocular（眼部） | NIR 瞳孔；RGB 眨眼辅助 | 瞳孔水平/波动/动态、眨眼及伪迹处理 |
+| Movement（动作） | RGB | 身体运动与姿态相关外显状态 |
+| Cardiopulmonary（心肺） | mmWave | 心率与呼吸率估计；当前为支持性生理信息 |
 
-| 职责 | 当前入口 |
+研究围绕三层问题展开：各科学信息怎样随注意内容报告变化；传感信息在已有行为信息之外是否提供稳定增量；这些关系和预测能否推广到训练中完全未见的参与者。
+
+## 2. 当前正式样本与分析单位
+
+当前 governed cohort（治理队列）为 **116 sessions（场次）、61 participant groups（参与者组）**，Behavior 权威 probe universe（思维探针全集）为 **2,320 probes**。`participant_group_id` 是重复测量推断、participant-cluster bootstrap（参与者簇自助法）和 participant-disjoint prediction（参与者互斥预测）的统一统计键。
+
+各模态 availability（可用性）不同。NIR、RGB、mmWave 缺失只能缩小对应分析集合，不能反向改变治理队列或参与者身份。历史 `44/38/6`、`115/61/11` 等数字只在对应旧工程阶段保留，不再作为当前总体口径。
+
+## 3. 当前阶段：正式分析已经运行
+
+本项目已经越过“单模态冻结后再决定是否启动监督学习”的阶段。当前已经形成并进入结果/报告证据链的工作包括：
+
+- Behavior、Ocular、Movement 的正式测量、解释性统计和科学输出；
+- mmWave Cardiopulmonary 来源追踪、探针前时间合法性闭环以及正式监督学习纳入；
+- 冻结特征登记、共同/比较特异分析集合和参与者互斥训练评价；
+- Q1 二分类监督学习、概率诊断、多模态增量、条件价值和设备组合评价；
+- Q1 四分类扩展分析及其概率/类别诊断；
+- 第 4 章方法与第 5 章结果的正式写作和结果资产映射。
+
+因此，旧文件中“等待特征冻结后再运行真实 LOSO（留一参与者）”“监督学习结果待形成”“心肺尚未进入正式比较”等表述，如果没有明确标为历史状态，均不能代表当前项目。
+
+Cardiopulmonary 已取得正式比较资格，只表示 producer provenance（生产端来源追踪）与 pre-probe time-legality（探针前时间合法性）满足当前合同。毫米波估计心率和呼吸率仍为支持性指标，尚无独立生理参考验证；HRV（心率变异性）继续阻塞。该边界必须随结果一起保留。
+
+## 4. 当前仓库与代码权威关系
+
+| 职责 | 当前权威入口 |
 |---|---|
 | 正式实验程序 | `kyandi233-dev/FocusWave@formaltest` |
-| Formal 方法、治理、报告 | `kyandi233-dev/FocusWave-Formal-Analysis@codex/code-fix-ledger` |
-| Behavior / Ocular / Movement 下游分析 | `kyandi233-dev/Attention-Analysis` |
-| 科学模态 / 设备命名迁移与 P4/P3 handoff | `Attention-Analysis@codex/1.16.10-modality-device-separation`，当前核验 HEAD `4205b8c903f33e372c1459a6186b4efa6a686293`（2026-09-13；此前记录的 `d4d52e8974a674ad442bf7b8fd6adc20a69106cd` 已滞后） |
-| 统一特征登记 / 比较集 / LOSO / 概率诊断 | `Attention-Analysis@codex/supervised-probability-diagnostics-20260913`，当前核验 HEAD `e0bdf33671a25842e3bfd1e3a418ddc9d539904d`（基于 `codex/supervised-comparison-sets-20260913` @ `1c3095f`） |
-| 毫米波心肺接入监督学习（补充通道） | `Attention-Analysis@codex/mmwave-supervised-intake-20260913`，当前核验 HEAD `608cffc` |
-| Ocular G1 supplemental freeze evidence（补充冻结证据） | `Attention-Analysis@codex/nir-g1-summary-hardening`，当前核验 HEAD `9b9a0ec170ab7e54198293bed181b134e492f4bc` |
-| mmWave（毫米波）与多模态外部 producer | `greenboo26/focuswave-multimodal-attention-analysis@main`，当前核验 HEAD `3d3671f05b0c502e60824c9f7b9c2fa18efddbb6`；M1 生产端合同线 `01da845e70e255b6537f8d03220aac2e6cc0bf31` 在已推送分支 `codex/mmwave-producer-contract-provenance-m1-20260913`（PR #44）上 |
+| 方法、治理、结果、国赛报告 | **本仓库 `main`** |
+| Behavior / Ocular / Movement / Cardiopulmonary 下游与监督学习 | `kyandi233-dev/Attention-Analysis@codex/formal-analysis-v2-portable` |
+| NIR AMD producer（生产端） | `Attention-Analysis@amd-DirectML` |
+| NIR NVIDIA producer（生产端） | `Attention-Analysis@nvidia-cuda-v8` |
+| RGB AMD producer（生产端） | `Attention-Analysis@rgb-amd` |
+| RGB NVIDIA producer（生产端） | `Attention-Analysis@rgb-nvidia` |
+| mmWave producer（生产端） | `greenboo26/focuswave-multimodal-attention-analysis`；具体执行来源以运行证据登记为准 |
 
-`Attention-Analysis@codex/formal-analysis-v2-portable` 仍是长期正式基础线，但当前代码事实不能只看基础分支；P4 Movement、post-G1 Ocular handoff 和 G1 补充汇总必须读取上表对应开发分支。
+Attention-Analysis 当前正式分析分支的国赛提交快照为 `national-competition-submission-20260913` → `470529b7e048d0caf4f55d2ffec680e3ce2e4c26`。当前开发分支可在提交快照之后继续包含文档、治理和修复更新；引用国赛提交版本时使用 tag（标签），引用当前状态时读取当前分支。
 
-## 当前队列与分析单位
+## 5. 从哪里开始读
 
-当前 governed cohort（治理队列）为 **116 sessions（场次）、61 participant groups（参与者组）**，Behavior 权威 probe（思维探针）总数为 **2,320**。`participant_group_id` 是重复测量推断、bootstrap（自助法）和 participant-disjoint prediction（参与者互斥预测）的统一参与者键。
+| 需要回答的问题 | 当前入口 |
+|---|---|
+| 当前方法到底怎样分析 | [`分析设计/README.md`](分析设计/README.md) |
+| 当前正式结果有哪些、证据在哪里 | [`国赛报告/完整结果/README.md`](国赛报告/完整结果/README.md) |
+| 国赛报告正文 | [`国赛报告/README.md`](国赛报告/README.md) 与 `国赛报告/章节草稿/` |
+| 每次正式运行和来源追溯 | [`运行记录与证据/README.md`](运行记录与证据/README.md) |
+| 分支、Issue、PR 与协作治理 | `协作治理/` |
+| Behavior 方法/证据 | `行为分析/` |
+| NIR / Ocular 方法/证据 | `NIR分析/` |
+| RGB / Movement 方法/证据 | `RGB分析/` |
+| mmWave / Cardiopulmonary 方法/证据 | `毫米波分析/` 与对应运行记录 |
 
-模态 availability（可用性）与 cohort membership（队列成员资格）必须分开。NIR、RGB 或 mmWave 缺失不得反向改变 Behavior 总体队列。历史 `44/38/6` 与更早 `115/61/11` 不再作为当前总体样本口径；旧数字只在对应历史工程审计中保留 provenance（来源追踪）意义。
+建议恢复项目上下文时优先读取：
 
-## 当前研究阶段
+```text
+README.md
+→ 分析设计/README.md
+→ 国赛报告/完整结果/README.md
+→ 国赛报告/完整结果/1-结果资产索引.md
+→ 当前任务对应的具体方法/结果文件
+```
 
-当前已经不是继续扩大 A/B/C/D 并行开发或直接跑真实多模态模型的阶段。当前主任务是：
+不要把某个日期较早但篇幅更长的计划文件当成当前状态总览。
 
-`single-modal producer（单模态生产端）`
-→ `measurement/QC + scientific analysis（测量审计、质量控制与单模态科学分析）`
-→ `Behavior / Ocular / Movement feature handoff`
-→ `研究者冻结少量剩余表示`
-→ **STOP**。
+## 6. 结果解释的固定边界
 
-只有完成研究者最终冻结后，才能继续物化真实 feature registry（特征登记表）、运行参与者互斥 LOSO（留一参与者）监督学习和多模态增量比较。
+1. **Q1 是注意内容自我报告，不是潜在注意状态“真值”。** 当前监督学习评价的是对新参与者 Q1 报告的预测能力。
+2. **Q2 不进入首轮 Q1 预测特征。** 它用于困倦/清醒等解释性分析。
+3. **不同模态原始性能不能在不同分析集合间直接排名。** 增量与删除特征的结论以同一比较集合内的成对比较为准。
+4. **参与者互斥验证是泛化评价的核心。** 预处理、模型选择和外层评价不得泄漏测试参与者信息。
+5. **正式纳入不等于生理效度已经验证。** 对 mmWave 心率、呼吸率尤其如此。
+6. **工程可运行不自动升级为正式科学证据。** 结果必须能回到冻结方法、真实运行输出和结果总账。
 
-Q1/Q2 与单模态指标的关系可以作为正式科学结果；Q1/Q2 显著性、outer-test（外层测试）表现或全样本预测结果不能作为“看到效果就选特征”的冻结规则。
+## 7. 版本与历史材料
 
-## Behavior 当前状态
+当前 `main` 用于继续维护最新正式方法、结果和报告；国赛提交快照通过 tag 固定，不要求 `main` 永远停留在提交日。历史方案、已关闭 Issue、旧分支说明和旧运行记录原则上不追溯改写其正文，但当前 README 必须把它们明确降级为历史来源。
 
-Behavior producer 不重跑。当前本地 `FormalScience/Behavior/` 已有正式科学输出，覆盖 **61 名参与者、116 场、2,320 probes**。
+若不同来源出现冲突，按以下优先级核对：
 
-当前核心科学维度为：
+```text
+当前真实输出 / 当前代码与配置
+→ 后出的正式方法裁决与结果总账
+→ 当前报告正文
+→ 历史计划、旧 Issue、旧 README 与聊天记录
+```
 
-- RT level（反应时水平）；
-- RT variability（反应时波动）；
-- RT trend（反应时趋势）；
-- Go omission（Go 遗漏）；
-- No-Go commission（No-Go 抑制错误）。
-
-RT-CV、Theil–Sen slope、raw Go omission 和 commission 已有明确科学角色；RT mean/median 的最终统一表示仍保留研究者冻结边界。当前 Behavior handoff 已存在，但 handoff 接口存在不等于最终 feature registry 已经冻结。
-
-## Ocular 当前状态
-
-G1 权威真实运行 `NIR_G1_20260912_fixed` 已完成：**109 / 109 / 0**。唯一 RGB blink source unavailable（RGB 眨眼来源不可用）为 `sub-041`，其 NIR-only（仅近红外）测量继续保留；缺失 RGB 保持 missing，不能解释为 zero blink（零眨眼）。
-
-当前已经冻结：
-
-- blink buffer（眨眼缓冲）：`pre200_post200`；
-- fixed bin（固定时间箱）：`2 s × 15 bins`，主窗口为 probe 前 30 s；
-- bin 内 median（中位数），空 bin 不插值；
-- `nir_qc_only` 与 `rgb_plus_nir_qc + pre200_post200` 的 cleaning-track（清洗轨道）角色。
-
-仍待研究者冻结：geometry（几何瞳孔）与 hard `R_seg`（硬分割瞳孔/虹膜比例）的最终角色、SD（标准差）与 MAD（中位数绝对偏差）的波动表示角色、trend temporal span（趋势最低真实时间跨度）。
-
-`FormalScience/Ocular/` 和 `ocular_feature_handoff.csv` 的代码接口已经实现，但真实物化仍必须读取本机权威 G1 大表；云盘没有大表不是重跑 G1 的理由。
-
-## Movement 当前状态
-
-RGB 是 source/device namespace（来源/设备命名空间），不是科学模态。P4 Movement 当前第一轮组织为：
-
-- `body_motion_energy_median`：Movement 主候选；
-- pose lateral / vertical（横向 / 纵向姿态）：辅助或 sensitivity（敏感性）；
-- radial proximity proxy（径向接近代理）：QC / sensitivity，仅为无量纲代理，不解释为真实物理位移；
-- blink（眨眼）：归入 Ocular；
-- exposure / coverage（曝光 / 覆盖率）：device-support / QC。
-
-既有 RGB 5.5 真实运行已有 **116 场治理骨架、115 场视频、2,320 个严格 probe 前 30 s 窗口**。P4 science-output builder（科学输出构建器）不重跑视频 producer，而消费已有表和参与者聚类统计。
-
-`FormalScience/Movement/`、`movement_feature_handoff.csv` 和 Ocular×Movement artifact-sensitivity audit（伪迹敏感性审计）代码已经实现；真实本地 materialization（物化）仍待用既有 RGB 5.5 大表和 G1 `probe_measurement_candidates.csv` 完成。
-
-## 毫米波当前状态
-
-毫米波相关历史 `44 场 / 39 场可加载` 仅代表早期工程输入审计，不再代表当前 governed cohort。当前分析设计中的 integration snapshot（集成快照）保留 116 场 / 2,320 probes 的总体骨架，心肺候选特征仍处于 physiology-limited（生理验证受限）状态。
-
-另有隔离 Formal 状态同步分支（**已失效，保留追溯**）：
-
-`codex/mmwave-formal-state-sync-v1`  
-远端 HEAD：`8f9bb62593b440e88b42ffd0d047bfd12c4b90e9`
-
-> **2026-09-13 核验更新**：该远端分支**已被删除**；毫米波状态同步已改由 Formal PR #10（`b11d019ee94862e621d2d7a54eb0c9bf6046234a`）与 PR #11（`a4c5afa1ea22beef24b772e9c9cdfbc0f3eda370`）合入 `codex/code-fix-ledger`，并有 `运行记录与证据/09-13-1-mmWave状态同步与time-legality裁决收口.md` 收口。因此下方停放状态**已被取代**，不得再作为当前状态引用。
-
-原停放状态（已取代）：
-
-- `FORMAL_MMWAVE_STATE_SYNC = PARTIAL`；
-- `BRANCH_ISOLATION = DONE`；
-- `MERGE = NOT_YET`；
-- `TRACEABILITY_SYNC = PENDING`。
-
-其中的重要待合并边界是：`MAIN_ANALYSIS = PROCEED` 不等于正式毫米波 predictor 已通过 producer-side time-legality（生产端时间合法性）；`MMWAVE_INTEGRATION = READY` 也不能单独视为 `verified_pre_probe_only`。1.15.8 的治理角色已被后续方法 superseded（取代），但其中技术问题仍是 `NOT_VERIFIED_CLOSED`，不能写成 resolved（已解决）。
-
-在该隔离分支完成 rebase / PR / merge 前，上述内容属于待合并状态同步，不得反向改写当前权威正文。
-
-## 当前真实执行顺序
-
-1. 不重跑 Behavior producer、RGB producer 或 NIR G1；
-2. 用本机现有 RGB 5.5 + G1 权威大表物化 `FormalScience/Movement`；
-3. 完成 Ocular×Movement 交叉伪迹审计；
-4. 物化 `FormalScience/Ocular` 并结合 G1 supplemental summary（补充汇总）冻结 trend temporal span；
-5. 研究者冻结 Behavior / Ocular / Movement 的少量剩余表示；
-6. 到此停止，不自动生成 final feature registry，不启动真实多模态 fit；
-7. 毫米波状态同步分支独立等待 `codex/code-fix-ledger` 稳定后再 rebase / PR，`TRACEABILITY_SYNC` 在其合入后另做。
-
-## 目录导航
-
-- [`分析设计/README.md`](分析设计/README.md)：方法设计与历史演变。
-- [`协作治理/`](协作治理/)：分支、issue、PR 和修复任务治理。
-- [`行为分析/`](行为分析/)：Behavior 方法、结果与证据。
-- [`NIR分析/`](NIR分析/)：NIR/Ocular producer、测量与 G1 证据。
-- [`RGB分析/`](RGB分析/)：RGB producer、动作/眨眼来源与技术证据。
-- [`毫米波分析/README.md`](毫米波分析/README.md)：毫米波历史工程审计与当前状态边界。
-- [`跨模态融合/`](跨模态融合/)：统一键、共同集合与后续多模态接口。
-- [`国赛报告/`](国赛报告/)：当前新版报告工作区。
-- [`正式报告/`](正式报告/)：历史报告与写作/统计/版式规范来源。
-- [`运行记录与证据/`](运行记录与证据/)：真实运行命令、环境、失败和验收证据。
-
-## 证据边界
-
-代码存在、合成测试通过、CI（持续集成）通过、配置声明某项规则，都不等同于真实科学结果已经产生。正式结果必须基于当前 governed cohort、当前代码/配置、真实运行输出和对应 QC 分母形成。未完成真实运行或仍待方法冻结的内容，只能写成计划、候选或待验证状态。
-代码存在、接口实现、CI（持续集成）通过、配置声明和文档计划都不等于真实科学结果已经产生。正式结果必须基于当前 governed cohort、当前代码/配置、真实运行输出及对应 QC 分母形成。任何仍待本地 materialization、研究者冻结、PR 合并或 traceability sync（追溯同步）的内容，都必须保持为 pending（待完成）状态。
-
-## 已登记的阶段性工程证据
-
-阶段 0 的 44 session、38 个当前队列匿名分析组、6 个双场重复组，以及对应的 NIR 44/44、毫米波 39/44 等口径，只保留为历史工程审计和来源追踪证据；它们不覆盖当前 governed cohort 116 session、61 participant groups 的正式代码事实。
-
-本地阶段性验收记录包括：[NIR PR27](NIR分析/1.3-PR27瞳孔only适配器验收记录.md)、[行为 PR19](行为分析/1.2-PR19正式BB行为生产器验收记录.md)、[毫米波 PR20](毫米波分析/1.3-PR20生产契约加固验收记录.md) 和 [总审查记录](运行记录与证据/08-29-07-三条PR分支验收准备与跨仓库代码审查.md)。这些记录表达代码验收、复跑门控和历史工程证据，不表达当前 governed cohort 的正式心理或生理结论。
+任何会改变正式结果解释的修改，都应先更新运行证据和 `国赛报告/完整结果/`，再修改正文。
