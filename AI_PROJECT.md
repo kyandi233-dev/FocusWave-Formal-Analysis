@@ -2,7 +2,7 @@
 
 - project_identity: FocusWave formal analysis and report evidence
 - canonical_repository: https://github.com/kyandi233-dev/FocusWave-Formal-Analysis.git
-- canonical_branch: repository default currently `codex/code-fix-ledger`; task-specific refs must be verified before writes
+- canonical_branch: `main`; task-specific refs must be verified before writes
 - repository_role: analysis plans, research decisions, report specification, execution/evidence records, result indexing and report-facing provenance
 - central_governance: https://github.com/greenboo26/ai-governance; read current `adapters/RUNTIME_BOOTSTRAP.md`, `rules/execution.yaml`, `rules/repository-sync.yaml`, and `rules/durable-project-record.yaml`
 - workspace_registry: `greenboo26/project@august/PROJECT_INDEX.md`
@@ -11,6 +11,6 @@
 
 ## Branch hygiene
 
-`codex/code-fix-ledger` is the current repository entry/canonical evidence branch. `codex/code-fix-ledger-temp`, `codex/code-fix-ledger-temp2`, and topic/research branches are provenance or task-specific work only unless a current handoff explicitly promotes one of them. Do not treat similarly named temporary/report branches as competing current authorities, and do not copy conclusions from them into the canonical evidence chain without an explicit reconciliation record.
+`main` is the current discovery and canonical evidence branch. Topic/research branches are provenance or task-specific work unless a current handoff explicitly promotes one. In particular, `codex/code-fix-ledger` is currently the head of draft PR #43 and contains one unreconciled NIR documentation/terminology correction; it is not a competing canonical branch and must not override `main` until that change is reviewed and merged or otherwise reconciled.
 
 This file is navigation only. It does not replace current module methods, run records, result indexes or producer repositories. For scientific claims, verify the current record and the repository that owns the underlying producer/result.
