@@ -11,6 +11,6 @@
 
 ## Branch hygiene
 
-`main` is the current discovery and canonical evidence branch. Topic/research branches are provenance or task-specific work unless a current handoff explicitly promotes one. In particular, `codex/code-fix-ledger` is currently the head of draft PR #43 and contains one unreconciled NIR documentation/terminology correction; it is not a competing canonical branch and must not override `main` until that change is reviewed and merged or otherwise reconciled.
+`main` is the current discovery and canonical evidence branch. Topic/research branches are provenance or task-specific work unless a current handoff explicitly promotes one. Historical references to `codex/code-fix-ledger` and its draft PR describe an earlier review stage; they do not override the current `main` methods, results, or report status.
 
 This file is navigation only. It does not replace current module methods, run records, result indexes or producer repositories. For scientific claims, verify the current record and the repository that owns the underlying producer/result.

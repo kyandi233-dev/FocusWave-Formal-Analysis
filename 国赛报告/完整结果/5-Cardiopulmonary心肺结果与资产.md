@@ -1,6 +1,6 @@
 # Cardiopulmonary 心肺结果与资产
 
-本文件登记当前毫米波心率、呼吸率相关的真实资产、可用性、估计器审计和验证资源。当前证据仍属于测量与算法验证阶段，不等于第 5.5 节已经形成正式心理生理结果。
+本文件登记毫米波估计心率、估计呼吸率的资产、可用性、测量审计及正式预测比较资格。第 5.5 节仍只报告测量与算法边界；正式预测结果另见[监督学习总账 §1.3](6-监督学习与多模态结果与资产.md)。预测资格不等于生理效度验证。
 
 ## 1. 当前证据身份
 
@@ -8,9 +8,9 @@
 
 毫米波权威仓库在 2026-09-13 进一步确认：正式 FocusWave 实验总体从设计上没有同步 ECG 参考，因此先前设想“在正式总体上补做独立 ECG 主要验证”的路线不可执行。当前 HR/BR 继续保持 `HOLD / SUPPORTING_ONLY`，HRV 保持 `BLOCKED`；心率改进验证线暂停，重新启动需要新采集、与现有开发样本参与者和场次均独立、且同步包含毫米波与 ECG 的数据。
 
-尚无正式 Q1/Q2 心肺效应或监督学习结果。
+心肺与任务进程或 Q1/Q2 的正式解释性效应尚未形成；但 Q1 二分类已有正式监督学习比较。当前正式预测批次覆盖 58 名参与者、110 场、2,198 个探针；行为基础上加入心肺的参与者宏平均对数损失改善量为 +0.000496，95% 置信区间 [−0.005756, +0.006920]，未显示明确增量。测量评估的 109 场 / 2,180 个探针与预测批次不可合并。
 
-2026-09-13 的 M1 生成链工作为本文件新增了两批可审计资产：生产端合同审计（`mmwave_producer_contract_m1_01da845e_20260913`）与心肺端点守卫（`mmwave_cardiopulmonary_endpoint_guard_e352dce_20260913`）。两者均属**生成链合同、身份与时间对齐**层面的证据，不提升生理效度，因此本文件的停止线不变。登记见第 11、12 节。
+2026-09-13 的 M1 生成链工作留下生产端合同审计（`mmwave_producer_contract_m1_01da845e_20260913`）与心肺端点守卫（`mmwave_cardiopulmonary_endpoint_guard_e352dce_20260913`）。两者关闭了正式预测所需的来源追踪和探针前时间合同；独立生理验证仍缺失。历史端点守卫产物中的预测资格 `false` 是晋级前状态，后续冻结注册表 v3 的正式资格以当前 Attention-Analysis 配置和运行记录为准。
 
 ## 2. integration snapshot v1 覆盖
 
@@ -56,11 +56,11 @@
 
 ## 7. 第 5.5 节与多模态分析的当前边界
 
-在心率和呼吸率取得正式测量资格、形成正式科学特征交接，并完成与任务进程和 Q1/Q2 的解释性分析之前，不把当前毫米波估计写成正式心理生理结果。
+心率和呼吸率已形成正式预测特征交接，但未取得独立生理效度验证，也未形成与任务进程或 Q1/Q2 的正式解释性效应；因此不把毫米波估计写成已验证的心理生理效应。
 
-**因此第 5.5 节只写测量评估与应用边界，不写任何与任务进程或 Q1/Q2 的心肺效应。** 具体只填入 `工作表/第5章结果表格模板.md` 中**表 5-8 的前两行**（毫米波估计心率、毫米波估计呼吸率，分析层次为“数据覆盖、稳定性与运动影响”），数据来源为本文件第 12 节。表 5-8 的后两行（任务进程或 Q1/Q2 关系）与“与参考测量的误差/一致性”行保持空缺，因为前者未形成、后者缺少独立参考测量。
+**因此第 5.5 节只写测量评估、开发集机制审计与应用边界，不写与任务进程或 Q1/Q2 的正式心肺解释性效应。** 当前正文[表 5-10](../章节草稿/5.5-心肺与注意相关状态.md)使用本文件第 12 节的覆盖与内部质量数字；开发集机制图单独标明开发集身份。工作表中旧“表 5-8”编号和待填行是历史填报设计，不能覆盖当前正文编号或被读作已有生理效应。
 
-同样，当前有限 HR/BR 数值不进入正式多模态监督学习主模型。Behavior、Ocular 和 Movement 的正式分析可以继续推进，毫米波心肺验证线的暂停不阻塞这三类已经合格信息的统一特征登记和后续多模态比较。Cardiopulmonary 在统一特征登记表中**未登记任何特征**，因此在监督学习层通过 `unavailable_modalities` 机械地表现为不可用，而不是通过人工声明。
+监督学习层已将两个心肺估计特征列入冻结注册表 v3，用于正式心肺单类、行为增量、完整组合与设备组合比较；对应结果见[监督学习总账 §1.3](6-监督学习与多模态结果与资产.md)。该资格由 M1 时间合同和来源追踪支持，不能据此称 HR/BR 已通过生理准确性验证；HRV 仍阻塞。
 
 ## 8. 本地资产
 
@@ -105,7 +105,7 @@
 
 ## 10. 图表状态
 
-目前没有可以直接进入国赛报告 5.5 的正式“心肺与注意状态”结果图。现有图表属于可用性、估计器诊断、失败机制和外部资产评估，只作为方法审查或补充证据。
+目前没有可以直接进入国赛报告 5.5 的正式“心肺与注意状态效应”结果图。现有 5.5 图表属于可用性、估计器诊断和失败机制；正式预测比较的图表与第 5.6–5.8 节分开登记。
 
 第 5.5 节因此只使用**表格**（表 5-8 前两行，数据见第 12 节），不配图；在正式心肺结果形成前不新绘图件。
 
@@ -156,7 +156,7 @@
 | 端点差审计 | `n_total = 2,320`、`n_finite = 2,320`、`n_zero = 2,320`、**`n_nonzero = 0`**、`abs_max_delta_ms = 0` |
 | `time_legality_status` | **`verified_pre_probe_only`**（2026-09-13 由 `blocked_upstream_contract_mismatch` 解除，见 §13） |
 | `physiology_qualification` | `LIMITED_SUPPORTING_ONLY` |
-| 两个特征的 `prediction_eligibility` | 均为 **false** |
+| 两个特征的 `prediction_eligibility`（当时端点守卫产物） | 均为 **false**；这是注册表 v3 正式晋级前的历史快照，不代表当前资格 |
 | 禁止升级字段 | `HF`、`LF`、`LF_HF`、`mmwave_ibi_median_ms`、`mmwave_motion_proxy_median`、`mmwave_rmssd_ms`、`mmwave_sdnn_ms` |
 | 停止线字段 | `final_feature_registry_modified = false`、`models_trained = false`、`q1_q2_used_for_ingest_decision = false`、`source_unavailable_zero_imputed = false`、`source_malformed_zero_imputed = false`、`participant_identity_inferred_from_folder = false` |
 
@@ -171,7 +171,7 @@
 - 该字符串**曾在真实产物中使用**：`mmwave_cardiopulmonary_coverage.csv` 与 `feature_handoff.csv` 写入 `time_legality_status = blocked_upstream_contract_mismatch`，并配 `physiology_qualification = LIMITED_SUPPORTING_ONLY`、全部预测资格字段为 `False`。
 - 但 Attention-Analysis 的 `src/attention_pipeline/supervised_learning/time_legality.py` 中 `ALLOWED_TIME_LEGALITY_STATUSES` **只有四个状态**（`verified_pre_probe_only`、`pending_upstream_freeze`、`blocked_future_information`、`blocked_temporal_scope_unknown`），**不含该第五状态**。
 - 因此若把 mmWave 特征送入该登记/校验链，它会因状态不在枚举内而**失败关闭**——结果方向与 1.15.9 一致（fail-closed），但原因是"枚举缺失"而不是"语义显式拒绝"。
-- **本次仅登记该差异，不修改代码**，理由是它不阻塞任何当前交付：Cardiopulmonary 未登记任何特征，mmWave 也不进入正式预测。补枚举属后续代码任务，须同时补测试。
+- 该旧状态现仅供来源追踪：后续 M1 合同关闭阻塞，注册表 v3 已将两个心肺特征标为 `verified_pre_probe_only` 并赋予正式预测资格。旧的第五状态枚举差异不阻塞当前正式运行；若将来需要重放阻塞状态的旧配置，再单独评估枚举测试。
 
 ## 12. 心肺测量评估（`表 5-8` 前两行数据来源）
 
@@ -221,7 +221,7 @@
 
 > 毫米波设备用于非接触获得心率与呼吸率的设备推导估计。当前分析采用 `mmwave_integration_snapshot_v1` 作为接口基线，其分母、身份键和时间对齐已形成可审计的集成证据；但 HR/BR 的独立生理效度证据仍有限，因此仅作为 Cardiopulmonary 支持性指标解释，不作为已验证的生理真值。
 
-不得写成"已完成生理效度验证""真实心率/呼吸率"或"独立金标准已验证"。报告**不必**一律写"producer-side time-legality 未完全验证"；更准确的限制是：时间窗口有 corrected DLL-time replay 的生产端审计证据，但当前 canonical main 与该历史执行 lineage 的源码收口尚未完成。
+不得写成“已完成生理效度验证”“真实心率/呼吸率”或“独立金标准已验证”。M1 生产端合同和可追溯源码已在毫米波权威仓库 `main` 收口，当前限制是缺少独立生理参照验证，以及未形成正式心肺解释性效应。
 
 ### 13.2 lineage 处置：**已解除**（原路径 3 作废）
 
@@ -229,24 +229,24 @@
 
 **现状态：`time_legality_status` = `verified_pre_probe_only`。** 四项前置经生产者侧 M1 合同收口后全部满足，裁决与精确执行命令见 `运行记录与证据/09-13-3-mmWave-producer-M1合同收口与time-legality解除裁决.md`（状态转换：`blocked_upstream_contract_mismatch → verified_pre_probe_only`）。
 
-**解除只关闭"时间合同与来源追溯"这一层，不改变第 5.5 节可写的内容，也不改变 5.6–5.8 的任何数字。** 理由：Cardiopulmonary 仍未在正式特征登记表中登记任何特征，心率与呼吸率仍为 `HOLD / SUPPORTING_ONLY`，心率变异性仍不纳入，设备组合 M2/M4/M6/M7 仍不可用。因此第 5.5 节仍只写测量评估与应用边界。
+**解除只关闭“时间合同与来源追溯”这一层。** 后续 Attention-Analysis 注册表 v3 已登记两个心肺特征并完成正式预测及设备组合比较（M2/M4/M6/M7），见[监督学习总账 §1.3](6-监督学习与多模态结果与资产.md)。此前冻结的 30 秒主窗口、旧模型结果和第 5.5 节的测量边界均未因资格变化而改动。HR/BR 的生理效度仍为 `LIMITED_SUPPORTING_ONLY`，HRV 仍阻塞。
 
 ### 13.3 pre-M1 lineage 明确排除
 
-以下目录属于 pre-M1 lineage，**本报告不使用**，不作为第 5.5 节的结果、图件或证据来源：
+以下目录属于 pre-M1 lineage，**不作为当前正式队列的心肺效应、测量统计或生理验证来源**。第 5.5.4 节仅以明确标注的冻结开发集身份使用机制审计图：
 
 - `D:\Project\厚粲杯\11_数据\_FormalAnalysis\mmWave\mmwave_probe_criterion_models_20260831\`
 - `D:\Project\厚粲杯\11_数据\_FormalAnalysis\mmWave\behavior_assoc_20260831\`
 - `D:\Project\厚粲杯\11_数据\derived\`（含 `mmwave_estimator_improvement_v1_*`、`mmwave_low_bias_mechanism_audit_v1_*`、`vitalsense_c1b_benchmark_v1` 等历史开发产物）
 - `D:\Project\厚粲杯\11_数据\MultiModal\`、`focuswave_canonical_v1`、`Behavior\formal_v3_backup_*`
 
-本文件第 5 节登记的估计器诊断数字（MAE 10.457 bpm 等）来自 **pre-M1 开发集**，其来源属上述排除范围。保留该节文字的原因是它解释了当前 integration snapshot v1 为何保持不变，属**方法审查记录**；但该节数字**不得**进入第 5.5 节作为心肺测量结果，也不得作为表 5-8 的任何一行。
+本文件第 5 节登记的估计器诊断数字（MAE 10.457 bpm 等）来自 **pre-M1 开发集**，其来源属上述排除范围。保留该节文字是为解释 integration snapshot v1 为何保持不变。第 5.5.4 节另以明确的“冻结开发集机制归因”身份使用相关机制图；它不是正式队列的心肺效应、独立生理验证或表 5-10 的测量统计。
 
 ## 14. 当前停止线
 
 - HR/BR：`HOLD / SUPPORTING_ONLY`
 - HRV：`BLOCKED`
 - 正式心肺心理效应：未形成
-- 正式心肺监督学习特征：未取得资格
+- 正式心肺监督学习特征：两项已获预测及对应设备组合资格；正式预测批次为 58 人、110 场、2,198 探针，增量区间跨 0
 - 新一轮独立生理验证：`PAUSED_PENDING_NEW_COLLECTION`
-- Behavior / Ocular / Movement 主分析：继续推进，不受该暂停阻塞
+- 冻结主分析：30 秒窗口与 11 特征完整模型保持不变；生理验证线暂停不阻塞已有预测结果

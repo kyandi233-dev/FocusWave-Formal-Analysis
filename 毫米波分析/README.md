@@ -1,25 +1,25 @@
 # 毫米波分析
 
-更新日期：2026-09-13。
+更新日期：2026-09-25。
 
-本目录同时包含毫米波早期工程输入审计、当前 integration snapshot（集成快照）和正式方法边界。阅读时必须区分“历史 44 场工程审计”“当前 116 场 governed cohort（治理队列）”“毫米波/心肺当前可用特征”和“尚未合入 Formal 权威分支的状态同步提案”。
+本目录同时包含毫米波早期工程输入审计、当前 integration snapshot（集成快照）和正式方法边界。阅读时须区分历史 44 场工程审计、当前 116 场 governed cohort（治理队列）、当前正式预测资格与仍受限的生理效度。
 
 ## 当前状态先读
 
 当前总体队列由 Formal / Attention-Analysis 的 governed cohort 决定，为 **116 sessions（场次）、61 participant groups（参与者组）、2,320 probes（思维探针）**。毫米波 availability（可用性）不能反向改变该总体队列。
 
-当前分析设计中的 mmWave integration snapshot v1 保留 116 场 / 2,320 probes 的完整骨架；其中临时 cardiopulmonary（心肺）候选特征覆盖约 109 场 / 2,180 probes。该状态仍是 **provisional / physiology-limited（暂定集成可用 / 生理验证受限）**：HR（心率）与 respiration rate / breathing rate（呼吸率）可以继续验证和组织，HRV（心率变异性）仍受逐搏质量与外部生理验证约束，mmWave motion proxy（毫米波运动代理）主要承担诊断、伪迹与辅助解释角色。
+mmWave integration snapshot v1 保留 116 场 / 2,320 probes 的完整骨架；测量评估批次有 109 场 / 2,180 probes 的有限心率与呼吸率估计。正式预测比较采用后续 M1 来源批次，覆盖 110 场 / 2,198 probes；两批分母不可混用。心率（heart rate，HR）和呼吸率（breathing rate，BR）**已获正式预测比较及相应设备组合资格**，但生理效度仍为 `LIMITED_SUPPORTING_ONLY`；心率变异性（heart rate variability，HRV）仍为 `BLOCKED`。毫米波动作代理只作诊断、伪迹与辅助解释。
 
-因此：`MMWAVE_INTEGRATION = READY` 只表示当前数据接口能够继续集成工作，不自动等于任何正式毫米波 predictor（预测变量）已经通过 feature qualification（特征资格审查）或 producer-side time-legality（生产端时间合法性）。
+`MMWAVE_INTEGRATION = READY` 只表示数据接口可集成。HR/BR 的正式预测资格另由 M1 生产端来源追踪和探针前时间合法性闭环、下游冻结注册表 v3 及实际模型运行支持；它不等于独立心电或呼吸参考下的生理准确性验证。当前预测结论见[心肺结果总账](../国赛报告/完整结果/5-Cardiopulmonary心肺结果与资产.md)与[监督学习结果总账](../国赛报告/完整结果/6-监督学习与多模态结果与资产.md)。
 
-## 当前隔离 Formal 状态同步分支
+## 历史 Formal 状态同步分支（来源追踪）
 
-毫米波 Formal 状态同步目前停放在：
+以下为 2026-09-13 的历史隔离提案，不能作为当前权威入口：
 
 `codex/mmwave-formal-state-sync-v1`  
 远端 HEAD：`8f9bb62593b440e88b42ffd0d047bfd12c4b90e9`
 
-该分支当前只修改 3 份 `分析设计/` 文档，没有代码、数据和 `01_管理/` 追溯文件改动，也没有合入 `codex/code-fix-ledger`。
+该分支当时只修改 3 份 `分析设计/` 文档，没有代码、数据和 `01_管理/` 追溯文件改动；以下状态是当时的快照。
 
 当前状态：
 
@@ -37,7 +37,7 @@
 3. 1.15.8 已被后续治理方法 superseded（取代），但其中尚未验证关闭的技术合同问题仍保持 open / not verified closed（开放 / 未验证关闭），不能改写成 resolved（已解决）；
 4. `TRACEABILITY_SYNC` 在该分支 PR 合入之后再单独处理，当前 `01_管理/分析记录.md` 与 `01_管理/版本对应.md` 不属于该分支修改范围。
 
-在 rebase / PR / merge 完成前，上述内容是**隔离分支上的待合并状态同步**，当前 Formal 权威正文仍以 `codex/code-fix-ledger` 为准。
+后续 M1 生产端合同及来源追踪已在毫米波 `main` 收口，Formal 当前权威为 `main`；该旧分支及其 `PARTIAL` 状态只供追溯，不再限制当前 HR/BR 预测资格。
 
 ## 历史 44 场工程输入审计
 
