@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-28",
+  "overall_status": "PARTIAL",
+  "status": "SOURCE_FIX_REAL_DATA_PASS_V3_ARCHIVE_PENDING",
+  "record": "09-28-2-心肺源表筛选修复与真实数据验证.md",
+  "source_fix_commit": "d3c59b8fe9c67da55fe4610326f3c5f494d4b9b2",
+  "test_commit": "08f3295f177d9a7e817b85f0e35e0e3af8494e24",
+  "tests_passed": 22,
+  "full_repository_suite_run": false,
+  "runtime": {"pandas": "2.2.3", "numpy": "2.3.5"},
+  "source_script_sha256": "718113d9057511a5bd0c85679b919ae7d2f1223091c344fd69da697713700750",
+  "source_script_git_blob": "20963b75e1b9a913c698710db497368094e02984",
+  "test_git_blob": "5e6a741173b9369615a52f900c5b49487c9e64bf",
+  "m1_rows": 2320,
+  "finite_hr_n": 2200,
+  "finite_br_n": 2200,
+  "source_field_mismatches": {
+    "mmwave_hr_fused_bpm_median": 0,
+    "mmwave_breath_rate_breaths_per_min_median": 0,
+    "mmwave_hr_usable_window_fraction": 0,
+    "window_effective_start_unix_ms": 0,
+    "window_end_unix_ms": 0,
+    "probe_onset_unix_ms": 0,
+    "mmwave_state": 0,
+    "mmwave_missing_reason": 0,
+    "mmwave_source_commit": 0,
+    "mmwave_source_run_id": 0
+  },
+  "governed_identity_mismatches": 0,
+  "legacy_base_rows": 2316,
+  "legacy_base_would_exclude_rows": 4,
+  "legacy_base_would_exclude_finite_hr_br_rows": 2,
+  "coverage_from_frozen_v1_memberships_and_m1": [
+    {"comparison": "full13", "n_probes": 1703, "n_participants": 57, "n_sessions": 98},
+    {"comparison": "sensor8_independent", "n_probes": 1705, "n_participants": 57, "n_sessions": 98},
+    {"comparison": "behavior_plus_cardiopulmonary", "n_probes": 2198, "n_participants": 58, "n_sessions": 110},
+    {"comparison": "standalone_hr_or_br", "n_probes": 2200, "n_participants": 58, "n_sessions": 110}
+  ],
+  "cardiopulmonary_modality_in_behavior_paired_group_stays_2198": true,
+  "v1_archive_model_rows_recomputed": 43,
+  "v1_loss_agreement_at_reported_decimals": 6,
+  "v1_loss_max_abs_difference_from_rounded_summary": 4.91102890798345e-7,
+  "v3_prediction_archive_read": false,
+  "models_retrained": false,
+  "report_modified": false,
+  "repaired_source_sha256": "afca972b38412251b35517a086543609d1cb0b1c4dbfcc9f77848d84208c185d",
+  "source_files": {
+    "archive_predictions.zip": "acb7af6cda97764b8c50c538a4d9146409f0530a9cc0cbdf9fc1cccda9d6c290",
+    "headline_model_performance.csv": "e3b4fd7797a4619e778749c1f86174ae14832658d9ad4ef4511a738be0439f8a",
+    "mmwave_probe_merge_ready.csv": "9eff209589ef286e831b6e8ae373e76950102d9d42ab8c48e980c91cd8e868dc",
+    "mmwave_probe_merge_ready_E.csv": "e95eb66b4bd4a5f7bdb10fbbd82eeb58c1a50e486430b84fc4aefea7eeaab39f",
+    "mmwave_cardiopulmonary_taskb_source.csv": "673c911e5e3bdefc61d5637a520dbf13037ebed22187fe6a148f0c4357244030"
+  },
+  "private_drive_bundle_id": "1gSyv_QDiVFWh5xCwTgCCw5rFUwF5vLuP",
+  "private_drive_bundle_sha256": "7348214992e3cf1f4139f8bccb3c237f49c559cc85b5d06060d9bb9048aa886c",
+  "limitations": [
+    "Uses archived accepted v1 membership and unchanged M1 values; final v3 input files still unavailable.",
+    "Does not reprocess raw radar or claim independent physiological validity.",
+    "The independent 1705-probe sensor model and 2200-probe HR/BR standalone models need their own complete re-evaluation; old predictions cannot simply be extended or relabeled."
+  ]
+}
