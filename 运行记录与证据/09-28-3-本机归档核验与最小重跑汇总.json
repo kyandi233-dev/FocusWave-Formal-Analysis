@@ -1,0 +1,436 @@
+{
+  "status": "PASS",
+  "input_equivalence": [
+    {
+      "analysis_set_id": "AS.behavior_plus_cardiopulmonary",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 2198,
+      "new_rows": 2198,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.behavior_plus_movement",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2296,
+      "new_rows": 2296,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.behavior_plus_ocular",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 1775,
+      "new_rows": 1775,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.behavior_reference",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2316,
+      "new_rows": 2316,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.device::M0",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2316,
+      "new_rows": 2316,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.device::M2",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 2198,
+      "new_rows": 2198,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.device::M3",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2196,
+      "new_rows": 2196,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.device::M5",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 1775,
+      "new_rows": 1775,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.device::M6",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 2098,
+      "new_rows": 2098,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.device::M7",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 1703,
+      "new_rows": 1703,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.full",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 1703,
+      "new_rows": 1703,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.sensor_only_joint",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 1703,
+      "new_rows": 1705,
+      "changed": true,
+      "added_keys": 2,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::behavior.go_omission.raw.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2320,
+      "new_rows": 2320,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::behavior.nogo_commission.raw.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2320,
+      "new_rows": 2320,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::behavior.rt_level.median.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2318,
+      "new_rows": 2318,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::behavior.rt_trend.theilsen.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2316,
+      "new_rows": 2316,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::behavior.rt_variability.cv.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2318,
+      "new_rows": 2318,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::cardiopulmonary.br.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 2198,
+      "new_rows": 2200,
+      "changed": true,
+      "added_keys": 2,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::cardiopulmonary.hr.fused.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": true,
+      "old_rows": 2198,
+      "new_rows": 2200,
+      "changed": true,
+      "added_keys": 2,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::movement.body_motion_energy.median.pre30s.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2300,
+      "new_rows": 2300,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::ocular.blink_rate.rgb_event_rate.pre30s.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 2200,
+      "new_rows": 2200,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 1936,
+      "new_rows": 1936,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 1857,
+      "new_rows": 1857,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 1855,
+      "new_rows": 1855,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    },
+    {
+      "analysis_set_id": "AS.standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+      "historical_rebuild_equivalent": true,
+      "stored_input_verified": false,
+      "old_rows": 1936,
+      "new_rows": 1936,
+      "changed": false,
+      "added_keys": 0,
+      "removed_keys": 0,
+      "existing_rows_all_columns_equal": true
+    }
+  ],
+  "historical_archive_folds": 1661,
+  "historical_inner_folds": 8305,
+  "result_summary": {
+    "status": "PASS",
+    "model_rows": 56,
+    "analysis_sets": 25,
+    "model_identities": 53,
+    "paired_rows": 28,
+    "outer_folds": 3297,
+    "files": {
+      "model_results": {
+        "sha256": "da9d5d8907178ccfbc056eb052e5873b76a23b9fa56faa7dd91688a3a70e5770",
+        "rows": 56
+      },
+      "paired_results": {
+        "sha256": "c4f26d0c0a7976d1e925bd65479c43a23506f91727c3b864d114fa40df946e18",
+        "rows": 28
+      },
+      "probability_diagnostics": {
+        "sha256": "12302841b13888b73d86239ecff4065e50021e67de030f13fd340834207d7db2",
+        "rows": 56
+      },
+      "calibration_bins": {
+        "sha256": "3b941b76c486fde768d95f5769a5e72fce8f8a5d0adb07d940b7701ae62484ef",
+        "rows": 90
+      },
+      "session_results": {
+        "sha256": "872df0c78212df650e664819b15ad0a7994b69d8c332b60ccb2ceae89bcbd07f",
+        "rows": 56
+      },
+      "constant_baselines": {
+        "sha256": "8dbefac2350b81a55572d75f2f77801533aa6d12e533bc316f30cc10699d748e",
+        "rows": 56
+      },
+      "result_lineage": {
+        "sha256": "fcac5389d282d2db265bc6343e7160dac5f74c44506850d258082748fecd8f85",
+        "rows": 25
+      }
+    }
+  },
+  "code_equivalence": [
+    {
+      "file": "src/attention_pipeline/supervised_learning/models.py",
+      "historical_code": "0b6070430089f2abe932268c3db6aa6bbee5a079",
+      "git_blob_sha256": "829c8d0a72e94c570065b42f9b4ee362ca06b04a6857af33ede4aaa8bce88fa9",
+      "current_checkout_sha256": "6367f3b268f60deae5a8041d883b1465167aa36b6f91770474f39318465fc10b",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "src/attention_pipeline/supervised_learning/preprocessing.py",
+      "historical_code": "0b6070430089f2abe932268c3db6aa6bbee5a079",
+      "git_blob_sha256": "a23610d432f6088b37e2b0e015bfb578be50e7640addbcbcd51e9fe1bad59cc8",
+      "current_checkout_sha256": "dbaf660254937b7107c7b21c05d23c9bf398ebe2a8ad9d57ccc2ff969b529a90",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "src/attention_pipeline/supervised_learning/runner.py",
+      "historical_code": "0b6070430089f2abe932268c3db6aa6bbee5a079",
+      "git_blob_sha256": "91f073ea82581fa7c5ec0867eca5c6ee539a3e43c514ea6350ac4eff6c25c7db",
+      "current_checkout_sha256": "e56348cd749f33a622e10abc5c4b755a90effa85fb8650c751264b80c03574e0",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "src/attention_pipeline/supervised_learning/evaluation.py",
+      "historical_code": "0b6070430089f2abe932268c3db6aa6bbee5a079",
+      "git_blob_sha256": "7f68fc49f181175572e7d2c715b1706cf657126a35b4f70b947abed33bb705fc",
+      "current_checkout_sha256": "7994fa2b47dbb8582d88c09b549ab537d6bc63ee89d55f048e82104056f4299b",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "src/attention_pipeline/supervised_learning/entrypoint.py",
+      "historical_code": "0b6070430089f2abe932268c3db6aa6bbee5a079",
+      "git_blob_sha256": "69fe14579391da8737345685425ff1ef381430d853f90f8ed7e9ff4e5fa95ada",
+      "current_checkout_sha256": "8d2e729d550c79450827f7a39ddde717d45ca598c7c3651d3f168f886a5404e6",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "src/attention_pipeline/supervised_learning/feature_registry.py",
+      "historical_code": "0b6070430089f2abe932268c3db6aa6bbee5a079",
+      "git_blob_sha256": "05f85078f6b30eb2c2b1c743483a317dfa04eb2b1549e4fe97741096aa43cd1a",
+      "current_checkout_sha256": "1e7fe31c7accb22d2a3354237ba0639eabb8386ad9032111e6314db28b45d2a3",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "scripts/build_supervised_comparison_sets.py",
+      "historical_code": "9b055956a347abca6c740852d4993a308cd9cf48",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "src/attention_pipeline/multimodal_formal/supervised_comparison_sets.py",
+      "historical_code": "9b055956a347abca6c740852d4993a308cd9cf48",
+      "equal_after_line_ending_normalization": true
+    },
+    {
+      "file": "src/attention_pipeline/multimodal_formal/supervised_input.py",
+      "historical_code": "9b055956a347abca6c740852d4993a308cd9cf48",
+      "equal_after_line_ending_normalization": true
+    }
+  ],
+  "report_input_sha256": "1b6c11e54e7cc2e260d0cf9673e19b74d191e08041ec60f2f9c976301091f181",
+  "report_output_sha256": "12956a49e18f98bfc14a3475dfed5da444566feac7c824e352765d9aa0ddea4a",
+  "changed_regions": 1497,
+  "original_report_preserved": true,
+  "replaced_figures": 6,
+  "document_qa": {
+    "status": "PASS",
+    "original_sha256_unchanged": "1b6c11e54e7cc2e260d0cf9673e19b74d191e08041ec60f2f9c976301091f181",
+    "delivery_sha256": "12956a49e18f98bfc14a3475dfed5da444566feac7c824e352765d9aa0ddea4a",
+    "package_members_changed": [
+      "word/document.xml",
+      "word/media/image17.png",
+      "word/media/image29.png",
+      "word/media/image30.png",
+      "word/media/image33.png",
+      "word/media/image34.png",
+      "word/media/image35.png"
+    ],
+    "other_package_members_byte_identical": true,
+    "tables": 51,
+    "body_paragraphs": 752,
+    "yellow_highlights": 2048,
+    "changed_regions": 1497,
+    "native_word_open_export": true,
+    "pdf_pages": 124,
+    "pages_with_changed_text_since_v2": [
+      38,
+      53,
+      54,
+      56,
+      61,
+      62,
+      63,
+      64,
+      102,
+      103
+    ],
+    "style_review": "Original wording and sentence structure retained where compatible; Chinese punctuation and ungrouped prose counts follow original; statistical interval commas and mathematical minus signs retained.",
+    "visual_review": "All 124 pages reviewed in 11 contact sheets; key results and appendix pages reviewed at enlarged size; no observed clipping, overlapping text or missing updated figures.",
+    "reviewed_contact_sheets": 11
+  },
+  "all_25_actual_run_inputs_verified": true,
+  "source_hashes": {
+    "behavior": "b15acd4bff289284cea6b21f436d17a612a0cc83ffea128b3d226f9c7fe43ec3",
+    "ocular": "f0d7b2314a04478a408b7545607e6a1a1cd2788d4975df9e63ff22e57d814239",
+    "movement": "64f1486db3ef169ab67ec29c61cb0d2f529c605d9777ddc82a61ad5a2f8805b2",
+    "cardiopulmonary": "73610d2194b94b6575ff6f62b9db42493c0be010e70808fea191683181aa8da1"
+  },
+  "repaired_source_sha256": "a9084c0e4782a1b35c2fe3af0a8567dd43f61b657060c0cf2213861a28084b87",
+  "runtime": {
+    "Python": "3.14.6",
+    "NumPy": "2.4.6",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.0"
+  },
+  "engineering_commit": "a134f6cd80df11fb03ce7ac3b0f0037fea59a726",
+  "engineering_remote_verified": true
+}
