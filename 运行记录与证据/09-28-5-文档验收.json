@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "original_sha256": "1b6c11e54e7cc2e260d0cf9673e19b74d191e08041ec60f2f9c976301091f181",
+  "input_sha256": "e4b8bf2d05869c73143bd51b03ee7ba3caeffeade3df0c152efdd09ecbf46053",
+  "output_sha256": "2118f960015325d6e7710cd0f6a17c5fc4fa0c0ad4509b067b5008e8540f5f34",
+  "native_pdf_sha256": "3591fd7143767a4c9b2babd9a134bcfc0699f31f1f2f81f31dca3825418740e6",
+  "package_parts": 97,
+  "changed_package_parts": [
+    "word/document.xml",
+    "word/media/image18.png"
+  ],
+  "section_properties_unchanged": true,
+  "paragraphs": 763,
+  "tables": 51,
+  "native_pdf_pages": 125,
+  "yellow_runs_before": 2040,
+  "yellow_runs_after": 2661,
+  "new_references": 12,
+  "appendix_source_checks": [
+    {
+      "source": "movement_task_progression",
+      "rows_matched": 16,
+      "sha256": "fc8011b4b20a4c9e0e342bd0e02fb24a448e3c9b6cdd0a20bc84d8133912f3ea"
+    },
+    {
+      "source": "movement_q1_models",
+      "rows_matched": 12,
+      "sha256": "68075dfd619214b3b62828269ca8ae3eb6bdace9d4e2b55f8555cce72233638e"
+    },
+    {
+      "source": "movement_q2_models",
+      "rows_matched": 4,
+      "sha256": "953c3330d0042f3f8dbd521af78df6fc31c53fb4bb3016961261245cb7ad97e5"
+    },
+    {
+      "source": "movement_behavior_links",
+      "rows_matched": 20,
+      "sha256": "1a49d7e8f774fcc5334c8423a9c4e94ab344c68eb3d7d818d9497a796d7b7348"
+    },
+    {
+      "source": "movement_feature_coverage",
+      "rows_matched": 7,
+      "sha256": "e9230faaace31954f4050aa59be14129ea317b2548e17e752878fa9cf52d216a"
+    }
+  ],
+  "predictive_table_indices_zero_based": [
+    14,
+    15,
+    18,
+    19,
+    20,
+    32,
+    33,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "preserved_numeric_cells": 1192,
+  "models_refitted": 0,
+  "frozen_payload_model_rows_matched": 56,
+  "frozen_payload_pair_rows_matched": 28,
+  "pages_without_extractable_text": [
+    109
+  ],
+  "native_render_caption_numbers_matched": 69,
+  "historical_v3_delivery_sha256": "12956a49e18f98bfc14a3475dfed5da444566feac7c824e352765d9aa0ddea4a",
+  "local_v3_differs_from_historical_delivery": true,
+  "visual_review": "125 页已通过 11 张总览图检查；方法、旧图、动作单位、开发对照、模型解释、参考文献和附录 D/E 重点页另行放大检查。未见新增裁切或重叠。第 109 页为原有整页图。",
+  "reviewed_contact_sheets": 11,
+  "enlarged_pages_reviewed": [
+    22,
+    26,
+    30,
+    31,
+    32,
+    34,
+    43,
+    50,
+    53,
+    58,
+    61,
+    63,
+    66,
+    84,
+    109,
+    112,
+    113,
+    114,
+    115
+  ]
+}

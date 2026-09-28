@@ -1,0 +1,31 @@
+{
+  "input_sha256": "e4b8bf2d05869c73143bd51b03ee7ba3caeffeade3df0c152efdd09ecbf46053",
+  "output_sha256": "2118f960015325d6e7710cd0f6a17c5fc4fa0c0ad4509b067b5008e8540f5f34",
+  "appendix_sources": {
+    "movement_task_progression": "fc8011b4b20a4c9e0e342bd0e02fb24a448e3c9b6cdd0a20bc84d8133912f3ea",
+    "movement_q1_models": "68075dfd619214b3b62828269ca8ae3eb6bdace9d4e2b55f8555cce72233638e",
+    "movement_q2_models": "953c3330d0042f3f8dbd521af78df6fc31c53fb4bb3016961261245cb7ad97e5",
+    "movement_behavior_links": "1a49d7e8f774fcc5334c8423a9c4e94ab344c68eb3d7d818d9497a796d7b7348",
+    "movement_feature_coverage": "e9230faaace31954f4050aa59be14129ea317b2548e17e752878fa9cf52d216a"
+  },
+  "replacement_media": [
+    "word/media/image18.png"
+  ],
+  "new_references": [
+    "Bazarevsky, V., Grishchenko, I., Raveendran, K., Zhu, T., Zhang, F., & Grundmann, M. (2020). BlazePose: On-device real-time body pose tracking. arXiv. https://doi.org/10.48550/arXiv.2006.10204",
+    "Chaudhary, A. K., Kothari, R., Acharya, M., Dangi, S., Nair, N., Bailey, R., Kanan, C., Diaz, G., & Pelz, J. B. (2019). RITnet: Real-time semantic segmentation of the eye for gaze tracking. In 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW) (pp. 3698–3702). IEEE. https://doi.org/10.1109/ICCVW.2019.00568",
+    "Dragomiretskiy, K., & Zosso, D. (2014). Variational mode decomposition. IEEE Transactions on Signal Processing, 62(3), 531–544. https://doi.org/10.1109/TSP.2013.2288675",
+    "Efron, B., & Tibshirani, R. J. (1994). An introduction to the bootstrap. Chapman & Hall. https://doi.org/10.1201/9780429246593",
+    "Hautus, M. J. (1995). Corrections for extreme proportions and their biasing effects on estimated values of d′. Behavior Research Methods, Instruments, & Computers, 27(1), 46–51. https://doi.org/10.3758/BF03203619",
+    "Kartynnik, Y., Ablavatski, A., Grishchenko, I., & Grundmann, M. (2019). Real-time facial surface geometry from monocular video on mobile GPUs. arXiv. https://doi.org/10.48550/arXiv.1907.06724",
+    "Lugaresi, C., Tang, J., Nash, H., McClanahan, C., Uboweja, E., Hays, M., Zhang, F., Chang, C.-L., Yong, M. G., Lee, J., Chang, W.-T., Hua, W., Georg, M., & Grundmann, M. (2019). MediaPipe: A framework for building perception pipelines. arXiv. https://doi.org/10.48550/arXiv.1906.08172",
+    "Macmillan, N. A., & Creelman, C. D. (2005). Detection theory: A user’s guide (2nd ed.). Lawrence Erlbaum Associates. https://doi.org/10.4324/9781410611147",
+    "Sen, P. K. (1968). Estimates of the regression coefficient based on Kendall’s tau. Journal of the American Statistical Association, 63(324), 1379–1389. https://doi.org/10.1080/01621459.1968.10480934",
+    "Soukupová, T., & Čech, J. (2016). Real-time eye blink detection using facial landmarks. In Proceedings of the 21st Computer Vision Winter Workshop. https://cmp.felk.cvut.cz/ftp/articles/cech/Soukupova-CVWW-2016.pdf",
+    "Theil, H. (1950). A rank-invariant method of linear and polynomial regression analysis, I–II. Indagationes Mathematicae, 12, 85–91, 173–177. https://ir.cwi.nl/pub/18445",
+    "Ultralytics. (2026). Ultralytics YOLO26 [Computer software documentation]. https://docs.ultralytics.com/models/yolo26/"
+  ],
+  "models_refitted": 0,
+  "changed_regions": 456,
+  "local_docx_name": "FocusWave_国赛报告_逐项审查修订_标黄副本_20260928_v4.docx"
+}

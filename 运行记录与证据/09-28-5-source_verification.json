@@ -1,0 +1,62 @@
+{
+  "window_cv_checks": [
+    {
+      "window_seconds": 10,
+      "total": 2320,
+      "cv_valid": 2303,
+      "mean_correct_go_rt_n": 5.825862068965518
+    },
+    {
+      "window_seconds": 20,
+      "total": 2320,
+      "cv_valid": 2318,
+      "mean_correct_go_rt_n": 13.114655172413793
+    },
+    {
+      "window_seconds": 30,
+      "total": 2320,
+      "cv_valid": 2318,
+      "mean_correct_go_rt_n": 19.93793103448276
+    }
+  ],
+  "formal_cohort": {
+    "sessions": 116,
+    "site_counts": {
+      "北京": 116
+    },
+    "blocks_per_session": 2,
+    "probes": 2320,
+    "trials": 100224
+  },
+  "historical_figure_identity": {
+    "9": {
+      "report_sha256": "8ee061c523501f423861c958cdd113655573198c194c14be4599bb43de295273",
+      "archive_sha256": "7332d5138f851b2a26671f95250c3087fe6a51f986df25c60f890d89b3977beb",
+      "byte_equal": false,
+      "pixels_equal": true
+    },
+    "13": {
+      "report_sha256": "ed4ae79aee20e29f9377fa3db84985432e2e3d16d1c3b4edd1038d821ed7575d",
+      "archive_sha256": "ed4ae79aee20e29f9377fa3db84985432e2e3d16d1c3b4edd1038d821ed7575d",
+      "byte_equal": true,
+      "pixels_equal": true
+    }
+  },
+  "figure17": {
+    "session_pairs": 116,
+    "error_bars": "SEM across participants after within-participant aggregation",
+    "model_refits": 0
+  },
+  "source_sha256": {
+    "Behavior\\formal_v3\\trial_metrics.csv": "4541ee465cb46c671bc2a75513092b1f93a3060f200de588ad03e87ddd4adc2f",
+    "Behavior\\formal_v3\\probe_window_sensitivity.csv": "e9594dd616b5583dde9e3e167e6879b951625d9777c07f3b09aaa31a5d33a68d",
+    "Behavior\\formal_v3\\block_metrics.csv": "68a509b7f537a4ba6b1bb07d21d7929391978f99ff87bc1ba050cd0b33f299fc",
+    "Behavior\\formal_v3\\cycle_metrics.csv": "857a267107f8674b1646188ff78e6fab2db8eb48d1d089ead661b22389ef007d"
+  },
+  "movement_unit": {
+    "files": 115,
+    "finite_rows": 4903542,
+    "all_equal_per_second": true,
+    "all_equal_dimensionless": false
+  }
+}
