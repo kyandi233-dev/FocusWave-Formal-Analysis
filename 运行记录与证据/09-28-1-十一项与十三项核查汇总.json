@@ -1,0 +1,140 @@
+{
+  "date": "2026-09-28",
+  "overall_status": "PARTIAL",
+  "scope": "Archived audit-table and aggregate-result recheck; NOT raw-signal validation or model refitting",
+  "record": "09-28-1-十一项与十三项监督学习及报告来源审计.md",
+  "recheck_script": "09-28-1-十一项与十三项审计复核.py",
+  "frame_audit": {
+    "records": 2320,
+    "sessions": 116,
+    "producer_participant_ids": 62,
+    "selected_windows": 2200,
+    "nonselected_windows": 120,
+    "duplicate_keys": 0,
+    "key_set_mismatch_between_audit_tables": 0,
+    "science_clock_columns": [1],
+    "selected_lower_endpoint_violations": 0,
+    "selected_upper_endpoint_violations": 0,
+    "frame_count_mismatches": 0,
+    "reconstructed_index_hash_mismatches": 0,
+    "membership_changed_vs_legacy": 1745,
+    "same_membership_stateless_changed_flag_violations": 0,
+    "same_membership_stateful_changed_flag_windows": 54,
+    "stateful_differences_with_unequal_incoming_anchor": 54,
+    "same_membership_equal_anchor_stateful_violations": 0,
+    "limits": [
+      "Original raw timestamp vectors and signals were not read.",
+      "First/last timestamps and frame indices are stored audit values.",
+      "Output-value equality uses archived field-change flags; only incoming anchors and membership hashes were independently compared."
+    ]
+  },
+  "source_construction": {
+    "m1_total_rows": 2320,
+    "m1_hr_finite": 2200,
+    "m1_br_finite": 2200,
+    "behavior_complete_base_rows": 2316,
+    "joined_source_rows": 2316,
+    "joined_hr_finite": 2198,
+    "joined_br_finite": 2198,
+    "excluded_otherwise_finite_hr_windows": 2,
+    "scope_limit": "Source-report is the earlier M1 intake build; exact final-v3 source routing/keys require its input manifest and source table."
+  },
+  "model_inventory": {
+    "v1_rows": 43,
+    "v1_sets": 19,
+    "v3_recomputed_or_added_rows": 29,
+    "v3_recomputed_or_added_sets": 8,
+    "same_name_rows_with_changed_model_or_sample": 16,
+    "unchanged_v1_rows_for_reuse": 27,
+    "new_model_set_rows": 13,
+    "proposed_current_inventory_rows": 56,
+    "proposed_current_inventory_sets": 25,
+    "proposed_distinct_model_ids": 53,
+    "full_model_n_features_from_registry": 13,
+    "sensor_joint_n_features_from_registry": 8,
+    "full_loss": 0.6207027136375438,
+    "point_equalities": {
+      "M7_equals_full": true,
+      "M2_equals_behavior_plus_cardiopulmonary": true,
+      "sensor_joint_equals_full_minus_behavior_point_only": true
+    },
+    "limits": "Proposed inventory merges archived summaries; it is not a newly validated complete OOF archive."
+  },
+  "report_identity": {
+    "original_word_sha256": "c9b6322a4577ba5adf03bd7abb7bac919da1e72f2150effbe6ebef2aa1eede8d",
+    "revised_word_sha256": "721a5ed83d05475a765592ba3d4b4157d1d2af44d728b829479ff2c786df9525",
+    "paragraphs_each": 3889,
+    "tables_each": 51,
+    "predefined_reduced_0_618623_present_in_either_word_text": false,
+    "paired_window_minus_0_007751_present_in_either_word_text": false
+  },
+  "code_provenance": {
+    "formal_head_before_audit": "99b1ba888fb2fa12e48c9733c7ee63dc6b37f5c9",
+    "v3_model_run_code_sha": "0b6070430089f2abe932268c3db6aa6bbee5a079",
+    "v3_recorded_config_digest": "4118ef3394932e84",
+    "comparison_builder_later_committed_sha": "9b055956a347abca6c740852d4993a308cd9cf48",
+    "m1_producer_execution_sha": "01da845e70e255b6537f8d03220aac2e6cc0bf31",
+    "m1_audit_interpretation_sha": "37f5d8e32fbc63fa3ba8bca05221b534089bcec9",
+    "source_input_equivalence_rechecked": false,
+    "v3_all_oof_and_fold_audits_rechecked": false,
+    "models_retrained_in_this_audit": 0
+  },
+  "input_hashes": {
+    "cardiopulmonary_model_evaluation.csv": {
+      "sha256": "fe17dd2a190653653bc604be9089732e2c3066d3c51e99b4402bfe6e90621c2b",
+      "bytes": 2378,
+      "drive_file_id": "10atv3PRlDuTXBY1aXWOJZjhLauowGDaR"
+    },
+    "headline_model_performance.csv": {
+      "sha256": "e3b4fd7797a4619e778749c1f86174ae14832658d9ad4ef4511a738be0439f8a",
+      "bytes": 7012,
+      "drive_file_id": "1Q9NaO8GuW43pRYJjYUoGEX8QcbUSvz7t"
+    },
+    "audit_v2_detail.csv": {
+      "sha256": "b4a6568a48095fa5dd38ff1c3d14e726e29cbadda082600ba98b23059d065ea4",
+      "bytes": 1231538,
+      "drive_file_id": "1xUCO7QkbK0GDq7h6a4xowzzlrR3puE9I"
+    },
+    "audit_v2_summary.json": {
+      "sha256": "865908507339ac71136876259c009548b03bd107506a7ac64e3499082318ea26",
+      "bytes": 1460,
+      "drive_file_id": "1uymTxf4tvll2Tgwhwr64ZnYXoHPjwHyT"
+    },
+    "mmwave_probe_frame_membership_audit.csv": {
+      "sha256": "ac31804233a06ca41a6edf56b8fcea67655f62e03a0a76254e7169aaab13adb1",
+      "bytes": 761968,
+      "drive_file_id": "1FZfZO4cWt1BtDW14WMvYe7tRi0PgFYBU"
+    },
+    "mmwave_probe_frame_membership_audit_E.csv": {
+      "sha256": "8f0da8cbce1e6a6ddf48ab01864b6d4e0293503e9eb561ba585953ea9f2da4de",
+      "bytes": 446679,
+      "drive_file_id": "1do_HM-T4rMqbJRYPiaZfqNtrUaNiuksr"
+    },
+    "m1_source_report.json": {
+      "sha256": "b6c4f5cce4d7b77cfcce9dfedab76feec166ca35374f66bcecaf95145cdc9cde",
+      "bytes": 835,
+      "drive_file_id": "1dd-SXn0kbWi6bLwPFEaGNVFgShEsz9qo"
+    }
+  },
+  "open_findings": [
+    {
+      "id": "FW-1313-INPUT-01",
+      "status": "PARTIAL",
+      "root_cause": "CONFIRMED in M1 source builder and earlier source report",
+      "formal_v3_downstream_impact": "Exact source routing and keys not yet independently verified",
+      "next": "Rebuild from 2320 outcome/identity keys and compare each affected analysis set before deciding reruns"
+    },
+    {
+      "id": "FW-1313-PROV-02",
+      "status": "PARTIAL",
+      "root_cause": "CONFIRMED: comparison builder was in working tree and committed after recorded run code SHA",
+      "next": "Separate source-building and model-fitting provenance; verify restored source builder against recorded input hashes"
+    },
+    {
+      "id": "FW-1313-ARCHIVE-03",
+      "status": "BLOCKED",
+      "reason": "Complete final-v3 input/OOF/fold archives unavailable in current accessed handoff package/runtime",
+      "next": "Recover existing SupervisedRunsV4_Cardiopulmonary archives and recompute diagnostics before changing report inferential claims"
+    }
+  ]
+}
