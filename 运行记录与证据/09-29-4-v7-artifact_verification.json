@@ -1,0 +1,402 @@
+{
+  "status": "PASS",
+  "docx_sha256": "e2c560f87150eba9f3b5ce2e7509cdf132b5a06603fba179bd92e39db679881b",
+  "pdf_sha256": "fc7e370f5a58df983821d6a8207d2ba8bcefee46e6894687dfd232226946dade",
+  "pages": 110,
+  "native_captions": 86,
+  "figures": 39,
+  "tables_excluding_cover": 47,
+  "changed_table_cells": [
+    [
+      8,
+      6,
+      2,
+      "探针前窗口内归一化画面变化率的中位数（s⁻¹）"
+    ],
+    [
+      21,
+      1,
+      4,
+      ".010"
+    ],
+    [
+      34,
+      13,
+      2,
+      "−0.004155"
+    ],
+    [
+      34,
+      13,
+      3,
+      "0.01326"
+    ]
+  ],
+  "figure_relationship_checks": [
+    {
+      "old_figure": 1,
+      "new_figure": 1,
+      "type": "unchanged_original",
+      "sha256": "3b2af73f453106a752620151386996310aa178ca1f805f677f38be43862168a5",
+      "caption": "图 1 持续注意的动态性与测量难题"
+    },
+    {
+      "old_figure": 2,
+      "new_figure": 2,
+      "type": "unchanged_original",
+      "sha256": "406336c9e94cf435c9cd2061ca5c7fbf56189718e492ffd33062e3952e014d1d",
+      "caption": "图 2 持续注意的构念边界与可观察测量"
+    },
+    {
+      "old_figure": 3,
+      "new_figure": 3,
+      "type": "unchanged_original",
+      "sha256": "5295fbdd3377b3d41747672c1654a60dcc748b9778b5be1873a7cb7a9f98636c",
+      "caption": "图 3 从数据采集到模型训练的研究流程"
+    },
+    {
+      "old_figure": 4,
+      "new_figure": 4,
+      "type": "unchanged_original",
+      "sha256": "cc9d9792745d7c30f248a98ca7d5ea1eef6946d42b4027d23a07895fc236f521",
+      "caption": "图 4 专注预测与系统解释"
+    },
+    {
+      "old_figure": 5,
+      "new_figure": 5,
+      "type": "unchanged_original",
+      "sha256": "8d76eac3ae336c0bb2ff8f3afea61884ca95b07774bb30838aaa96b9406eb18b",
+      "caption": "图 5 不同大小的刺激呈现示例图"
+    },
+    {
+      "old_figure": 6,
+      "new_figure": 6,
+      "type": "unchanged_original",
+      "sha256": "82637d6fed02a395d9ec9e2258676e4807817cf40cc35a09a6f86dd6afc93409",
+      "caption": "图 6 实验程序流程图"
+    },
+    {
+      "old_figure": 7,
+      "new_figure": 7,
+      "type": "unchanged_original",
+      "sha256": "c27c02dcf5b04b0d9dd2afe4f2691b3d7ca4c685a67a0b2a563779b9ea19081a",
+      "caption": "图 7 预实验实验任务和场景示例"
+    },
+    {
+      "old_figure": 9,
+      "new_figure": 8,
+      "type": "unchanged_original",
+      "sha256": "174a3eadc596532e526fe99d84939a08e40b28529255d9e90621adcb880502fc",
+      "caption": "图 8 设备和实验对准示意图"
+    },
+    {
+      "old_figure": 10,
+      "new_figure": 9,
+      "type": "unchanged_original",
+      "sha256": "cae405a420393f07f0f081f595dfd8ee3222e71bf702ac430a585991753627b7",
+      "caption": "图 9 正式实验范式与时间轴"
+    },
+    {
+      "old_figure": 11,
+      "new_figure": 10,
+      "type": "unchanged_original",
+      "sha256": "90a3908aa25a3a785d2a4d4e011214c30656b7e2204be650f262aecd2f27ce5c",
+      "caption": "图 10 FocusWave 多模态持续注意测评实现概览"
+    },
+    {
+      "old_figure": 13,
+      "new_figure": 11,
+      "type": "unchanged_original",
+      "sha256": "bba50f68aa4fee89a53238e3b2465fed69e30d2d46b6ae4def4e9ab09413e8fc",
+      "caption": "图 11 毫米波信号处理关键步骤"
+    },
+    {
+      "old_figure": 14,
+      "new_figure": 12,
+      "type": "unchanged_original",
+      "sha256": "04102b48d4e46e710315e0ab8b8b70d025cdf0af8675326ee49013063c38826b",
+      "caption": "图 12 毫米波距离选择、相位微动与频谱示例"
+    },
+    {
+      "old_figure": 15,
+      "new_figure": 13,
+      "type": "source_based_statistical_plot",
+      "sha256": "e5321a145d46aa864dbea69e9050cde2995b04f4d2de0ff8d8232f4a6786a686",
+      "caption": "图 13 各模态指标的有效覆盖"
+    },
+    {
+      "old_figure": 16,
+      "new_figure": 14,
+      "type": "source_based_statistical_plot",
+      "sha256": "91cef640e52b6f2f7281df77b9b9f7d933591daf42cd79245ef31a3dff61cb32",
+      "caption": "图 14 反应时变异系数的任务时间进程"
+    },
+    {
+      "old_figure": 17,
+      "new_figure": 15,
+      "type": "source_based_statistical_plot",
+      "sha256": "cbcd93490c10f2d4707abbf7e8e117d781199bc044cbb2c421288342cda8b9f3",
+      "caption": "图 15 近期行为与注意内容报告的关系"
+    },
+    {
+      "old_figure": 18,
+      "new_figure": 16,
+      "type": "source_based_statistical_plot",
+      "sha256": "ff7879160c5032a3fc4f9b9f64eb8ebd5dbb04d9b748abbe46db712b213602de",
+      "caption": "图 16 错误前后各试次位置的正确反应时偏离"
+    },
+    {
+      "old_figure": 21,
+      "new_figure": 17,
+      "type": "source_based_statistical_plot",
+      "sha256": "11719843703c5d937728777671f39984158b7733580c8048986b00deaef6fc6e",
+      "caption": "图 17 注意内容与眼部变化的参与者内关联"
+    },
+    {
+      "old_figure": 22,
+      "new_figure": 18,
+      "type": "source_based_statistical_plot",
+      "sha256": "a52a9e84376fa2db811ae17650fa41dacfd24ddfc0edc22fa007d89ab4cd0248",
+      "caption": "图 18 主观警觉与眼部变化的参与者内关联"
+    },
+    {
+      "old_figure": 24,
+      "new_figure": 19,
+      "type": "source_based_statistical_plot",
+      "sha256": "26f51920988bc9aa5eaa0fd995a0ea1e66cd4c51efb24c01c38bd19cff0afceb",
+      "caption": "图 19 眼部–行为参与者内部同步"
+    },
+    {
+      "old_figure": 25,
+      "new_figure": 20,
+      "type": "source_based_statistical_plot",
+      "sha256": "e990fbf2951ecdcd4902dbcdcba6efbedaf14e87a20889746f8164231645348d",
+      "caption": "图 20 整体身体动作强度的任务进程效应"
+    },
+    {
+      "old_figure": 26,
+      "new_figure": 21,
+      "type": "source_based_statistical_plot",
+      "sha256": "daaa3b6d0047987edfcf8f615c5afe73b70750d108ec3f6525feca48c8d7ad30",
+      "caption": "图 21 毫米波心率与心电参考的差值分布"
+    },
+    {
+      "old_figure": 27,
+      "new_figure": 22,
+      "type": "source_based_statistical_plot",
+      "sha256": "62970693428396e5e5b108fa8b40fa1a6a1464ae19158e1cb74d0d14b304a08d",
+      "caption": "图 22 各类信息的折外预测表现"
+    },
+    {
+      "old_figure": 28,
+      "new_figure": 23,
+      "type": "source_based_statistical_plot",
+      "sha256": "88e3b181ba2df35f64f8a9e7e64a5df34dd89aeca71e23253e4ebea7d7194052",
+      "caption": "图 23 十三项完整组合的折外概率校准"
+    },
+    {
+      "old_figure": 29,
+      "new_figure": 24,
+      "type": "source_based_statistical_plot",
+      "sha256": "7a91b8e28455ad9a066b64240c3cc2224ee54be2ff131e7e51c667a5d73d6df8",
+      "caption": "图 24 行为基础上的成对增量"
+    },
+    {
+      "old_figure": 30,
+      "new_figure": 25,
+      "type": "source_based_statistical_plot",
+      "sha256": "63041d5da01411abb934a7e759a6271c683452d535711ddbaad1b5b5e8ef8ae5",
+      "caption": "图 25 完整组合的逐项移除比较"
+    },
+    {
+      "old_figure": 31,
+      "new_figure": 26,
+      "type": "source_based_statistical_plot",
+      "sha256": "0d9c2ad3aa8d220843dc680b67cd8e62fd96cb266ee1ccc975b084684a94faff",
+      "caption": "图 26 不同设备配置的折外表现"
+    },
+    {
+      "old_figure": 33,
+      "new_figure": 27,
+      "type": "original_clean_system_diagram",
+      "sha256": "01668d57fa50f90d985db87482e0434b0195f03838e4294c3e8fa33b367501f1",
+      "caption": "图 27 测量分析与结果呈现的关系"
+    },
+    {
+      "old_figure": 34,
+      "new_figure": 28,
+      "type": "original_clean_system_diagram",
+      "sha256": "b82f8527a23b9b2339c7e70e4adbfef1bc13134c456ac784bca708afe0bfafde",
+      "caption": "图 28 测评信息的组成与呈现"
+    },
+    {
+      "old_figure": 35,
+      "new_figure": 29,
+      "type": "unchanged_original",
+      "sha256": "e7906d9b855e2794c5d232082210a2dd5b3fa7dac9e5193b17ae7da11d47beb5",
+      "caption": "图 29 测评入口界面"
+    },
+    {
+      "old_figure": 36,
+      "new_figure": 30,
+      "type": "unchanged_original",
+      "sha256": "28eeb298d0a3d32e4a1eaaa07c0f70d9ae296b96a8d6d0cd06bfae71ab3019c3",
+      "caption": "图 30 测评设置界面"
+    },
+    {
+      "old_figure": 37,
+      "new_figure": 31,
+      "type": "unchanged_original",
+      "sha256": "03b9dc6b32ec65d7252971fa3c508f7f8f3614f6face095e91086d795baee6fb",
+      "caption": "图 31 设备就绪与信号质量界面"
+    },
+    {
+      "old_figure": 38,
+      "new_figure": 32,
+      "type": "unchanged_original",
+      "sha256": "2b5710ee2782d4f142b3e0040b75e0d40c6846b8ab1513a6af494d19a3471126",
+      "caption": "图 32 实时注意状态界面"
+    },
+    {
+      "old_figure": 39,
+      "new_figure": 33,
+      "type": "unchanged_original",
+      "sha256": "f10198035c31a2a8ab68e47ffe48739a41bf9a3639059d81859f9aaccc0ecab3",
+      "caption": "图 33 单次测评结束后的总结界面"
+    },
+    {
+      "old_figure": 40,
+      "new_figure": 34,
+      "type": "unchanged_original",
+      "sha256": "f1422d8df85623591a3709a2ef314f2cd7e58f3dc7e7bedd53fd083b92d328f4",
+      "caption": "图 34 跨次数记录的墨池莲花界面"
+    },
+    {
+      "old_figure": 41,
+      "new_figure": 35,
+      "type": "unchanged_original",
+      "sha256": "14aad858451e39cb3edf8506f3807db5458e09e5f09ccf9e4a2dc144bda19bd4",
+      "caption": "图 35 专注档案界面"
+    },
+    {
+      "old_figure": 42,
+      "new_figure": 36,
+      "type": "unchanged_original",
+      "sha256": "f767b6489f49eb7d7d4095302e65d92f79e24630687a75af9e4ddd9bf884375c",
+      "caption": "图 36 注意画像界面"
+    },
+    {
+      "old_figure": 43,
+      "new_figure": 37,
+      "type": "unchanged_original",
+      "sha256": "d8e4ce128afbd29277bebc3439b621a781b562c489d366d52d9dbc0a486a367f",
+      "caption": "图 37 设置与模型信息界面"
+    },
+    {
+      "old_figure": 44,
+      "new_figure": 38,
+      "type": "unchanged_original",
+      "sha256": "9bd19de416c21c52de8ed8d31b20aaad4c17c2a0f998afd7d5d30d802f9d045f",
+      "caption": "图 38 信号与状态特征到画面参数的对应关系"
+    },
+    {
+      "old_figure": 45,
+      "new_figure": 39,
+      "type": "unchanged_original",
+      "sha256": "bfd04accf69a81aa3cdafcb2a311a27b99266027b7ea5a0eba89be2e30ce5b2e",
+      "caption": "图 39 四种视觉意象与四种注意状态的画面"
+    }
+  ],
+  "caption_pages": {
+    "图 1 持续注意的动态性与测量难题": 4,
+    "表 1 相关构念区分表": 6,
+    "图 2 持续注意的构念边界与可观察测量": 7,
+    "表 2 SART范式行为指标与心理意义": 8,
+    "表 3 瞳孔指标相关概念": 11,
+    "表 4 非接触测量证据与评价": 14,
+    "表 5 相关系统启示": 15,
+    "表 6 总体方案各阶段一览表": 19,
+    "图 3 从数据采集到模型训练的研究流程": 20,
+    "图 4 专注预测与系统解释": 20,
+    "图 5 不同大小的刺激呈现示例图": 23,
+    "图 6 实验程序流程图": 23,
+    "图 7 预实验实验任务和场景示例": 24,
+    "图 8 设备和实验对准示意图": 25,
+    "图 9 正式实验范式与时间轴": 26,
+    "图 10 FocusWave 多模态持续注意测评实现概览": 27,
+    "表 7 正式实验设备与采集参数": 28,
+    "图 11 毫米波信号处理关键步骤": 31,
+    "图 12 毫米波距离选择、相位微动与频谱示例": 32,
+    "表 8 多模态增量模型纳入特征": 34,
+    "图 13 各模态指标的有效覆盖": 38,
+    "表 9 思维探针 Q1 与 Q2 选择分布": 39,
+    "表 10 探针前 30 s 行为的描述统计": 39,
+    "图 14 反应时变异系数的任务时间进程": 40,
+    "图 15 近期行为与注意内容报告的关系": 41,
+    "图 16 错误前后各试次位置的正确反应时偏离": 42,
+    "表 11 主要眼部任务进程估计": 43,
+    "图 17 注意内容与眼部变化的参与者内关联": 44,
+    "图 18 主观警觉与眼部变化的参与者内关联": 44,
+    "图 19 眼部–行为参与者内部同步": 45,
+    "图 20 整体身体动作强度的任务进程效应": 46,
+    "表 12 身体动作强度与即时主观报告的关系": 46,
+    "表 13 心率与呼吸率的描述统计": 47,
+    "图 21 毫米波心率与心电参考的差值分布": 48,
+    "表 14 单类信息及仅传感信息联合模型的折外表现": 49,
+    "图 22 各类信息的折外预测表现": 50,
+    "表 15 同一场次内的报告区分": 50,
+    "图 23 十三项完整组合的折外概率校准": 51,
+    "表 16 行为模型的窗口长度敏感性": 52,
+    "表 17 眼部、头动模型对比": 52,
+    "表 18 行为基础上的信息增量": 53,
+    "图 24 行为基础上的成对增量": 53,
+    "表 19 从完整组合移除信息后的损失变化": 54,
+    "图 25 完整组合的逐项移除比较": 55,
+    "表 20 当前设备配置的覆盖与折外表现": 56,
+    "图 26 不同设备配置的折外表现": 57,
+    "表 21 探索性与确定性优势比分析": 58,
+    "图 27 测量分析与结果呈现的关系": 59,
+    "图 28 测评信息的组成与呈现": 60,
+    "图 29 测评入口界面": 61,
+    "图 30 测评设置界面": 62,
+    "图 31 设备就绪与信号质量界面": 63,
+    "图 32 实时注意状态界面": 64,
+    "图 33 单次测评结束后的总结界面": 65,
+    "图 34 跨次数记录的墨池莲花界面": 66,
+    "图 35 专注档案界面": 67,
+    "图 36 注意画像界面": 68,
+    "图 37 设置与模型信息界面": 69,
+    "图 38 信号与状态特征到画面参数的对应关系": 70,
+    "图 39 四种视觉意象与四种注意状态的画面": 71,
+    "表 A1 事后问卷分析单位与样本": 85,
+    "表 A2 事后走神等级分布": 85,
+    "表 A3 事后问卷有序模型完整系数": 87,
+    "表 B1 眼部任务进程的全部估计": 89,
+    "表 B2 眼部与注意内容的参与者内关联": 90,
+    "表 B3 眼部与注意内容的参与者间关联": 90,
+    "表 B4 眼部与清醒等级的参与者内关联": 91,
+    "表 B5 眼部与清醒等级的参与者间关联": 91,
+    "表 B6 眼部与同期行为的参与者内关联": 91,
+    "表 B7 眼部与同期行为的参与者间关联": 92,
+    "表 B8 全部正式成对预测比较": 93,
+    "表 B9 全部正式模型的损失与排序诊断": 93,
+    "表 C1 两个正式区块之间的行为变化": 96,
+    "表 C2 错误事件前后正确反应时的变化": 97,
+    "表 C3 行为指标的有效覆盖": 97,
+    "表 D1 动作指标的任务进程系数": 98,
+    "表 D2 动作指标与即时注意内容的关系": 99,
+    "表 D3 动作指标与清醒等级的关系": 99,
+    "表 D4 动作指标与近期行为的关系": 100,
+    "表 D5 动作指标的有效覆盖": 100,
+    "表 E1 心率与呼吸率的有效覆盖": 101,
+    "表 E2 心率估计误差的分类比较": 101,
+    "表 E3 各类误差对总体低估的贡献": 101,
+    "表 E4 不同心率估计路径的比较": 102,
+    "表 F1 各分析集合上的模型性能": 102,
+    "表 F2 概率诊断结果": 106
+  },
+  "preserved_other_package_parts": true,
+  "preserved_sections": true,
+  "no_empty_pages": true,
+  "models_refitted": 0
+}

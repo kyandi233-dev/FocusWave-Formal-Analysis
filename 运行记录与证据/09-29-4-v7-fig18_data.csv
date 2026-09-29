@@ -1,0 +1,15 @@
+﻿error_type,relative_trial,participant_group_n,session_n,error_event_n,participant_centered_rt_mean_ms,participant_centered_rt_sem_ms,observation_unit
+go_omission,-3,54,93,1944,32.800186083923855,15.149817454767597,participant_group_summary
+go_omission,-2,54,93,1949,48.83614986993038,12.326081178317944,participant_group_summary
+go_omission,-1,54,93,1955,76.59808300808061,19.249138652142108,participant_group_summary
+go_omission,0,54,93,1957,,,participant_group_summary
+go_omission,1,54,93,1951,-38.26301319940967,10.720502221048656,participant_group_summary
+go_omission,2,54,93,1945,6.7036536783960505,7.123991893351743,participant_group_summary
+go_omission,3,54,93,1941,10.32782141424324,7.625135257100386,participant_group_summary
+nogo_commission,-3,61,116,3724,4.41734517860824,5.279861444389609,participant_group_summary
+nogo_commission,-2,61,116,3724,8.64617270002888,4.967503861572904,participant_group_summary
+nogo_commission,-1,61,116,3724,9.657926845398135,4.979793359522066,participant_group_summary
+nogo_commission,0,61,116,3724,,,participant_group_summary
+nogo_commission,1,61,116,3724,-6.130189876767872,9.141233091092117,participant_group_summary
+nogo_commission,2,61,116,3724,-18.27243799676589,7.107372735363725,participant_group_summary
+nogo_commission,3,61,116,3724,-6.601158412491308,6.979929041700205,participant_group_summary

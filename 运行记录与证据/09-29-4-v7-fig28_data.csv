@@ -1,0 +1,11 @@
+﻿model_id,run_id,analysis_set_id,membership_type,bin_index,bin_lower,bin_upper,n_probes,mean_predicted_probability,observed_positive_rate
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,0,0.0191,0.517,171,0.4413738778170842,0.5847953216374269
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,1,0.517,0.591,170,0.5580780208272146,0.5529411764705883
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,2,0.591,0.634,170,0.6141047735281698,0.611764705882353
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,3,0.634,0.664,170,0.6507145550269137,0.6823529411764706
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,4,0.664,0.698,171,0.6821491577353763,0.7660818713450293
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,5,0.698,0.73,170,0.7132069459801178,0.6705882352941176
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,6,0.73,0.761,170,0.74533003789749,0.7647058823529411
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,7,0.761,0.782,170,0.7734960492232287,0.8
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,8,0.782,0.805,170,0.7932986141050125,0.7764705882352941
+full,AS.full__included_missing_aware,AS.full,included_missing_aware,9,0.805,0.899,171,0.8251890112357975,0.695906432748538

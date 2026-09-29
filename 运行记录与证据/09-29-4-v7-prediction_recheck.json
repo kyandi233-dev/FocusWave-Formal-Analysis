@@ -1,0 +1,461 @@
+{
+  "status": "PASS",
+  "analysis_sets": 25,
+  "model_rows": 56,
+  "outer_fold_records": 3297,
+  "inner_fold_records": 16485,
+  "metrics": [
+    {
+      "analysis_set": "AS.behavior_plus_cardiopulmonary",
+      "model": "behavior_plus::cardiopulmonary.br.v1",
+      "n": 2198,
+      "participant_equal_log_loss": 0.6206336964517296,
+      "participant_macro_brier": 0.21375925871339502,
+      "participant_macro_auroc": 0.7088421122668301
+    },
+    {
+      "analysis_set": "AS.behavior_plus_cardiopulmonary",
+      "model": "behavior_plus::cardiopulmonary.hr.fused.v1",
+      "n": 2198,
+      "participant_equal_log_loss": 0.6167959160749364,
+      "participant_macro_brier": 0.21282645463856392,
+      "participant_macro_auroc": 0.7052666427773381
+    },
+    {
+      "analysis_set": "AS.behavior_plus_cardiopulmonary",
+      "model": "behavior_plus_modality::cardiopulmonary",
+      "n": 2198,
+      "participant_equal_log_loss": 0.6184776241353975,
+      "participant_macro_brier": 0.21354094630738746,
+      "participant_macro_auroc": 0.7011328074356983
+    },
+    {
+      "analysis_set": "AS.behavior_plus_cardiopulmonary",
+      "model": "behavior_reference",
+      "n": 2198,
+      "participant_equal_log_loss": 0.6189738749195083,
+      "participant_macro_brier": 0.21304443789305239,
+      "participant_macro_auroc": 0.7103950611793671
+    },
+    {
+      "analysis_set": "AS.behavior_plus_cardiopulmonary",
+      "model": "modality::cardiopulmonary",
+      "n": 2198,
+      "participant_equal_log_loss": 0.6346959768390592,
+      "participant_macro_brier": 0.22101267361199547,
+      "participant_macro_auroc": 0.46910346364168815
+    },
+    {
+      "analysis_set": "AS.behavior_plus_movement",
+      "model": "behavior_plus::movement.body_motion_energy.median.pre30s.v1",
+      "n": 2296,
+      "participant_equal_log_loss": 0.6276139317587901,
+      "participant_macro_brier": 0.2176571997030873,
+      "participant_macro_auroc": 0.7024139270797382
+    },
+    {
+      "analysis_set": "AS.behavior_plus_movement",
+      "model": "behavior_plus_modality::movement",
+      "n": 2296,
+      "participant_equal_log_loss": 0.6276139317587901,
+      "participant_macro_brier": 0.2176571997030873,
+      "participant_macro_auroc": 0.7024139270797382
+    },
+    {
+      "analysis_set": "AS.behavior_plus_movement",
+      "model": "behavior_reference",
+      "n": 2296,
+      "participant_equal_log_loss": 0.6242492983866208,
+      "participant_macro_brier": 0.21616901836705868,
+      "participant_macro_auroc": 0.705398416058234
+    },
+    {
+      "analysis_set": "AS.behavior_plus_movement",
+      "model": "modality::movement",
+      "n": 2296,
+      "participant_equal_log_loss": 0.6464554422283386,
+      "participant_macro_brier": 0.22665547162067165,
+      "participant_macro_auroc": 0.45694596354337785
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "behavior_plus::ocular.blink_rate.rgb_event_rate.pre30s.v1",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6223183920942503,
+      "participant_macro_brier": 0.21396609690757903,
+      "participant_macro_auroc": 0.7036477859020568
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "behavior_plus::ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6219692738888718,
+      "participant_macro_brier": 0.21467090512125828,
+      "participant_macro_auroc": 0.6954391197505863
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "behavior_plus::ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6240980251392373,
+      "participant_macro_brier": 0.2143432380877637,
+      "participant_macro_auroc": 0.699133975700022
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "behavior_plus::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6245968911862669,
+      "participant_macro_brier": 0.21433849364727303,
+      "participant_macro_auroc": 0.7004634968080152
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "behavior_plus::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6172387870463473,
+      "participant_macro_brier": 0.2118914391443836,
+      "participant_macro_auroc": 0.7106257383189157
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "behavior_plus_modality::ocular",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6160203086440049,
+      "participant_macro_brier": 0.21153412851550177,
+      "participant_macro_auroc": 0.7111104188757368
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "behavior_reference",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6236048429816435,
+      "participant_macro_brier": 0.21415604925189216,
+      "participant_macro_auroc": 0.7000741391445945
+    },
+    {
+      "analysis_set": "AS.behavior_plus_ocular",
+      "model": "modality::ocular",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6456336993816052,
+      "participant_macro_brier": 0.2252560460910378,
+      "participant_macro_auroc": 0.5682910098081139
+    },
+    {
+      "analysis_set": "AS.behavior_reference",
+      "model": "behavior_reference",
+      "n": 2316,
+      "participant_equal_log_loss": 0.6237334205332632,
+      "participant_macro_brier": 0.21595384320421365,
+      "participant_macro_auroc": 0.7060397855521061
+    },
+    {
+      "analysis_set": "AS.device::M0",
+      "model": "M0",
+      "n": 2316,
+      "participant_equal_log_loss": 0.6237334205332632,
+      "participant_macro_brier": 0.21595384320421365,
+      "participant_macro_auroc": 0.7060397855521061
+    },
+    {
+      "analysis_set": "AS.device::M2",
+      "model": "M2",
+      "n": 2198,
+      "participant_equal_log_loss": 0.6184776241353975,
+      "participant_macro_brier": 0.21354094630738746,
+      "participant_macro_auroc": 0.7011328074356983
+    },
+    {
+      "analysis_set": "AS.device::M3",
+      "model": "M3",
+      "n": 2196,
+      "participant_equal_log_loss": 0.6235844863655583,
+      "participant_macro_brier": 0.21602574208576647,
+      "participant_macro_auroc": 0.7039761952695405
+    },
+    {
+      "analysis_set": "AS.device::M5",
+      "model": "M5",
+      "n": 1775,
+      "participant_equal_log_loss": 0.6180333219583619,
+      "participant_macro_brier": 0.2123135927289957,
+      "participant_macro_auroc": 0.706876157507811
+    },
+    {
+      "analysis_set": "AS.device::M6",
+      "model": "M6",
+      "n": 2098,
+      "participant_equal_log_loss": 0.6216825428825274,
+      "participant_macro_brier": 0.21483612175935743,
+      "participant_macro_auroc": 0.7029129424849746
+    },
+    {
+      "analysis_set": "AS.device::M7",
+      "model": "M7",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6207027136375437,
+      "participant_macro_brier": 0.21394931851747317,
+      "participant_macro_auroc": 0.7035213458949408
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6207027136375437,
+      "participant_macro_brier": 0.21394931851747317,
+      "participant_macro_auroc": 0.7035213458949408
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::behavior.go_omission.raw.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6163673856053892,
+      "participant_macro_brier": 0.2120922770577381,
+      "participant_macro_auroc": 0.7068478350178139
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::behavior.nogo_commission.raw.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6449759497183464,
+      "participant_macro_brier": 0.22535376589772224,
+      "participant_macro_auroc": 0.5775652227123477
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::behavior.rt_level.median.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6202863849823869,
+      "participant_macro_brier": 0.21373523455448148,
+      "participant_macro_auroc": 0.7040115258581648
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::behavior.rt_trend.theilsen.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.620259678492479,
+      "participant_macro_brier": 0.2137473691188332,
+      "participant_macro_auroc": 0.7051820508711385
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::behavior.rt_variability.cv.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6179488677446209,
+      "participant_macro_brier": 0.21288337845909763,
+      "participant_macro_auroc": 0.7048677760335136
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::cardiopulmonary.br.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6190407386649636,
+      "participant_macro_brier": 0.21321856171373654,
+      "participant_macro_auroc": 0.7052131763699432
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::cardiopulmonary.hr.fused.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6205937749701165,
+      "participant_macro_brier": 0.21387061460228218,
+      "participant_macro_auroc": 0.7072757201749524
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::movement.body_motion_energy.median.pre30s.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.616660419419232,
+      "participant_macro_brier": 0.21232142826623998,
+      "participant_macro_auroc": 0.7032555089790221
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::ocular.blink_rate.rgb_event_rate.pre30s.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6205625632412956,
+      "participant_macro_brier": 0.21381107490834947,
+      "participant_macro_auroc": 0.6976440778721961
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6199590889181932,
+      "participant_macro_brier": 0.21365995203228896,
+      "participant_macro_auroc": 0.7092096648264422
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6203702583349066,
+      "participant_macro_brier": 0.213816642074617,
+      "participant_macro_auroc": 0.7031449704565856
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6190596585427284,
+      "participant_macro_brier": 0.21366504747708048,
+      "participant_macro_auroc": 0.7028607119548368
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6250770489853557,
+      "participant_macro_brier": 0.21587147514320137,
+      "participant_macro_auroc": 0.6998713894358645
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus_modality::behavior",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6441079657051401,
+      "participant_macro_brier": 0.22465810216735527,
+      "participant_macro_auroc": 0.5125175022355498
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus_modality::cardiopulmonary",
+      "n": 1703,
+      "participant_equal_log_loss": 0.6189403242693112,
+      "participant_macro_brier": 0.21313368304863586,
+      "participant_macro_auroc": 0.7069265360807264
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus_modality::movement",
+      "n": 1703,
+      "participant_equal_log_loss": 0.616660419419232,
+      "participant_macro_brier": 0.21232142826623998,
+      "participant_macro_auroc": 0.7032555089790221
+    },
+    {
+      "analysis_set": "AS.full",
+      "model": "full_minus_modality::ocular",
+      "n": 1703,
+      "participant_equal_log_loss": 0.620890812970407,
+      "participant_macro_brier": 0.21423465429231273,
+      "participant_macro_auroc": 0.6944341849157799
+    },
+    {
+      "analysis_set": "AS.sensor_only_joint",
+      "model": "sensor_only_joint",
+      "n": 1705,
+      "participant_equal_log_loss": 0.6440637577210161,
+      "participant_macro_brier": 0.2246320354631574,
+      "participant_macro_auroc": 0.5119016637887155
+    },
+    {
+      "analysis_set": "AS.standalone::behavior.go_omission.raw.v1",
+      "model": "standalone::behavior.go_omission.raw.v1",
+      "n": 2320,
+      "participant_equal_log_loss": 0.6435365675326941,
+      "participant_macro_brier": 0.22541422024727203,
+      "participant_macro_auroc": 0.5466066646183748
+    },
+    {
+      "analysis_set": "AS.standalone::behavior.nogo_commission.raw.v1",
+      "model": "standalone::behavior.nogo_commission.raw.v1",
+      "n": 2320,
+      "participant_equal_log_loss": 0.61224814348171,
+      "participant_macro_brier": 0.21145071009811267,
+      "participant_macro_auroc": 0.7038721458383866
+    },
+    {
+      "analysis_set": "AS.standalone::behavior.rt_level.median.v1",
+      "model": "standalone::behavior.rt_level.median.v1",
+      "n": 2318,
+      "participant_equal_log_loss": 0.6444965428192632,
+      "participant_macro_brier": 0.22569611564421194,
+      "participant_macro_auroc": 0.5738719470965672
+    },
+    {
+      "analysis_set": "AS.standalone::behavior.rt_trend.theilsen.v1",
+      "model": "standalone::behavior.rt_trend.theilsen.v1",
+      "n": 2316,
+      "participant_equal_log_loss": 0.6429492624239759,
+      "participant_macro_brier": 0.22512121368549573,
+      "participant_macro_auroc": 0.5285280410649795
+    },
+    {
+      "analysis_set": "AS.standalone::behavior.rt_variability.cv.v1",
+      "model": "standalone::behavior.rt_variability.cv.v1",
+      "n": 2318,
+      "participant_equal_log_loss": 0.6436369473165817,
+      "participant_macro_brier": 0.22547150558112003,
+      "participant_macro_auroc": 0.5516822075585721
+    },
+    {
+      "analysis_set": "AS.standalone::cardiopulmonary.br.v1",
+      "model": "standalone::cardiopulmonary.br.v1",
+      "n": 2200,
+      "participant_equal_log_loss": 0.6345714896828946,
+      "participant_macro_brier": 0.22098070255102978,
+      "participant_macro_auroc": 0.5142613922300204
+    },
+    {
+      "analysis_set": "AS.standalone::cardiopulmonary.hr.fused.v1",
+      "model": "standalone::cardiopulmonary.hr.fused.v1",
+      "n": 2200,
+      "participant_equal_log_loss": 0.6330760706566386,
+      "participant_macro_brier": 0.22030633216942194,
+      "participant_macro_auroc": 0.4806866964585949
+    },
+    {
+      "analysis_set": "AS.standalone::movement.body_motion_energy.median.pre30s.v1",
+      "model": "standalone::movement.body_motion_energy.median.pre30s.v1",
+      "n": 2300,
+      "participant_equal_log_loss": 0.6461126826771197,
+      "participant_macro_brier": 0.22648838630347662,
+      "participant_macro_auroc": 0.458580901674191
+    },
+    {
+      "analysis_set": "AS.standalone::ocular.blink_rate.rgb_event_rate.pre30s.v1",
+      "model": "standalone::ocular.blink_rate.rgb_event_rate.pre30s.v1",
+      "n": 2200,
+      "participant_equal_log_loss": 0.6404360854587857,
+      "participant_macro_brier": 0.22383694721768926,
+      "participant_macro_auroc": 0.5663838210856633
+    },
+    {
+      "analysis_set": "AS.standalone::ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+      "model": "standalone::ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+      "n": 1936,
+      "participant_equal_log_loss": 0.6497049635095545,
+      "participant_macro_brier": 0.22828919027234923,
+      "participant_macro_auroc": 0.5157328217200218
+    },
+    {
+      "analysis_set": "AS.standalone::ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+      "model": "standalone::ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+      "n": 1857,
+      "participant_equal_log_loss": 0.646833386015356,
+      "participant_macro_brier": 0.2269768651277249,
+      "participant_macro_auroc": 0.501951326959597
+    },
+    {
+      "analysis_set": "AS.standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+      "model": "standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+      "n": 1855,
+      "participant_equal_log_loss": 0.6477767002497248,
+      "participant_macro_brier": 0.2272998569730314,
+      "participant_macro_auroc": 0.4850285854668934
+    },
+    {
+      "analysis_set": "AS.standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+      "model": "standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+      "n": 1936,
+      "participant_equal_log_loss": 0.6470898803501688,
+      "participant_macro_brier": 0.22681033567196016,
+      "participant_macro_auroc": 0.5924983104044667
+    }
+  ],
+  "inputs_predictors_labels_groups_equal": true,
+  "prediction_files_match_recorded_hashes": true,
+  "models_refitted": 0,
+  "tolerance": 1e-12
+}

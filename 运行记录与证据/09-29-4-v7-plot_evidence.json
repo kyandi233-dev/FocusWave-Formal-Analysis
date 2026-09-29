@@ -1,0 +1,127 @@
+{
+  "source_sha256": {
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\SupervisedRunsV4_Cardiopulmonary\\repair_20260928\\report_results\\model_results.csv": "da9d5d8907178ccfbc056eb052e5873b76a23b9fa56faa7dd91688a3a70e5770",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\SupervisedRunsV4_Cardiopulmonary\\repair_20260928\\report_results\\probability_diagnostics.csv": "12302841b13888b73d86239ecff4065e50021e67de030f13fd340834207d7db2",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\SupervisedRunsV4_Cardiopulmonary\\repair_20260928\\report_results\\constant_baselines.csv": "8dbefac2350b81a55572d75f2f77801533aa6d12e533bc316f30cc10699d748e",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\SupervisedRunsV4_Cardiopulmonary\\repair_20260928\\report_results\\paired_results.csv": "c4f26d0c0a7976d1e925bd65479c43a23506f91727c3b864d114fa40df946e18",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\SupervisedRunsV4_Cardiopulmonary\\repair_20260928\\report_results\\calibration_bins.csv": "3b941b76c486fde768d95f5769a5e72fce8f8a5d0adb07d940b7701ae62484ef",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\Behavior\\formal_v3\\block_metrics.csv": "68a509b7f537a4ba6b1bb07d21d7929391978f99ff87bc1ba050cd0b33f299fc",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\Behavior\\formal_v3\\cycle_metrics.csv": "857a267107f8674b1646188ff78e6fab2db8eb48d1d089ead661b22389ef007d",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\SupervisedRunsV4_Cardiopulmonary\\repair_20260928\\report_results\\v5_fig17_aggregate.csv": "48ca504e8f8e31e48852775144d4bdde07cba69a0f596e88a3da311a387fcec9",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\Behavior\\formal_v3\\q1_nominal_models.csv": "0147719319457992df480874f04827ad0c5320d675b172e535667dc72c02a061",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\Behavior\\formal_v3\\error_trajectory_summary.csv": "78712e90b3c635ee9a338306f68ca66a3e18ea59bf5100cd1376115a68176a7e",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\FormalScience\\Ocular\\tables\\ocular_q1_models.csv": "1f4ecd03e702a031d725e435e02572c43c4902b499db21196b99f0c001a51a33",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\FormalScience\\Ocular\\tables\\ocular_q2_models.csv": "8b021fe139163eb58e0ff4f9c0cfb7593a9c798300c3a0d177b18ad21b751d6a",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\FormalScience\\Ocular\\tables\\ocular_behavior_links.csv": "3d572eaa4a525f04ce97360d4786b750854d103b84eab66c3c71a1204192cca8",
+    "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\FormalScience\\Movement\\tables\\movement_task_progression.csv": "fc8011b4b20a4c9e0e342bd0e02fb24a448e3c9b6cdd0a20bc84d8133912f3ea",
+    "D:\\Project\\厚粲杯\\11_数据\\derived\\mmwave_estimator_improvement_v1_20260912_r1\\final\\CONTROL_VS_CANDIDATES_100_PROBES_LOCAL_ONLY.csv": "7197bafcc41e4a83a7a0b9111f78d94da0c883c98afb9dd36e82526ef7a6890d"
+  },
+  "figures": [
+    {
+      "old_figure": 15,
+      "question": "各类输入的有效覆盖",
+      "plotted_rows": 13,
+      "data_file": "fig15_data.csv",
+      "png": "fig15_v7.png"
+    },
+    {
+      "old_figure": 16,
+      "question": "持续任务的反应时波动变化",
+      "plotted_rows": 12,
+      "data_file": "fig16_data.csv",
+      "png": "fig16_v7.png"
+    },
+    {
+      "old_figure": 17,
+      "question": "六个行为维度与三类非任务聚焦报告的关系",
+      "plotted_rows": 18,
+      "data_file": "fig17_data.csv",
+      "png": "fig17_v7.png"
+    },
+    {
+      "old_figure": 18,
+      "question": "错误事件前后的参与者内反应时变化",
+      "plotted_rows": 14,
+      "data_file": "fig18_data.csv",
+      "png": "fig18_v7.png"
+    },
+    {
+      "old_figure": 21,
+      "question": "眼部变化与注意内容的人内关系",
+      "plotted_rows": 15,
+      "data_file": "fig21_data.csv",
+      "png": "fig21_v7.png"
+    },
+    {
+      "old_figure": 22,
+      "question": "眼部变化与清醒等级的人内关系",
+      "plotted_rows": 5,
+      "data_file": "fig22_data.csv",
+      "png": "fig22_v7.png"
+    },
+    {
+      "old_figure": 24,
+      "question": "眼部与近期行为的人内同步",
+      "plotted_rows": 20,
+      "data_file": "fig24_data.csv",
+      "png": "fig24_v7.png"
+    },
+    {
+      "old_figure": 25,
+      "question": "身体动作强度随区块和阶段的模型估计",
+      "plotted_rows": 3,
+      "data_file": "fig25_data.csv",
+      "png": "fig25_v7.png"
+    },
+    {
+      "old_figure": 26,
+      "question": "心率估计与心电参考的一致性",
+      "plotted_rows": 100,
+      "data_file": "fig26_data.csv",
+      "png": "fig26_v7.png"
+    },
+    {
+      "old_figure": 27,
+      "question": "各信息类别预测表现",
+      "plotted_rows": 5,
+      "data_file": "fig27_data.csv",
+      "png": "fig27_v7.png"
+    },
+    {
+      "old_figure": 31,
+      "question": "设备配置的预测表现",
+      "plotted_rows": 6,
+      "data_file": "fig31_data.csv",
+      "png": "fig31_v7.png"
+    },
+    {
+      "old_figure": 28,
+      "question": "完整组合的概率校准",
+      "plotted_rows": 10,
+      "data_file": "fig28_data.csv",
+      "png": "fig28_v7.png"
+    },
+    {
+      "old_figure": 29,
+      "question": "行为基础上的传感增量",
+      "plotted_rows": 3,
+      "data_file": "fig29_data.csv",
+      "png": "fig29_v7.png"
+    },
+    {
+      "old_figure": 30,
+      "question": "完整组合的预定义逐项贡献",
+      "plotted_rows": 13,
+      "data_file": "fig30_data.csv",
+      "png": "fig30_v7.png"
+    }
+  ],
+  "palette": {
+    "behavior": "#0072B2",
+    "ocular": "#009E73",
+    "movement": "#E69F00",
+    "cardiopulmonary": "#CC79A7",
+    "joint": "#526779"
+  },
+  "models_refitted": 0
+}

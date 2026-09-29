@@ -1,0 +1,4 @@
+﻿term,analysis,metric,estimate,se,ci_low,ci_high,participant_group_n,session_n,n_rows,correlation_structure,status
+block2,block_cycle_gee,body_motion_energy_median,-0.0009884650639739,0.0005177532398576,-0.0020032614140948,2.633128614702978e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+cycle_bin,block_cycle_gee,body_motion_energy_median,-0.0001637324973951,6.868997017865836e-05,-0.0002983648389453,-2.910015584500563e-05,61,115,1380,Exchangeable within participant_group_id,estimable
+block2:cycle_bin,block_cycle_gee,body_motion_energy_median,0.0001673477601405,9.165846766938798e-05,-1.2302836491413712e-05,0.0003469983567725,61,115,1380,Exchangeable within participant_group_id,estimable
