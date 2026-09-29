@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "output_sha256": "a17b526a2ded66f8ba664efb87acafcf1f3611b7eaa1adf8c7d3070f83e3da49",
+  "original_unchanged": true,
+  "source_v4_unchanged": true,
+  "changed_package_parts": [
+    "word/document.xml",
+    "word/media/image14.png",
+    "word/media/image17.png",
+    "word/media/image18.png",
+    "word/media/image28.png",
+    "word/media/image29.png",
+    "word/media/image30.png",
+    "word/media/image33.png",
+    "word/media/image34.png",
+    "word/media/image35.png"
+  ],
+  "styles_headers_footers_unchanged": true,
+  "caption_paragraph_formats_restored": 68,
+  "native_caption_numbers_matched": 68,
+  "preserved_numeric_cells": 1388,
+  "frozen_model_rows": 56,
+  "frozen_pair_rows": 28,
+  "predictive_refits": 0,
+  "pages": 123,
+  "pages_without_extractable_text": [
+    107
+  ],
+  "visual_review": "See run record; separate contact-sheet and enlarged-page inspection."
+}

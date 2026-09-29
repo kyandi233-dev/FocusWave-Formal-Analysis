@@ -1,0 +1,70 @@
+{
+  "rt_valid_n": 83661,
+  "rt_total_trials": 100224,
+  "rt_sessions": 116,
+  "rt_min": 100.05939996335655,
+  "rt_max": 1169.3298000027426,
+  "coverage": {
+    "behavior.rt_level.median.v1": 2318,
+    "behavior.rt_variability.cv.v1": 2318,
+    "behavior.rt_trend.theilsen.v1": 2316,
+    "behavior.go_omission.raw.v1": 2320,
+    "behavior.nogo_commission.raw.v1": 2320,
+    "ocular.pupil_level.rseg_hard.rgb_nir_qc.v1": 1936,
+    "ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1": 1936,
+    "ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1": 1857,
+    "ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1": 1855,
+    "ocular.blink_rate.rgb_event_rate.pre30s.v1": 2200,
+    "movement.body_motion_energy.median.pre30s.v1": 2300,
+    "cardiopulmonary.hr.fused.v1": 2200,
+    "cardiopulmonary.br.v1": 2200
+  },
+  "heart_stats": [
+    {
+      "label": "心率（次/min）",
+      "n": 2200,
+      "mean": 75.92969727272727,
+      "sd": 10.679502016090437,
+      "median": 75.795,
+      "q25": 69.22574999999999,
+      "q75": 82.307,
+      "min": 50.171,
+      "max": 115.097
+    },
+    {
+      "label": "呼吸率（次/min）",
+      "n": 2200,
+      "mean": 18.528602272727273,
+      "sd": 4.603438257669271,
+      "median": 20.094,
+      "q25": 16.183,
+      "q75": 22.157,
+      "min": 6.063,
+      "max": 26.316
+    }
+  ],
+  "heart_sessions": 110,
+  "figure17": {
+    "participants": 61,
+    "bootstrap_samples": 20000,
+    "seed": 20260929,
+    "aggregation": "within-participant before across-participant mean",
+    "paired_difference_mean": 0.02891910544135966
+  },
+  "reference": {
+    "n": 100,
+    "mae": 10.457079173363644,
+    "bias": -9.033105841645153,
+    "sd": 11.083737315006672,
+    "lower_line": -30.75723097905823,
+    "upper_line": 12.691019295767926
+  },
+  "input_hashes": {
+    "Behavior\\formal_v3\\trial_metrics.csv": "4541ee465cb46c671bc2a75513092b1f93a3060f200de588ad03e87ddd4adc2f",
+    "Behavior\\formal_v3\\block_metrics.csv": "68a509b7f537a4ba6b1bb07d21d7929391978f99ff87bc1ba050cd0b33f299fc",
+    "Behavior\\formal_v3\\cycle_metrics.csv": "857a267107f8674b1646188ff78e6fab2db8eb48d1d089ead661b22389ef007d",
+    "SupervisedRunsV4_Cardiopulmonary\\repair_20260928\\repaired_source\\m1_cardiopulmonary_taskb_source.csv": "a9084c0e4782a1b35c2fe3af0a8567dd43f61b657060c0cf2213861a28084b87",
+    "CONTROL_VS_CANDIDATES_100_PROBES_LOCAL_ONLY.csv": "b4251445b1938df61f07efece9ecba4dd29feffceed699e0b5b5226d0571a76d"
+  },
+  "predictive_model_refits": 0
+}
