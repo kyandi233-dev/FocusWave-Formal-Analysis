@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "source_sha256": "a17b526a2ded66f8ba664efb87acafcf1f3611b7eaa1adf8c7d3070f83e3da49",
+  "output_sha256": "379e648b7ba410348d2b46cd18ca7432626b14fbcf5886dcfb6e4c2c1dc040e7",
+  "pages": 119,
+  "captions": 66,
+  "tables": 48,
+  "unchanged_table_cells": 3383,
+  "models_refitted": 0,
+  "original_analysis_archives_preserved": true,
+  "changed_package_parts": [
+    "word/document.xml"
+  ]
+}
