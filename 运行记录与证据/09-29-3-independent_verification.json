@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "models_verified": 56,
+  "pairs_verified": 28,
+  "label_mapping_verified": true,
+  "primary_points_match_frozen_archive": true,
+  "outer_folds": 3297,
+  "inner_folds": 16485,
+  "source_code_commits": [
+    "85a7b77473b0264df0e2b2875dbf54513e69773c",
+    "96d9e11e847768ca9aaf421fda7e10612fc1cdf3",
+    "06999e2b814d693da35067f7a629def1d18461b2"
+  ],
+  "output_files": {
+    "model_results.csv": "c4793b5549a5140ee175d524c63bd7d817395e0e49f7fbb3d0594e102beabf57",
+    "primary_target_results.csv": "37b135d0887364811bd76a402154e23a98c762e18cc541b4631acdd7e1872afd",
+    "paired_results.csv": "f490d7986dd01a4fb00468fc2682a8dedaaea256f616a1480631f9dc1553a4b2",
+    "main_model_comparison.csv": "6a7deb7d68f7cda072ca5afb28841afde97e3dd44d426e65eaabcec400b266cc",
+    "label_distribution.csv": "18299f41455d297283eb1efed0bf5e919ce249697363587ec11e504b4e628f5d",
+    "target_comparison.png": "39db6e605f154393eb665048ee25d642995b403b99c7389a00ea5b96e5d9eb4a"
+  }
+}

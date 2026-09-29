@@ -1,0 +1,658 @@
+{
+  "status": "PASS",
+  "task": {
+    "name": "q1_12_vs_34_sensitivity_20260929",
+    "status": "user_requested_post_hoc_supplement",
+    "base_config": "configs/supervised_learning_v3_cardiopulmonary.yaml",
+    "task": {
+      "name": "q1_1_2_vs_3_4",
+      "source_column": "q1_nominal_4class",
+      "positive_values": [
+        1,
+        2
+      ],
+      "negative_values": [
+        3,
+        4
+      ],
+      "positive_probability_name": "p_q1_in_1_2"
+    },
+    "expected_analysis_sets": 25,
+    "expected_model_rows": 56,
+    "expected_pairs": 28,
+    "preserve_primary_target": true,
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20260830
+  },
+  "code_sha": "85a7b77473b0264df0e2b2875dbf54513e69773c",
+  "working_tree_dirty": false,
+  "config_sha256": "1ba1cd81060e899fad5615da464dd3f845caa33c60fe569b3642bcba3040e911",
+  "runner_sha256": "ea9cc19846f58967df878d57e1e489a856bf0859a7019787b179fe420e1b662a",
+  "script_sha256": "6c4c2363aa6e84d39d104ba103d1323489555adf3657c5ba34a4d89c33cf3c04",
+  "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:29:05) [MSC v.1942 64 bit (AMD64)]",
+  "time_legality": {
+    "schema_version": "1.16.10-time-legality-v1",
+    "n_features": 13,
+    "n_verified_pre_probe_only": 13,
+    "verified_pre_probe_only_feature_ids": [
+      "behavior.rt_level.median.v1",
+      "behavior.rt_variability.cv.v1",
+      "behavior.rt_trend.theilsen.v1",
+      "behavior.go_omission.raw.v1",
+      "behavior.nogo_commission.raw.v1",
+      "ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+      "ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+      "ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+      "ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+      "ocular.blink_rate.rgb_event_rate.pre30s.v1",
+      "movement.body_motion_energy.median.pre30s.v1",
+      "cardiopulmonary.hr.fused.v1",
+      "cardiopulmonary.br.v1"
+    ],
+    "pending_or_blocked_feature_ids": [],
+    "features": [
+      {
+        "feature_id": "behavior.rt_level.median.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "build_probe_windows: same session/block; trial_num < anchor_trial; absolute_onset_time < probe_time; primary interval [probe_time-30s, probe_time); anchor trial excluded; block crossing forbidden",
+        "preprocessing_dependencies": [],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_reference_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": []
+      },
+      {
+        "feature_id": "behavior.rt_variability.cv.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "build_probe_windows: same session/block; trial_num < anchor_trial; absolute_onset_time < probe_time; primary interval [probe_time-30s, probe_time); anchor trial excluded; block crossing forbidden",
+        "preprocessing_dependencies": [],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_reference_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": []
+      },
+      {
+        "feature_id": "behavior.rt_trend.theilsen.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "build_probe_windows: same session/block; trial_num < anchor_trial; absolute_onset_time < probe_time; primary interval [probe_time-30s, probe_time); anchor trial excluded; block crossing forbidden",
+        "preprocessing_dependencies": [],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_reference_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": []
+      },
+      {
+        "feature_id": "behavior.go_omission.raw.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "build_probe_windows: same session/block; trial_num < anchor_trial; absolute_onset_time < probe_time; primary interval [probe_time-30s, probe_time); anchor trial excluded; block crossing forbidden",
+        "preprocessing_dependencies": [],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_reference_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": []
+      },
+      {
+        "feature_id": "behavior.nogo_commission.raw.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "build_probe_windows: same session/block; trial_num < anchor_trial; absolute_onset_time < probe_time; primary interval [probe_time-30s, probe_time); anchor trial excluded; block crossing forbidden",
+        "preprocessing_dependencies": [],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_reference_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": []
+      },
+      {
+        "feature_id": "ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "G1 fixed probe-relative pre-30s bins; 2s x 15; no interpolation; pre200/post200 for RGB-assisted track",
+        "preprocessing_dependencies": [
+          "rgb_plus_nir_qc",
+          "fixed_2s_bins",
+          "no_interpolation",
+          "pre200_post200"
+        ],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M5",
+          "M7"
+        ]
+      },
+      {
+        "feature_id": "ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "G1 fixed probe-relative pre-30s bins; 2s x 15; no interpolation; pre200/post200 for RGB-assisted track",
+        "preprocessing_dependencies": [
+          "rgb_plus_nir_qc",
+          "fixed_2s_bins",
+          "no_interpolation",
+          "pre200_post200"
+        ],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M5",
+          "M7"
+        ]
+      },
+      {
+        "feature_id": "ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "G1 fixed probe-relative pre-30s bins; 2s x 15; no interpolation; pre200/post200 for RGB-assisted track; frozen span >=20s",
+        "preprocessing_dependencies": [
+          "rgb_plus_nir_qc",
+          "fixed_2s_bins",
+          "no_interpolation",
+          "pre200_post200"
+        ],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M5",
+          "M7"
+        ]
+      },
+      {
+        "feature_id": "ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "G1 fixed probe-relative pre-30s bins; 2s x 15; no interpolation; pre200/post200 for RGB-assisted track; frozen span >=20s",
+        "preprocessing_dependencies": [
+          "rgb_plus_nir_qc",
+          "fixed_2s_bins",
+          "no_interpolation",
+          "pre200_post200"
+        ],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M5",
+          "M7"
+        ]
+      },
+      {
+        "feature_id": "ocular.blink_rate.rgb_event_rate.pre30s.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "existing RGB 5.5 strict same-block [-30s,0) probe window; anchor trial excluded",
+        "preprocessing_dependencies": [
+          "rgb_blink_events",
+          "strict_probe_pre30s_window"
+        ],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M3",
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      {
+        "feature_id": "movement.body_motion_energy.median.pre30s.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "existing RGB 5.5 producer; strict same-block [-30 s, 0) probe window; anchor trial excluded; no future information",
+        "preprocessing_dependencies": [
+          "rgb_formal_analysis_ready",
+          "strict_probe_pre30s_window"
+        ],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M3",
+          "M5",
+          "M6",
+          "M7"
+        ]
+      },
+      {
+        "feature_id": "cardiopulmonary.hr.fused.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "MMWAVE M1 producer contract and provenance closure, now canonical on the mmWave repository main branch (merge of PR #44; main 527ff09). Producer execution commit 01da845e with a clean worktree and four source SHA-256 values independently rechecked. Frozen producer time contract: scientific clock = timestamp CSV zero-based column 1 (DLL host receive/enqueue time), column 2 is QC-only; formal frame membership is strictly right-open [window_effective_start_unix_ms, probe_onset_unix_ms) with window_end equal to probe_onset exactly and a frame exactly at probe onset excluded; window_effective_start_unix_ms is the actual slicing lower bound; J and E share one process_probe() implementation; mmwave_hr_usable_window_fraction now carries the producer course signal_quality.usable_ratio instead of a binary availability indicator. Real-cohort old-vs-new audit v2 PASS over all 2320 probes: key and frame-audit conservation, zero strict new-frame membership violations, zero stateless same-membership violations, zero stateful HR violations when local membership and the incoming previous_bpm anchor are both equal, and all 54 same-membership HR differences explained by previous_bpm anchor divergence. Boundary: this closes the 1.15.9 §3 time-legality gate for contract and provenance ONLY. It is not a physiology validation: physiology_qualification remains LIMITED_SUPPORTING_ONLY.",
+        "preprocessing_dependencies": [],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M2",
+          "M4",
+          "M6",
+          "M7"
+        ]
+      },
+      {
+        "feature_id": "cardiopulmonary.br.v1",
+        "temporal_anchor": "probe_time_ms",
+        "temporal_scope": "pre_probe_only",
+        "time_legality_status": "verified_pre_probe_only",
+        "time_legality_evidence": "MMWAVE M1 producer contract and provenance closure, now canonical on the mmWave repository main branch (merge of PR #44; main 527ff09). Producer execution commit 01da845e with a clean worktree and four source SHA-256 values independently rechecked. Frozen producer time contract: scientific clock = timestamp CSV zero-based column 1 (DLL host receive/enqueue time), column 2 is QC-only; formal frame membership is strictly right-open [window_effective_start_unix_ms, probe_onset_unix_ms) with window_end equal to probe_onset exactly and a frame exactly at probe onset excluded; window_effective_start_unix_ms is the actual slicing lower bound; J and E share one process_probe() implementation; mmwave_hr_usable_window_fraction now carries the producer course signal_quality.usable_ratio instead of a binary availability indicator. Real-cohort old-vs-new audit v2 PASS over all 2320 probes: key and frame-audit conservation, zero strict new-frame membership violations, zero stateless same-membership violations, zero stateful HR violations when local membership and the incoming previous_bpm anchor are both equal, and all 54 same-membership HR differences explained by previous_bpm anchor divergence. Boundary: this closes the 1.15.9 §3 time-legality gate for contract and provenance ONLY. It is not a physiology validation: physiology_qualification remains LIMITED_SUPPORTING_ONLY.",
+        "preprocessing_dependencies": [],
+        "requests_prediction": true,
+        "prediction_eligibility_fields_true": [
+          "standalone_eligible",
+          "behavior_increment_eligible",
+          "modality_model_eligible",
+          "full_model_eligible",
+          "full_leave_one_out_eligible"
+        ],
+        "allowed_device_packages": [
+          "M2",
+          "M4",
+          "M6",
+          "M7"
+        ]
+      }
+    ],
+    "contract": {
+      "prediction_requires_verified_pre_probe_only": true,
+      "q1_blind_alone_proves_leakage_safe": false,
+      "training_fold_preprocessing_governed_separately": true
+    }
+  },
+  "completed_sets": [
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.behavior_reference",
+      "models": 1,
+      "input_sha256": "6de2c35edd4741d242e0ed23a5eca1bca693e2d932e4dc673f9a32db91aa192b",
+      "prediction_sha256": "9df39a79aba841fd047aba9c7628afb3b69a0f561c6e8df89a04f91847f865d7",
+      "old_prediction_sha256": "2e0db7204531f1649600b6086c79b14b34382b4ceae9fd51735197fd11d7a4c4",
+      "elapsed_seconds_total": 39.94732141494751
+    },
+    {
+      "outer_folds": 57,
+      "inner_folds": 285,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.sensor_only_joint",
+      "models": 1,
+      "input_sha256": "f441f22d50f89d261a3aba50ce84a061d9d7d7a9020765cb67c76e58a4b885bc",
+      "prediction_sha256": "28347f08667799d5546ae4bc87ee9297527a094d307784f4b2a9214df64a5009",
+      "old_prediction_sha256": "eedc206101f0671879e2db1dc7bf8c8e6f01450e833630c969d7f11147b8ea6b",
+      "elapsed_seconds_total": 81.03898739814758
+    },
+    {
+      "outer_folds": 480,
+      "inner_folds": 2400,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.behavior_plus_ocular",
+      "models": 8,
+      "input_sha256": "264afeb496f14f374e93c5b3e4aae374074cbc4a83632def77faa985115e78a1",
+      "prediction_sha256": "51c3cb8c16740805612eab0d11b573ac276b145973769aa7a29709266993da73",
+      "old_prediction_sha256": "f34cd421f0f745bb32095b49938ae71d99cbf0b0f45305cfc94977577035c2b4",
+      "elapsed_seconds_total": 107.95363187789917
+    },
+    {
+      "outer_folds": 244,
+      "inner_folds": 1220,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.behavior_plus_movement",
+      "models": 4,
+      "input_sha256": "e8d7dc30b98b0bd7fc90e20fe6a01145357b3bd61c964deff801e53dd0f38c0b",
+      "prediction_sha256": "1a94b365fc579a5765190e332fb213bda4d1d86c601d283f5a4347362157655c",
+      "old_prediction_sha256": "35ce99f0ff86209afabe04550684dd08d5bed9d5af88175e2d66b67dfa8a7b59",
+      "elapsed_seconds_total": 166.14625906944275
+    },
+    {
+      "outer_folds": 290,
+      "inner_folds": 1450,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.behavior_plus_cardiopulmonary",
+      "models": 5,
+      "input_sha256": "f7d4c22d6915872ecfd781e6b68689711b309e4579faa9954bcab92d4d536d83",
+      "prediction_sha256": "fa8fb008f7b7a2265524acc35a33a216b49018bcd925791122ea68c8891a2c58",
+      "old_prediction_sha256": "d40e0a91260a18d7ff365c17f6c902605fa0be63334efc520b21dba9f7b57a5c",
+      "elapsed_seconds_total": 238.02226614952087
+    },
+    {
+      "outer_folds": 1026,
+      "inner_folds": 5130,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.full",
+      "models": 18,
+      "input_sha256": "a63d4c5ce4b117689875e5bbd154a8784881763b3aead3cc07bc5e04e9610ad0",
+      "prediction_sha256": "8eb17a46a8b7bd1707b14a29bb3e84b0b7364b9083a259e21b86c06df1705fba",
+      "old_prediction_sha256": "1f778f9bd1e33173913963d0d69b9a6cdba0d29ab256a431f09235767c2a01fd",
+      "elapsed_seconds_total": 584.9350378513336
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.device::M0",
+      "models": 1,
+      "input_sha256": "6f2744dbd2b7ab57e6b9c3c2266067d1fc5e689f89be6eb6447c63426bdede72",
+      "prediction_sha256": "ba8eba7fdda47735a96167890e0cafbbe6f9c16d903f1c50c28389121d35daaa",
+      "old_prediction_sha256": "c691f623a68e6cb064b640509cb6a048b96dcc4d51fbcf2d408757f05f85c4ce",
+      "elapsed_seconds_total": 14.651089668273926
+    },
+    {
+      "outer_folds": 58,
+      "inner_folds": 290,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.device::M2",
+      "models": 1,
+      "input_sha256": "cabafd7926a41a4b8b7f7869cd1091a85fcb8e2eae7692b9e159e54a57d50c7e",
+      "prediction_sha256": "10d6ddb2d6b223a99d4e784bc16af37e0d23ca2fce187d634e85cf86410e8620",
+      "old_prediction_sha256": "501152bd9abf54d2f6aa5e1d57b68bf7678787d826ce7a2374683f83f5b25260",
+      "elapsed_seconds_total": 28.53078055381775
+    },
+    {
+      "outer_folds": 60,
+      "inner_folds": 300,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.device::M3",
+      "models": 1,
+      "input_sha256": "58cda388a79e210ec3f3501b6641a6bce92f08fed946514e0021be9292832fa1",
+      "prediction_sha256": "8754a7d865a7dec924fc885389327cffc2aab4c1c4686b7bb6d4d6b54542ee2a",
+      "old_prediction_sha256": "49faa01cd3ac582d52baaeda7d94d5eb69f08c1dad910b4c6f7196708f770b69",
+      "elapsed_seconds_total": 42.3486442565918
+    },
+    {
+      "outer_folds": 60,
+      "inner_folds": 300,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.device::M5",
+      "models": 1,
+      "input_sha256": "80a89bb023d0b481c7d4e3493396f3134587515bd91425d9d738f9cb1f4315df",
+      "prediction_sha256": "bf7defdd8b270ba4e5211cb46142f95969a35e5cd6fff079eb518f547f000241",
+      "old_prediction_sha256": "0c0a19840bd1df2c73599335f8648e1e4eca5dff4f2ebfab8853130eac1ae8c6",
+      "elapsed_seconds_total": 58.760706663131714
+    },
+    {
+      "outer_folds": 57,
+      "inner_folds": 285,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.device::M6",
+      "models": 1,
+      "input_sha256": "26b52a1efd75cdc0e1a2ee108f8a9646b387a4572337f44da6b77640bfe3fdff",
+      "prediction_sha256": "4a77a827beb9d3cd99cac1711454cc77dab3d7262b872bb6072540b66722e98e",
+      "old_prediction_sha256": "ea416f8d6b825291470836fa91918b1d6e1cef3c5c3710d163477c8b37e5609c",
+      "elapsed_seconds_total": 72.79184222221375
+    },
+    {
+      "outer_folds": 57,
+      "inner_folds": 285,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.device::M7",
+      "models": 1,
+      "input_sha256": "c405ea63db9e39241133f6b71045c12005f8f57c8d562f6bab06ef167c3cd1cc",
+      "prediction_sha256": "ad9fc3250e59b80208357e67cb10d8402a76f8b669c2f74dea0c34e13629165d",
+      "old_prediction_sha256": "92931ca091b521363ab6db7bbf9b29c5b131bf0b7a8bc51b7d8ea5231b0d7984",
+      "elapsed_seconds_total": 89.55642747879028
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::behavior.go_omission.raw.v1",
+      "models": 1,
+      "input_sha256": "a4afceb70a35b7870c3dadf168f44b4828fe0b11cba1fb67884556abc0224dc7",
+      "prediction_sha256": "b0c97da093324579f7990a37746e5841ac525d8da00879be91ad65e49616e85c",
+      "old_prediction_sha256": "b904a49d63ece98900a61ebcd29c337b142f28b186671dec683ec22a9b9c969f",
+      "elapsed_seconds_total": 97.55286526679993
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::behavior.nogo_commission.raw.v1",
+      "models": 1,
+      "input_sha256": "5dd59bfd080bf9169e03ed957e6e1cbb9f0897ac3aefbe34fe0d362e7c9a1b3a",
+      "prediction_sha256": "9141cdc42ba5b2643f73636ef9c48a4f3284bdcd2dfcf920970aef6d468ed080",
+      "old_prediction_sha256": "21c80342d3c7d73e9a39a3b504c16c4a409bf69da80f0ed7dc2336630c1a76db",
+      "elapsed_seconds_total": 105.04388427734375
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::behavior.rt_level.median.v1",
+      "models": 1,
+      "input_sha256": "77fef9809e08dadea6073ab9394a17015cfbd557c24238d23476bbee43d3ea93",
+      "prediction_sha256": "4a761435c7eaaf094c0c1803f1260e490f72a6bdca5774c202bf761670e3cc9e",
+      "old_prediction_sha256": "5813eedc6d203c0800ed2719168907128401af5b37a2d4cc43c2b452089f5c4b",
+      "elapsed_seconds_total": 113.20185470581055
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::behavior.rt_trend.theilsen.v1",
+      "models": 1,
+      "input_sha256": "4ede24fa9e3ffa9484388f65d3ab7e57776fd012d1296786716af3d63cb90bc0",
+      "prediction_sha256": "d1daaca8b4e010c12beb284b76dbf7cffd023859cc53a2da6066394ff7fa1ba7",
+      "old_prediction_sha256": "767e4fd24007a05592fbd029a940d9ac66a7e2532b6b9828db83722226fc616b",
+      "elapsed_seconds_total": 120.60831356048584
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::behavior.rt_variability.cv.v1",
+      "models": 1,
+      "input_sha256": "f4d9471f44f692e56277d5ce0d28481d605099631df92090cb8f318d00b89efd",
+      "prediction_sha256": "8cc5c4ef0849b4298c1f77baf51f90afefd171b0462550bdc8c8c942c1c6d530",
+      "old_prediction_sha256": "a967c219a9c35c7d03db3fc2e6bf168ab2a5cc4281164e988112ee92c22c6ed1",
+      "elapsed_seconds_total": 128.0420114994049
+    },
+    {
+      "outer_folds": 58,
+      "inner_folds": 290,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::cardiopulmonary.br.v1",
+      "models": 1,
+      "input_sha256": "790d4b17b6c54dd452bc77781509d5c277d18b64b748eb8e817c6803ee6c1177",
+      "prediction_sha256": "cd6a379477d32567c35e8284350f6e5d173c67dcd130d78aaedc298f91fe387a",
+      "old_prediction_sha256": "c64460de69a45910298f9390f66b73be15a04cc378f0ead62dfd9199972768ec",
+      "elapsed_seconds_total": 134.84182620048523
+    },
+    {
+      "outer_folds": 58,
+      "inner_folds": 290,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::cardiopulmonary.hr.fused.v1",
+      "models": 1,
+      "input_sha256": "a874a84456ea2041b236c43270a0da7868e90007fa0aebee5bcf5176b093035d",
+      "prediction_sha256": "d1b5e642ed3c91d9ca4b0deda403cb03480910a5af8fe53436b5c05b7a7116aa",
+      "old_prediction_sha256": "e61591256301026f4323b98a850ebed28dc3aa9f61941816397f9055883db5ec",
+      "elapsed_seconds_total": 142.223388671875
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::movement.body_motion_energy.median.pre30s.v1",
+      "models": 1,
+      "input_sha256": "ba2febadc2028b40530c7050a4c0611bd6e9253fcdf776f940690c15fba200b8",
+      "prediction_sha256": "ff28933199958dd0de8f722acf2ab55a64b6903f53d8c737cc1a468d731f3785",
+      "old_prediction_sha256": "29ba07bc584edde5e08f525b49aaec922b71da97f8c8da41be3f4e19b3ae06a3",
+      "elapsed_seconds_total": 149.70137286186218
+    },
+    {
+      "outer_folds": 60,
+      "inner_folds": 300,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::ocular.blink_rate.rgb_event_rate.pre30s.v1",
+      "models": 1,
+      "input_sha256": "fd30fe00a4978809e0aa3ec6ac12fca74caa5ca9bead965fbc53aaf6f97defcf",
+      "prediction_sha256": "737a0197ee3735313d569c25fc6bccfd5a2128f2d8ecbf82e2b32b8b4d433174",
+      "old_prediction_sha256": "f33e3b8dc1cf89dca033b78ba062c67c28977e4ef91dc9203961437e9f96fe90",
+      "elapsed_seconds_total": 157.40061450004578
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::ocular.pupil_level.rseg_hard.rgb_nir_qc.v1",
+      "models": 1,
+      "input_sha256": "501a7b9336188e863424c5278ddcfb53122af5f4e34ff3a79e8a08ba06f2be36",
+      "prediction_sha256": "abb2fbf52fdf3bcf0c9a6f4707de51243fbbfd34dfe9e9ec4679d599c8c7aa32",
+      "old_prediction_sha256": "62acb2402c09730ef4e30222bf8c98ed989aaff582738223fc1bd47d80b3084d",
+      "elapsed_seconds_total": 164.33363151550293
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::ocular.pupil_linear_trend.rseg_hard.rgb_nir_qc.v1",
+      "models": 1,
+      "input_sha256": "1d3b8eea83b6bb74b49dccd93f4b5eb770ca07c48f8042a151e09f455c72e6a0",
+      "prediction_sha256": "a8d3850bbb271816738c992bed8bf55a380ae7b8f012abcaebbf75c1317b4adf",
+      "old_prediction_sha256": "a7df30e507218e9c0f2915e4a2052b004038307893918bbe8e4d54e673aefc68",
+      "elapsed_seconds_total": 171.4684329032898
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::ocular.pupil_quadratic_curvature.rseg_hard.rgb_nir_qc.v1",
+      "models": 1,
+      "input_sha256": "fecf02655ec55293d7cd2c072e353f55ed2bd3735eeefcc1c75e7d412e0dc31f",
+      "prediction_sha256": "f227621096b3129b8aa3f2705da0a86b6ec65950c115a71ca07781dbd46c4590",
+      "old_prediction_sha256": "c2ef570416f0ccc52ea28b297d06d8e1bc08dced6f4c298e1fdc9f1fbcf7545e",
+      "elapsed_seconds_total": 178.75138902664185
+    },
+    {
+      "outer_folds": 61,
+      "inner_folds": 305,
+      "failures": 0,
+      "raw_labels_keys_and_splits_match_primary": true,
+      "analysis_set_id": "AS.standalone::ocular.pupil_variability.rseg_hard.rgb_nir_qc.v1",
+      "models": 1,
+      "input_sha256": "5257f757f6bcbb121c96b9d42236c2de8b5150eb1de1c2fbb6727c19d8fa244f",
+      "prediction_sha256": "b39777d987c9148ca835300c7a973843f51e6b50c7cdbde9f8c941d6ecf425a1",
+      "old_prediction_sha256": "baca8a02f7288ebf990dcb9c9f850627e52eaa03271e1b784916c9a7d2abaffa",
+      "elapsed_seconds_total": 185.7828447818756
+    }
+  ],
+  "resumed_executions": [
+    {
+      "code_sha": "96d9e11e847768ca9aaf421fda7e10612fc1cdf3",
+      "working_tree_dirty": false,
+      "runner_sha256": "e7ef434e02091484520e5e8164df93ece3a38af21b3047b79e952514e667cf48",
+      "script_sha256": "4727d09e5fc3e1bdb9cf9960eb538aece832dd27011eacef16e83b27f99adbd8",
+      "workers": 4
+    },
+    {
+      "code_sha": "06999e2b814d693da35067f7a629def1d18461b2",
+      "working_tree_dirty": false,
+      "runner_sha256": "e7ef434e02091484520e5e8164df93ece3a38af21b3047b79e952514e667cf48",
+      "script_sha256": "fb17d46f91283163b582720836ab56b5602c88d583e34a79abc9ac42b8e0196e",
+      "workers": 4
+    }
+  ],
+  "model_rows": 56,
+  "paired_rows": 28,
+  "outer_folds": 3297,
+  "inner_folds": 16485,
+  "elapsed_seconds": 186.04396200180054
+}
