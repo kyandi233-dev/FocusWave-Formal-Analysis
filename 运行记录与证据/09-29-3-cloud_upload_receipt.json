@@ -1,0 +1,19 @@
+{
+  "local_status": "PASS",
+  "content_files": 419,
+  "input_tables": 25,
+  "new_analysis_sets": 25,
+  "old_analysis_sets": 25,
+  "zip_bytes": 66349093,
+  "zip_sha256": "2ac0546bbbb2b1960fdbfa729cc6fbfdb5b99700ee33223503dca8898f4287fa",
+  "zip_md5": "21a12aa48cc433e2f9692cd1a26a0271",
+  "cloud_status": "VERIFIED_CONNECTOR_READBACK",
+  "zip_path": "D:\\Project\\厚粲杯\\11_数据\\_FormalAnalysis\\_handoff\\2026-09-29_q1-12vs34-4d51c7c\\FocusWave_Q1_12vs34_完整分析交接_20260929.zip",
+  "cloud_file_id": "1mpNqnfPonNr57BCXtAd2nvJX93EllT5b",
+  "cloud_url": "https://drive.google.com/file/d/1mpNqnfPonNr57BCXtAd2nvJX93EllT5b/view",
+  "parent_id": "1wZ6fHAyz4JMBwQ7LxL2fYZ9DdhO4XAfL",
+  "cloud_bytes": 66349093,
+  "cloud_readback_sha256": "2ac0546bbbb2b1960fdbfa729cc6fbfdb5b99700ee33223503dca8898f4287fa",
+  "rclone_status": "BLOCKED_INVALID_GRANT",
+  "verification_method": "Connector uploaded and raw-file fetched; full cloud bytes SHA256 equal local archive. Not rclone check."
+}
