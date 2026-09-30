@@ -1,0 +1,53 @@
+{
+  "task": "FW-REPORT-V15-99e554b7-ARCHIVE-20260930",
+  "repository": "kyandi233-dev/FocusWave-Formal-Analysis",
+  "branch": "main",
+  "remote_head_before": "90af32fb8c1620d0fec651278b9e2d85abc7c4f0",
+  "source_bundle_sha256": "8594d30939360b9e704bd81095919e7a5dab29017767e4b13338749d0062ebcf",
+  "cloud_root_id": "1wZ6fHAyz4JMBwQ7LxL2fYZ9DdhO4XAfL",
+  "report_modified": false,
+  "phase": "LOCAL_VERIFIED_PENDING_TRANSFER",
+  "same_version_other_output_sha256": "613e40d1a99e23518b5945fa30bd0d43b7f1c71767cb96a2f89c5a4930ae447c",
+  "files": [
+    {
+      "path": "报告/FocusWave_国赛报告_文献与附录校订_原格式保留_20260930_v15.docx",
+      "bytes": 24484428,
+      "sha256": "99e554b76d1c3ea732018cbc43ce7c13322817c3111b9fbe51c86286693cb39f"
+    },
+    {
+      "path": "原稿/FocusWave_国赛报告_重点与分页统一_标黄副本_20260929_v13.docx",
+      "bytes": 25270400,
+      "sha256": "8830a3e11cca3ca1357b0311c420a5921b9d0a318e1e4d2d36b4b0a8fd5ae1e0"
+    },
+    {
+      "path": "核验材料/09-30-3-原格式保留与文献补核.md",
+      "bytes": 13264,
+      "sha256": "23a601c1d822da17d75a1964f604ac8bbb5fd1f95175c3172fe972e5166ce711"
+    },
+    {
+      "path": "核验材料/SHA256清单.json",
+      "bytes": 497,
+      "sha256": "4fd53275fa0d20c4d451662cf0658e65b52e72b17cda71d7e1fc9efdfe4a49d6"
+    },
+    {
+      "path": "核验材料/citation_regression.json",
+      "bytes": 12473,
+      "sha256": "dd589c5ec569d410d2ad6b255f6223911b0fbb44fddefe43df4ce0b84b6150fc"
+    },
+    {
+      "path": "核验材料/patch_report_v15.py",
+      "bytes": 17849,
+      "sha256": "436d59ae84fa07c21920054d3a0fedd74d5852e0198836ddf8f734fecf9570cb"
+    },
+    {
+      "path": "核验材料/render_validation.json",
+      "bytes": 270,
+      "sha256": "98c41f5ad8195128770ea9a37d98d4cb06482ecbcb658121152577af63044d08"
+    },
+    {
+      "path": "核验材料/v15_validation.json",
+      "bytes": 10615,
+      "sha256": "63a29d57da79cc326ac7d6cf305a4b77a4d3e60aa576b57440711a601097ace0"
+    }
+  ]
+}
