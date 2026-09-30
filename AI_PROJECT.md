@@ -14,3 +14,7 @@
 `main` is the current discovery and canonical evidence branch. Topic/research branches are provenance or task-specific work unless a current handoff explicitly promotes one. Historical references to `codex/code-fix-ledger` and its draft PR describe an earlier review stage; they do not override the current `main` methods, results, or report status.
 
 This file is navigation only. It does not replace current module methods, run records, result indexes or producer repositories. For scientific claims, verify the current record and the repository that owns the underlying producer/result.
+
+## Current report handoff
+
+2026-09-30: [v15 citation follow-up and original-format preservation](运行记录与证据/09-30-3-国赛报告文献补核与原格式保留.md). This record supersedes the v14 layout-preservation claim and appendix B10 reconstruction, not the statistical results. It links the executed patch, primary-source follow-up and structural/rendered acceptance evidence; remaining book-page and native-Word checks are explicitly scoped in that record.
