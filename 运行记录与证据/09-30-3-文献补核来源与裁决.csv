@@ -1,0 +1,8 @@
+reference,status,material_obtained,source,report_action,remaining_boundary
+"Bosch & D’Mello (2021)",DONE,"原论文摘要及作者所在机构书目","https://ieeexplore.ieee.org/abstract/document/8680698 ; https://experts.illinois.edu/en/publications/automatic-detection-of-mind-wandering-from-video-in-the-lab-and-i/","区分实验室的上半身动作/头部姿态/面部视频特征与课堂实时头姿/面部动作特征；两种情境高于机会水平的表述保留","未声称阅读全文；课堂提取特征不等同于存储视频"
+"Macmillan & Creelman (2005)",PARTIAL,"第二版作者、题名、年份、出版社及书目信息","https://ci.nii.ac.jp/ncid/BA69955900 ; https://books.google.com/books?id=jrDHjTQ4_U4C ; https://doi.org/10.4324/9781410611147","保留已确认书目和信号检测论方法引用；不添加未经读取的页码","尚未取得第二版所用公式的精确对应原页；不以其他版次替代"
+"See et al. (1995)",DONE,"原论文摘要，作者上传的论文页面","https://www.researchgate.net/publication/232476815_Meta-analysis_of_the_sensitivity_decrement_in_vigilance","将目标事件出现频率改为刺激呈现速率；与辨别方式及记忆要求结合叙述","材料层级为原摘要，不标为全文逐页核验"
+"Parasuraman (1979)",DONE,"PubMed原论文摘要及书目","https://pubmed.ncbi.nlm.nih.gov/472714/","与See共同支持刺激呈现速率、辨别方式和记忆要求影响警觉递减；没有把所有任务的表现下降归为同一过程","未外推至本研究参数的普遍最优性"
+"Smilek et al. (2010)",DONE,"共同作者上传的原论文全文及PubMed书目","https://www.researchgate.net/publication/44679493_Out_of_Mind_Out_of_Sight_Eye_Blinking_as_Indicator_and_Embodiment_of_Mind_Wandering ; https://pubmed.ncbi.nlm.nih.gov/20554601/","阅读中走神伴随更多眨眼的引述保留；最终刊载21(6),786–789保持","原作者稿采用提前在线发表分页，最终卷页依据正式书目；关联不改写为因果"
+"Theil (1950)",DONE,"CWI机构书目、原始扫描文本及合并条目封面","https://ir.cwi.nl/pub/18445 ; https://ir.cwi.nl/pub/8270/8270D.pdf","保留I–II、Indagationes Mathematicae 12及85–91,173–177；稳健斜率方法引用保留","具体内容页依据原扫描提取文本；没有声称所有页面截图均成功或逐页视觉核验"
+"Robison et al. (2019)",DONE,"PubMed原论文摘要及作者实验室书目","https://pubmed.ncbi.nlm.nih.gov/30788799/ ; https://camlab.nd.edu/publications/","三项实验未发现探针频率与提问框架影响行为表现或探针回答；区分任务聚焦、任务外思维与任务相关干扰","未发现影响不等于证明所有探针设计完全等效"
