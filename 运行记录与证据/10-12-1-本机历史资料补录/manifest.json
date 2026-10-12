@@ -1,0 +1,403 @@
+{
+  "date": "2026-10-12",
+  "repository": "kyandi233-dev/FocusWave-Formal-Analysis",
+  "base_branch": "main",
+  "base_commit": "4759c9fb9db7203ec8059e150ec57e81531c854c",
+  "branch": "codex/local-process-recovery-20261012",
+  "purpose": "Recover unpublished portable historical sources and method/run evidence for project backup. No scientific rerun or active pipeline change.",
+  "exclusions": [
+    "raw participant data",
+    "row-level outputs",
+    "personal/financial material",
+    "credentials/runtime",
+    "model binaries",
+    "superseded navigation",
+    "test caches"
+  ],
+  "entries": [
+    {
+      "snapshot": "payloads/165197a4a2f9/5.2-行为表现与即时主观状态_20260913.md",
+      "original_path": "国赛报告/章节草稿/5.2-行为表现与即时主观状态_20260913.md",
+      "git_blob": "165197a4a2f978bb76c0bf0b14eac1fce1ec91a8",
+      "sha256": "b873a630de78184af4908541e18a7d5509f9b607801718a7d4e2f190d963d8e8",
+      "bytes": 9053,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "国赛报告/章节草稿/5.2-行为表现与即时主观状态_20260913.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/f5e3f5165bc9/4.5-数据处理与统计分析.md",
+      "original_path": "正式报告/章节草稿/4.5-数据处理与统计分析.md",
+      "git_blob": "f5e3f5165bc9636ffd90a6bc6cc5779aee833eff",
+      "sha256": "2c35039bba62ef3c009361562af4c80ef8289b08d5c430995f19c63fc1b53414",
+      "bytes": 15077,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "正式报告/章节草稿/4.5-数据处理与统计分析.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/eb4833e57d28/5.6-多模态增量与互补信息.md",
+      "original_path": "正式报告/章节草稿/5.6-多模态增量与互补信息.md",
+      "git_blob": "eb4833e57d2865d6b32225532434dbb13e3b4954",
+      "sha256": "95035ac2a7194c99bc2e8f25381c8f9f85a9b96679255502ecd1a70931a9a1fe",
+      "bytes": 4539,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "正式报告/章节草稿/5.6-多模态增量与互补信息.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/9cdd962fcbfd/08-31-3-最终规范复核与修订.md",
+      "original_path": "正式报告/运行记录与证据/08-31-3-最终规范复核与修订.md",
+      "git_blob": "9cdd962fcbfd17ccc3f6e476a8fb0aab1b9037f3",
+      "sha256": "a44b5315b0ba00c3d0861766e7b516c643980a82ca29e6b6b31974cc1ef5d1c3",
+      "bytes": 2497,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "正式报告/运行记录与证据/08-31-3-最终规范复核与修订.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/e573ff26002c/README.md",
+      "original_path": "README.md",
+      "git_blob": "e573ff26002cf80411a9608e81f2978d95959949",
+      "sha256": "7691844530a287dbf563d5d0aea1cf683dfbffc2d796ee9f7cb4dbdddb7d3b68",
+      "bytes": 13440,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "README.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/ba99d4c8186b/1.16.28-预定义精简模型嵌套LOSO验证_20260925.md",
+      "original_path": "分析设计/1.16.28-预定义精简模型嵌套LOSO验证_20260925.md",
+      "git_blob": "ba99d4c8186be3cd374908ac523f9f97b03eaf24",
+      "sha256": "eaf57c56109d27e578f99d0dc5e2917e4167882e0c8122044a88d51d2e047253",
+      "bytes": 6289,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "分析设计/1.16.28-预定义精简模型嵌套LOSO验证_20260925.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/d5e88a14aebe/README.md",
+      "original_path": "分析设计/README.md",
+      "git_blob": "d5e88a14aebea4dbed969a56adbd4a420fe89801",
+      "sha256": "f55e023a1d4c5085f9205fb9b4ffb789abffc8ff9e386f68476a0f39d89a0c09",
+      "bytes": 14882,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "分析设计/README.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/84fdd8175bde/6-监督学习与多模态结果与资产.md",
+      "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+      "git_blob": "84fdd8175bdefaf3e051191479d882b5b8456bf8",
+      "sha256": "2474c4ee1f664286c7383e72501452bb08117d56bcbea034db61890a8462998e",
+      "bytes": 45839,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/4d8ca4f24133/09-25-1-预定义精简模型嵌套LOSO真实运行.md",
+      "original_path": "运行记录与证据/09-25-1-预定义精简模型嵌套LOSO真实运行.md",
+      "git_blob": "4d8ca4f24133442b5298773c2e267feb7e597287",
+      "sha256": "dcff5ce94e2ca383084b3632626c893cbbb79a65c4607b432578d9e3eab2214a",
+      "bytes": 1030,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "运行记录与证据/09-25-1-预定义精简模型嵌套LOSO真实运行.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/89d130a5aea1/README.md",
+      "original_path": "运行记录与证据/README.md",
+      "git_blob": "89d130a5aea1a415f6b03c8008cf9afd9c99f3f8",
+      "sha256": "de47732c049467f11cf9d0e28b5e9ea291c65083acf702d1d6c8567a05be7ce3",
+      "bytes": 5052,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "working_tree",
+          "original_path": "运行记录与证据/README.md",
+          "commit": null
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/8c4ffc9c79e8/6-监督学习与多模态结果与资产.md",
+      "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+      "git_blob": "8c4ffc9c79e8cab04a6eaed532bb404ff2f692c4",
+      "sha256": "0c3247a57cea915e48d3ae0d98456f98bbdc1295cc44d202f4148f807c2e5a18",
+      "bytes": 36920,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+          "commit": "31f37a2cbc9fad44b75fb1e904a659367e5778c8"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/d8d18f0ee606/6-监督学习与多模态结果与资产.md",
+      "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+      "git_blob": "d8d18f0ee60606caae7a424584faa42bb983698e",
+      "sha256": "937e1733d8d6ad1a107e83c2619eaf4874d5ab4253c2579416de7d755dda88a9",
+      "bytes": 35967,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+          "commit": "fff91c9ca0a261bcc9c2a6a83ca5590d828bcb45"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/7ed61e374da9/5.6-各科学模态对新参与者Q1的预测能力.md",
+      "original_path": "国赛报告/章节草稿/5.6-各科学模态对新参与者Q1的预测能力.md",
+      "git_blob": "7ed61e374da93065377f89883d083cc9d532fab6",
+      "sha256": "f75f88fce22f15d1e01d66680fa5022e4fb62a9f8d42c7345afecf1caaa4f6b0",
+      "bytes": 14673,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/章节草稿/5.6-各科学模态对新参与者Q1的预测能力.md",
+          "commit": "fff91c9ca0a261bcc9c2a6a83ca5590d828bcb45"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/be1c637fe349/1-结果资产索引.md",
+      "original_path": "国赛报告/完整结果/1-结果资产索引.md",
+      "git_blob": "be1c637fe349227864fa3454660c620cabd61896",
+      "sha256": "87eb20e7dee399f5891ae7321130cef3a3e517826080ebc35eb2912c4d13e322",
+      "bytes": 19160,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/完整结果/1-结果资产索引.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/5dc5706026a5/1.1-当前结果总览.md",
+      "original_path": "国赛报告/完整结果/1.1-当前结果总览.md",
+      "git_blob": "5dc5706026a54c1421628d173cf7274fd2048604",
+      "sha256": "4b24bb7dff3f66f5e7624240908982d28469d66917931df00c353842d40509ab",
+      "bytes": 14877,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/完整结果/1.1-当前结果总览.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/6309c976c627/4-Movement动作结果与资产.md",
+      "original_path": "国赛报告/完整结果/4-Movement动作结果与资产.md",
+      "git_blob": "6309c976c627f79fd867a24832a24b336438bcac",
+      "sha256": "c835fb83e64187cd1e0b59623597ba5e1cd05ca160e384a4c102e1bb0db05dd2",
+      "bytes": 16349,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/完整结果/4-Movement动作结果与资产.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/1a699e645843/5.1-分析样本、数据覆盖与测量质量_20260913.md",
+      "original_path": "国赛报告/章节草稿/5.1-分析样本、数据覆盖与测量质量_20260913.md",
+      "git_blob": "1a699e645843a7ad196ed30bdcc9e8b5410160ce",
+      "sha256": "14c784071c5f9ed3168fb899ede24083b7f7010e5f61863d38cca6cfd39a7301",
+      "bytes": 2438,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/章节草稿/5.1-分析样本、数据覆盖与测量质量_20260913.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/f79a52b0c4ca/5.2-行为表现与即时主观状态_20260913.md",
+      "original_path": "国赛报告/章节草稿/5.2-行为表现与即时主观状态_20260913.md",
+      "git_blob": "f79a52b0c4cab56f4b727ba73dcf7c821d418760",
+      "sha256": "f523f29a7268b37bbe76232ebd4ede8f8522c80f0e9d0447f23a48da32216861",
+      "bytes": 9542,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/章节草稿/5.2-行为表现与即时主观状态_20260913.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/90ef951dea3b/5.3-眼部测量资格与瞳孔动态_20260913.md",
+      "original_path": "国赛报告/章节草稿/5.3-眼部测量资格与瞳孔动态_20260913.md",
+      "git_blob": "90ef951dea3b60997ec99729a233a0fc73fa71f7",
+      "sha256": "07af510217b189889b6c075c0b3a1b276e11180cb4bee11076e7f41b233e265f",
+      "bytes": 33432,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/章节草稿/5.3-眼部测量资格与瞳孔动态_20260913.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/1e44a58d67ca/5.4-动作与注意相关状态_20260913.md",
+      "original_path": "国赛报告/章节草稿/5.4-动作与注意相关状态_20260913.md",
+      "git_blob": "1e44a58d67caec97c4a50e3a4cf035d78b451ba5",
+      "sha256": "9491aca16e4675653426d62ca2dc11533b7553bd6636ea589d405279730769d7",
+      "bytes": 4720,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/章节草稿/5.4-动作与注意相关状态_20260913.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/97e5df145533/5.5-心肺与注意相关状态.md",
+      "original_path": "国赛报告/章节草稿/5.5-心肺与注意相关状态.md",
+      "git_blob": "97e5df145533ef6ad920d230b3cf68915d31d46b",
+      "sha256": "793976f27304593a2e9219ed677544eedcc1e6c1a1fc7aba79bd30822576aca1",
+      "bytes": 8383,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/章节草稿/5.5-心肺与注意相关状态.md",
+          "commit": "5ef906f92fa4bd6ff1aec02f5aa73bb76d58749a"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/0b73a07add5b/5.6-各科学模态对新参与者Q1的预测能力.md",
+      "original_path": "国赛报告/章节草稿/5.6-各科学模态对新参与者Q1的预测能力.md",
+      "git_blob": "0b73a07add5bac38dd26024b8d54351168143f86",
+      "sha256": "42bccfcb1821c31d9b9fbb5f61c01f8df0961cd2d5a75bf7e94b59da838158ff",
+      "bytes": 14114,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/章节草稿/5.6-各科学模态对新参与者Q1的预测能力.md",
+          "commit": "c96bb963f5b882f5a1f94e6f782275b5d87cc8d6"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/88a54e06ef3c/3-Ocular眼部结果与资产.md",
+      "original_path": "国赛报告/完整结果/3-Ocular眼部结果与资产.md",
+      "git_blob": "88a54e06ef3c1205bca82886801aa386d9b7223f",
+      "sha256": "d4d5df842f0c91cab648ce6daaa500b33fb50822735935a1cb07f041323a8271",
+      "bytes": 21992,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/完整结果/3-Ocular眼部结果与资产.md",
+          "commit": "5bef32c55ad12f8056c876783507bbc4d310fc7f"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    },
+    {
+      "snapshot": "payloads/f6a1ad162106/6-监督学习与多模态结果与资产.md",
+      "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+      "git_blob": "f6a1ad1621063379505d41793816cde317188957",
+      "sha256": "3cd4f92b2ac6dcc1b6efb2627bcda9977769d429602d05bf4a0eb3f60938438e",
+      "bytes": 33925,
+      "classification": "historical_source_or_provenance_not_current_pipeline",
+      "sources": [
+        {
+          "kind": "committed_history",
+          "original_path": "国赛报告/完整结果/6-监督学习与多模态结果与资产.md",
+          "commit": "5bef32c55ad12f8056c876783507bbc4d310fc7f"
+        }
+      ],
+      "usage": "Use original-path and recorded version/input contracts to reconstruct; do not execute the isolated snapshot as current pipeline."
+    }
+  ]
+}
