@@ -1,0 +1,131 @@
+{
+  "files": 24,
+  "all_byte_identical": true,
+  "checks": [
+    {
+      "file": "payloads/165197a4a2f9/5.2-行为表现与即时主观状态_20260913.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/f5e3f5165bc9/4.5-数据处理与统计分析.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/eb4833e57d28/5.6-多模态增量与互补信息.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/9cdd962fcbfd/08-31-3-最终规范复核与修订.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/e573ff26002c/README.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/ba99d4c8186b/1.16.28-预定义精简模型嵌套LOSO验证_20260925.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/d5e88a14aebe/README.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/84fdd8175bde/6-监督学习与多模态结果与资产.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/4d8ca4f24133/09-25-1-预定义精简模型嵌套LOSO真实运行.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/89d130a5aea1/README.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/8c4ffc9c79e8/6-监督学习与多模态结果与资产.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/d8d18f0ee606/6-监督学习与多模态结果与资产.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/7ed61e374da9/5.6-各科学模态对新参与者Q1的预测能力.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/be1c637fe349/1-结果资产索引.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/5dc5706026a5/1.1-当前结果总览.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/6309c976c627/4-Movement动作结果与资产.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/1a699e645843/5.1-分析样本、数据覆盖与测量质量_20260913.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/f79a52b0c4ca/5.2-行为表现与即时主观状态_20260913.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/90ef951dea3b/5.3-眼部测量资格与瞳孔动态_20260913.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/1e44a58d67ca/5.4-动作与注意相关状态_20260913.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/97e5df145533/5.5-心肺与注意相关状态.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/0b73a07add5b/5.6-各科学模态对新参与者Q1的预测能力.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/88a54e06ef3c/3-Ocular眼部结果与资产.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    },
+    {
+      "file": "payloads/f6a1ad162106/6-监督学习与多模态结果与资产.md",
+      "byte_identical": true,
+      "syntax": "not_applicable"
+    }
+  ],
+  "not_claimed": [
+    "scientific revalidation",
+    "full runtime execution of historical sources",
+    "adoption into current pipeline"
+  ]
+}
