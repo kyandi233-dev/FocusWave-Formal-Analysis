@@ -18,3 +18,7 @@ This file is navigation only. It does not replace current module methods, run re
 ## Current report handoff
 
 2026-09-30: [v15 citation follow-up and original-format preservation](运行记录与证据/09-30-3-国赛报告文献补核与原格式保留.md). This record supersedes the v14 layout-preservation claim and appendix B10 reconstruction, not the statistical results. It links the executed patch, primary-source follow-up and structural/rendered acceptance evidence; remaining book-page and native-Word checks are explicitly scoped in that record.
+
+## Current technical provenance audit
+
+2026-10-14: [Camera–radar public prior art and third-party provenance initial audit](运行记录与证据/10-14-1-摄像头毫米波公开专利与第三方来源初审.md). Continues the 2026-09-14 patent evidence mapping. Scope is public-source provenance and unresolved licensing/claim checks; it does not change scientific methods/results, grant licenses, or publish private implementations. Overall status remains PARTIAL.
